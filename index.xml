@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gabriele Orazi</title>
+    <link>https://goemon07.github.io/</link>
+    <description>Recent content on Gabriele Orazi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Mon, 23 Sep 2019 23:06:02 +0300</lastBuildDate>
+    
+	<atom:link href="https://goemon07.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About me</title>
+      <link>https://goemon07.github.io/aboutme/</link>
+      <pubDate>Mon, 23 Sep 2019 23:06:02 +0300</pubDate>
+      
+      <guid>https://goemon07.github.io/aboutme/</guid>
+      <description>Adaptable, hyperactive and tireless, I like challenges and adventures. I always wonder why things happen. I love to play team sports and climb, as well as improve my technical skills with CTFs.
+Work experience Angular developer [Apr 2018 - Aug 2018] Loccioni Group for Daimler - Stuttgart, Germany Three months of work in Daimler laboratories. I worked as a front-end developer of the framework used to control and manage the injectors test bench.</description>
+    </item>
+    
+  </channel>
+</rss>
