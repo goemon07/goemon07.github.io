@@ -1,19 +1,43 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://goemon07.github.io/aboutme/</loc>
-    <lastmod>2019-09-23T23:06:02+03:00</lastmod>
+    <loc>goemon07.github.io/about/</loc>
+    <lastmod>2020-09-23T18:32:10+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goemon07.github.io/</loc>
-    <lastmod>2019-09-23T23:06:02+03:00</lastmod>
+    <loc>goemon07.github.io/posts/aboutme/</loc>
+    <lastmod>2020-09-23T18:11:48+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://goemon07.github.io/tags/</loc>
+    <loc>goemon07.github.io/</loc>
+    <lastmod>2020-09-23T18:11:48+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>goemon07.github.io/posts/</loc>
+    <lastmod>2020-09-23T18:11:48+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>goemon07.github.io/tags/</loc>
+    <lastmod>2020-09-23T18:11:48+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>goemon07.github.io/tags/untagged/</loc>
+    <lastmod>2020-09-23T18:11:48+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>goemon07.github.io/blog/</loc>
+  </url>
+  
+  <url>
+    <loc>goemon07.github.io/series/</loc>
   </url>
   
 </urlset>
