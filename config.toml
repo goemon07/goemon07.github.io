@@ -1,0 +1,85 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Gabriele Orazi"
+theme = "hugo-theme-cactus"
+copyright = "Gabriele Orazi" # cactus will use title if copyright is not set
+disqusShortname = "goemon" # Used when comments is enabled. Cactus will use site title if not set
+# googleAnalytics = "UA-1234-5"
+
+
+# summaryLength = 2
+
+# Main menu which appears below site header.
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+#[[menu.main]]
+#name = "Writings"
+#url = "/posts"
+#weight = 2
+
+#[[menu.main]]
+#name = "Tags"
+#url = "/tags"
+#weight = 3
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 4
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 2
+
+[params]
+
+  colortheme = "dark" # dark, light, white, or classic
+  css = ["css/custom.css"] # here path of css custom file
+  rss = false # generate rss feed. default value is false
+  googleAnalyticsAsync = true # use asynchronous tracking. Synchronous tracking by default
+
+  # Home page settings
+  description = "InfoSec, music and climbing. What else?"
+  mainSection = "about" # your main section
+  showAllPostsOnHomePage = false # default
+  postsOnHomePage = 2 # this option will be ignored if showAllPostsOnHomePage is set to true
+  tagsOverview = false # show tags overview by default.
+  showProjectsList = false # show projects list by default (if projects data file exists).
+  projectsUrl = "https://github.com/gohugoio" # title link for projects list
+
+  # https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
+  dateFormat = "2006-01-02" # default
+
+  # Post page settings
+  show_updated = true # default
+
+  [params.comments]
+    enabled = false # default
+    engine = "disqus" # more supported engines will be added.
+
+  # the value of name should be an valid font awesome icon name (brands type)
+  # https://fontawesome.com/icons?d=gallery&s=brands
+  [[params.social]]
+    name = "github"
+    link = "https://github.com/goemon07"
+
+  [[params.social]]
+    name = "linkedin"
+    link = "https://www.linkedin.com/in/gabriele-orazi/"
+
+  [[params.social]]
+    name = "email"
+    link = "gabriorazi07@gmail.com"  # no need for "mailto:" in the head
+
+  [[params.social]]
+    name = "telegram"
+    link = "https://t.me/goemon07"
+
+  [[params.social]]
+    name = "twitter"
+    link = "https://twitter.com/_goemon07"
