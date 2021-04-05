@@ -15,15 +15,15 @@ name = "Home"
 url = "/"
 weight = 1
 
-#[[menu.main]]
-#name = "Writings"
-#url = "/posts"
-#weight = 2
+[[menu.main]]
+name = "Writings"
+url = "/posts"
+weight = 2
 
-#[[menu.main]]
-#name = "Tags"
-#url = "/tags"
-#weight = 3
+# [[menu.main]]
+# name = "Tags"
+# url = "/tags"
+# weight = 3
 
 [[menu.main]]
 name = "About"
@@ -44,10 +44,10 @@ weight = 4
   googleAnalyticsAsync = false # use asynchronous tracking. Synchronous tracking by default
 
   # Home page settings
-  description = "InfoSec, music and climbing. What else?"
-  mainSection = "about" # your main section
+  description = "InfoSec researcher based in Italy. Love to try sticking on the rocks for getting higher and higher (sorry, cannot consider myself a climber, still). Running helps me to think... that's why I do a lot."
+  mainSection = "posts" # your main section
   showAllPostsOnHomePage = false # default
-  postsOnHomePage = 2 # this option will be ignored if showAllPostsOnHomePage is set to true
+  postsOnHomePage = 5 # this option will be ignored if showAllPostsOnHomePage is set to true
   tagsOverview = false # show tags overview by default.
   showProjectsList = true # show projects list by default (if projects data file exists).
   projectsUrl = "https://github.com/goemon07" # title link for projects list
@@ -56,7 +56,7 @@ weight = 4
   dateFormat = "2006-01-02" # default
 
   # Post page settings
-  show_updated = true # default
+  show_updated = false # default
 
   [params.comments]
     enabled = false # default
