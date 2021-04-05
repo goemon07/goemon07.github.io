@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Gabriele Orazi</title>
-    <link>/</link>
-    <description>Recent content on Gabriele Orazi</description>
+    <title>Posts on Gabriele Orazi</title>
+    <link>/posts/</link>
+    <description>Recent content in Posts on Gabriele Orazi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Gabriele Orazi</copyright>
-    <lastBuildDate>Fri, 02 Apr 2021 08:47:11 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Apr 2021 08:47:11 +0100</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to create free static website with Hugo and Github Pages</title>
       <link>/posts/github_pages/</link>
@@ -19,16 +19,6 @@ Ok, probably you&amp;rsquo;re a bit too ambitious.
 OR NOT.
 I was in your situation too and now you&amp;rsquo;re visiting this website, which is built on top of the same advices you&amp;rsquo;re going to follow (hopefully!).
 If you unfortunately fall into this website, probably you&amp;rsquo;re familiar with the git versioning system. Probably you know about Github as well.</description>
-    </item>
-    
-    <item>
-      <title>About me</title>
-      <link>/about/</link>
-      <pubDate>Wed, 24 Aug 2016 17:51:42 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>whoami Adaptable, hyperactive and tireless, I like challenges and adventures. I always wonder why things happen. I have difficulties in surviving without running and climbing. I do research in the InfoSec field. Currently based in Padua, working with SPRITZ research group.
-Education I fell in love with Bologna, where I studied Computer Science for my Bachelor. Did you ever seen a bot for a smartphone game? That’s what I did with RoboRK for my Bachelor thesis!</description>
     </item>
     
   </channel>
