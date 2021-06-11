@@ -4,7 +4,7 @@ date: 2021-06-10 17:51:42
 ---
 
 # My readings
-Here I would like to share some of the books that I read and that I can defenetly recommand.
+Here I would like to share some of the books that I read and that I can definitively recommend.
 
 Whenever is possible, you will find both the Italian and English versions.
 If you want to suggest me new readings, **I'm more than happy to listen to you.** Please, drop me a message!
