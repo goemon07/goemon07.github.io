@@ -37,7 +37,7 @@ During the second semester of the Finnish experience, I’ve been working for [A
 Lastly, I join [XTN Cognitive Security](https://xtn-lab.com/) as a DevOps.
 After few months, I decided to jump into a totally different kind of experience.
 
-I'm currently a PhD student at the [University of Padua](https://www.math.unipd.it/) with the [SPRITZ Research Group](). My main topics are image processing and forensics.
+I'm currently a PhD student at the [University of Padua](https://www.math.unipd.it/) with the [SPRITZ Research Group](https://spritz.math.unipd.it/team.html). My main topics are image processing and forensics.
 
 ## Not enough?
 
