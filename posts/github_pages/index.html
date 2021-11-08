@@ -16,8 +16,8 @@ I was in your situation too and now you&rsquo;re visiting this website, which is
 If you unfortunately fall into this website, probably you&rsquo;re familiar with the git versioning system. Probably you know about Github as well." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/github_pages/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-04-02T08:47:11&#43;01:00" />
-<meta property="article:modified_time" content="2021-04-02T08:47:11&#43;01:00" />
+<meta property="article:published_time" content="2021-04-02T08:47:11+01:00" />
+<meta property="article:modified_time" content="2021-04-02T08:47:11+01:00" />
 
 
   <meta name="twitter:card" content="summary"/>
@@ -244,18 +244,18 @@ Some cool features you might want to find already in the theme (or at least what
 <p>It&rsquo;s time to get your working local folder set up.
 First step <strong>clone</strong> your plain repo somewhere in your disk.
 You can accomplish so by hitting the cloning command like so:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; git clone git@github.com:&lt;your-user-here&gt;/&lt;your-user-here&gt;.github.io.git
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; git clone git@github.com:&lt;your-user-here&gt;/&lt;your-user-here&gt;.github.io.git
 </code></pre></div><p>Then, it&rsquo;s important to sync the theme repository too, but kind of detatching it from your personal one. That&rsquo;s why submodules are made for!</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; mkdir themes <span style="color:#f92672">&amp;&amp;</span> cd themes
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; mkdir themes <span style="color:#f92672">&amp;&amp;</span> cd themes
 &gt; git submodule add https://github.com/themefisher/vex-hugo.git
 </code></pre></div><p>Once the submodule is up, you probably may want to see your theme running in localhost!
 Every hugo theme has a <code>exampleSite</code> folder where to run the exact landing page that captured your attenction while selecting the theme.
 Since you&rsquo;ll have to work on a copy of those files, I suggest you to copy all the content of <code>exampleSite</code> folder into your main one:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># change dir to your main one, in this case .. to move one step backwards from themes folder</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># change dir to your main one, in this case .. to move one step backwards from themes folder</span>
 &gt; cd ..
 &gt; cp -r themes/&lt;your-theme-folder-here&gt;/exampleSite/* .
 </code></pre></div><p>Once you have all the files, you should be able to show up the live of your website locally:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; hugo server -D
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; hugo server -D
 </code></pre></div><p>Then head to <a href="localhost:1313">localhost:1313</a> and see if it&rsquo;s working!</p>
 <h2 id="step-5-automatically-build-and-deploy">Step 5: Automatically build and deploy</h2>
 <p>Wow, almost there!
@@ -273,7 +273,7 @@ This will create a brand new <code>public</code> folder where all your builder s
 Therefore, it is worth to add <code>public</code> into the <code>.gitignore</code> file in the project directory.</p>
 <p>If you already have a <code>.gitignore</code> file, just attach the folder in a new line. If not, create the file and write down the folder too.</p>
 <p>I.e., this is how my <code>.gitignore</code> looks like:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Thumbs.db
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Thumbs.db
 */uncompressed/
 */gimp/
 .dist
@@ -286,11 +286,11 @@ public/
 </code></pre></div><h3 id="step-52-setup-new-deploy-key">Step 5.2: Setup new Deploy key</h3>
 <p>A new deploy key will enable our machine, where the ssh key is stored, to being authorized to fire the Action that we&rsquo;re going to enplace.
 In order to generate the ssh key, place your terminal in the <code>~/.ssh</code> folder and then fire:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; ssh-keygen -t rsa -b <span style="color:#ae81ff">4096</span> -C <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>git config user.email<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span> -f gh-pages -N <span style="color:#e6db74">&#34;&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; ssh-keygen -t rsa -b <span style="color:#ae81ff">4096</span> -C <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>git config user.email<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span> -f gh-pages -N <span style="color:#e6db74">&#34;&#34;</span>
 </code></pre></div><p>This will generate a pair of new public/private <code>gh-pages</code> key files.</p>
 <p>Now we need share our public key with GitHub so that it will recognize us.</p>
 <p>Head to your repository settings and click on <strong>Deploy Key</strong> section to add a new one. Then copy it into your clipboard using:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; xclip -selection clipboard &lt; gh-pages.pub
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; xclip -selection clipboard &lt; gh-pages.pub
 </code></pre></div><p>And <code>ctrl+v</code> here:
 <img src="/images/posts/github_pages/deploy.png" alt="GitHub Deploy Key screenshot"></p>
 <p>Remember to enable the <em>Allow write access</em> toggle be able to <code>git push</code>.</p>
@@ -299,7 +299,7 @@ Get into the <em>Secrets</em> section and click on <em>New repository secret</em
 <p><img src="/images/posts/github_pages/secret.png" alt="GitHub Secret screenshot"></p>
 <p>Remember to name the new secret as <code>ACTIONS_DEPLOY_KEY</code> or remember how you name it for the next step.
 This time, in the big text box you have to share the previously created private key. Copy it into your clipboard using the following command from the <code>~/.ssh</code> folder:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; xclip -selection clipboard &lt; gh-pages
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; xclip -selection clipboard &lt; gh-pages
 </code></pre></div><p>&hellip; and paste it into the form.</p>
 <h3 id="step-53-setup-github-action">Step 5.3: Setup GitHub Action</h3>
 <p>It is possible to automate the process of deploying changes as soon as the commit has been pushed into the GitHub repository.
@@ -309,7 +309,7 @@ In fact, leveraging <em>Actions</em>  we can:</p>
 <li>publish the <code>/public</code> folder into a separate branch</li>
 <li>let <em>GitHub Pages</em> watch that specific branch to</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">github pages</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">github pages</span>
 
 <span style="color:#f92672">on</span>:
   <span style="color:#f92672">push</span>:
