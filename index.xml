@@ -9,6 +9,16 @@
     <copyright>Gabriele Orazi</copyright>
     <lastBuildDate>Fri, 02 Apr 2021 08:47:11 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>My publications</title>
+      <link>/publications/</link>
+      <pubDate>Thu, 10 Jun 2021 17:51:42 +0000</pubDate>
+      
+      <guid>/publications/</guid>
+      <description>My publications My research areas are malware detection, Machine Learning applied to Cyber Security (Adversarial attacks), and image processing-based attacks.
+Invoice #31415 attached: Automated analysis of malicious Microsoft Office documents  Malware detection on Microsoft Office documents. @ Computers &amp;amp; Security V.Koutsokostas, N. Lykousas, T. Apostolopoulos, G. Orazi, A. Ghosal, F. Casino, M. Conti, C. Patsakis  </description>
+    </item>
+    
+    <item>
       <title>My readings</title>
       <link>/readings/</link>
       <pubDate>Thu, 10 Jun 2021 17:51:42 +0000</pubDate>
