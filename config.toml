@@ -16,23 +16,28 @@ url = "/"
 weight = 1
 
 [[menu.main]]
+name = "Publications"
+url = "/publications"
+weight = 2
+
+[[menu.main]]
 name = "Writings"
 url = "/posts"
-weight = 2
+weight = 3
 
 [[menu.main]]
 name = "Readings"
 url = "/readings"
-weight = 3
+weight = 4
 
 [[menu.main]]
 name = "About"
 url = "/about"
-weight = 4
+weight = 5
 
 [markup]
   [markup.tableOfContents]
-    endLevel = 4
+    endLevel = 5
     ordered = false
     startLevel = 2
 
@@ -44,8 +49,8 @@ weight = 4
   googleAnalyticsAsync = false # use asynchronous tracking. Synchronous tracking by default
 
   # Home page settings
-  description = "InfoSec researcher based in Italy. Love to try sticking on the rocks for getting higher and higher (sorry, cannot consider myself a climber, still). Running helps me to think... that's why I do a lot."
-  mainSection = "posts" # your main section
+  description = "InfoSec PhD student based in Padua (Italy). Love to try sticking on the rocks for getting higher and higher (sorry, cannot consider myself a climber, still). Running helps me to think... that's why I do a lot."
+  mainSection = "publications" # your main section
   showAllPostsOnHomePage = false # default
   postsOnHomePage = 5 # this option will be ignored if showAllPostsOnHomePage is set to true
   tagsOverview = false # show tags overview by default.
@@ -67,6 +72,10 @@ weight = 4
   [[params.social]]
     name = "email"
     link = "gabriorazi07@gmail.com"  # no need for "mailto:" in the head
+
+  [[params.social]]
+    name = "scholar"
+    link = "https://scholar.google.com/citations?user=u30gQ60AAAAJ&hl=it"
 
   [[params.social]]
     name = "github"
