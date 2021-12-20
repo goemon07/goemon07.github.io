@@ -50,7 +50,7 @@ weight = 5
 
   # Home page settings
   description = "InfoSec PhD student based in Padua (Italy). Love to try sticking on the rocks for getting higher and higher (sorry, cannot consider myself a climber, still). Running helps me to think... that's why I do a lot."
-  mainSection = "publications" # your main section
+  mainSection = "posts" # your main section
   showAllPostsOnHomePage = false # default
   postsOnHomePage = 5 # this option will be ignored if showAllPostsOnHomePage is set to true
   tagsOverview = false # show tags overview by default.
