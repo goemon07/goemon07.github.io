@@ -8,5 +8,5 @@ My research areas are malware detection, Machine Learning applied to Cyber Secur
 
 ## Invoice #31415 attached: Automated analysis of malicious Microsoft Office documents
 - Malware detection on Microsoft Office documents.
-- @ Computers & Security
+- @ Computers & Security 2021
 - V.Koutsokostas, N. Lykousas, T. Apostolopoulos, G. Orazi, A. Ghosal, F. Casino, M. Conti, C. Patsakis
