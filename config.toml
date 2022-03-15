@@ -16,28 +16,33 @@ url = "/"
 weight = 1
 
 [[menu.main]]
+name = "Teaching"
+url = "/teaching"
+weight = 2
+
+[[menu.main]]
 name = "Publications"
 url = "/publications"
-weight = 2
+weight = 3
 
 [[menu.main]]
 name = "Writings"
 url = "/posts"
-weight = 3
+weight = 4
 
 [[menu.main]]
 name = "Readings"
 url = "/readings"
-weight = 4
+weight = 5
 
 [[menu.main]]
 name = "About"
 url = "/about"
-weight = 5
+weight = 6
 
 [markup]
   [markup.tableOfContents]
-    endLevel = 5
+    endLevel = 6
     ordered = false
     startLevel = 2
 
@@ -71,7 +76,7 @@ weight = 5
   # https://fontawesome.com/icons?d=gallery&s=brands
   [[params.social]]
     name = "email"
-    link = "gabriorazi07@gmail.com"  # no need for "mailto:" in the head
+    link = "gabriele.orazi@phd.unipd.com"  # no need for "mailto:" in the head
 
   [[params.social]]
     name = "scholar"
