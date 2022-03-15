@@ -30,6 +30,16 @@ Self-improvement  The Subtle Art of Not Giving A F*ck - Mark Manson [EN] [IT] Sc
     </item>
     
     <item>
+      <title>Teaching activities</title>
+      <link>/teaching/</link>
+      <pubDate>Thu, 10 Jun 2021 17:51:42 +0000</pubDate>
+      
+      <guid>/teaching/</guid>
+      <description>Teaching activities As a PhD student, I had the chance to be a teaching assistant of professors from my own University, as well as few other experiences as lecturer.
+A.A. 2021/2022  [MSc] CyberSecurity and Cryptography: Principles and Practices - teaching assistant with prof. Conti [MSc] Security and Risk: Management and Certifications - teaching assistant with prof. Soderi [MSc] Ethical Hacking - teaching assistant with prof. Losiouk [HS] Industrial Cyber Security Specialist, Teacher for ITS Meccatronico Veneto  </description>
+    </item>
+    
+    <item>
       <title>How to create free static website with Hugo and Github Pages</title>
       <link>/posts/github_pages/</link>
       <pubDate>Fri, 02 Apr 2021 08:47:11 +0100</pubDate>
