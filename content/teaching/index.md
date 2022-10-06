@@ -11,3 +11,8 @@ As a PhD student, I had the chance to be a teaching assistant of professors from
 - \[MSc\] [Security and Risk: Management and Certifications](https://www.didattica.unipd.it/off/2020/LM/SC/SC2542/000ZZ/SCQ0089517/N0) - teaching assistant with [prof. Soderi](https://www.soderi.it/index.html)
 - \[MSc\] [Ethical Hacking](https://spritz.math.unipd.it/events/2022/Ethical_Hacking/index.html) - teaching assistant with [prof. Losiouk](https://www.math.unipd.it/~elosiouk/)
 - \[HS\] [Industrial Cyber Security Specialist](https://www.itsmeccatronico.it/industrial-cyber-security-specialist/), Teacher for [ITS Meccatronico Veneto](https://www.itsmeccatronico.it/passione-cyber-security/)
+
+## A.A. 2022/2023
+- \[MSc\] [CyberSecurity and Cryptography: Principles and Practices](https://www.math.unipd.it/~conti/teaching/CCPP2223/index.html) - teaching assistant with [prof. Conti](https://www.math.unipd.it/~conti/index.html)
+- \[MSc\] [Ethical Hacking](https://spritz.math.unipd.it/events/2023/Ethical_Hacking/index.html) - teaching assistant with [prof. Losiouk](https://www.math.unipd.it/~elosiouk/) and [prof. Brighente](https://www.math.unipd.it/~abrighen/)
+- \[HS\] [Industrial Cyber Security Specialist](https://www.itsmeccatronico.it/industrial-cyber-security-specialist/), Teacher for [ITS Meccatronico Veneto](https://www.itsmeccatronico.it/passione-cyber-security/)
