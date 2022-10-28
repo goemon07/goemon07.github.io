@@ -88,6 +88,7 @@ Since you'll have to work on a copy of those files, I suggest you to copy all th
 # change dir to your main one, in this case .. to move one step backwards from themes folder
 > cd ..
 > cp -r themes/<your-theme-folder-here>/exampleSite/* .
+> cp -r themes/<your-theme-folder-here>/layouts/* .
 ```
 
 Once you have all the files, you should be able to show up the live of your website locally:
@@ -145,7 +146,7 @@ In order to generate the ssh key, place your terminal in the `~/.ssh` folder and
 ```
 This will generate a pair of new public/private `gh-pages` key files.
 
-Now we need share our public key with GitHub so that it will recognize us. 
+Now we need share our public key with GitHub so that it will recognize us.
 
 Head to your repository settings and click on **Deploy Key** section to add a new one. Then copy it into your clipboard using:
 
