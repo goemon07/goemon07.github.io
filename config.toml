@@ -86,9 +86,9 @@ weight = 6
     name = "github"
     link = "https://github.com/goemon07"
 
-  [[params.social]]
-    name = "telegram"
-    link = "https://t.me/goemon07"
+#  [[params.social]]
+#    name = "telegram"
+#    link = "https://t.me/goemon07"
 
   [[params.social]]
     name = "twitter"
@@ -97,3 +97,7 @@ weight = 6
   [[params.social]]
     name = "linkedin"
     link = "https://www.linkedin.com/in/gabriele-orazi/"
+
+[[params.office]]
+    department = "Department of Mathematics “Tullio Levi-Civita”"
+    office = "7D3 (ex 731)"

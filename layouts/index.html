@@ -34,6 +34,13 @@
       {{ end }}
       </p>
   {{ end }}
+  {{ if isset .Site.Params "office" }}
+    <p>In person @
+      {{ range $elem := .Site.Params.office }}
+      {{ $elem.department }}, office {{ $elem.office }}
+      {{ end }}
+    .</p>
+  {{ end}}
   </section>
 
   <section id="writing">
