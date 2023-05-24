@@ -15,3 +15,5 @@ My research areas are malware detection, Machine Learning applied to Cyber Secur
 - User continuous and automatic authentication and de-authentication.
 - @ Pervasive and Mobile Computing Journal 2023
 - M. Cardaioli, M. Conti, G. Orazi, P. P. Tricomi, G. Tsudik
+
+
