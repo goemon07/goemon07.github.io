@@ -37,13 +37,11 @@
   {{ if isset .Site.Params "office" }}
     <p>In person @
       {{ range $elem := .Site.Params.office }}
-      {{ $elem.department }}, office {{ $elem.office }}
+      {{ $elem.department }}, office {{ $elem.office }}.
       {{ end }}
-    .</p>
-    {{ end }}
-    <p>Currently in visiting @ University of California, Irvine (UCI).
     </p>
-  {{ end}}
+  {{ end }}
+  <p>Currently in visiting @ University of California, Irvine (UCI).</p>
   </section>
 
   <section id="writing">
