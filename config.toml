@@ -26,7 +26,7 @@ url = "/publications"
 weight = 3
 
 [[menu.main]]
-name = "Writings"
+name = "Posts"
 url = "/posts"
 weight = 4
 

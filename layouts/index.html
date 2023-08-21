@@ -44,8 +44,8 @@
   <p>Currently in visiting @ University of California, Irvine (UCI).</p>
   </section>
 
-  <section id="writing">
-    <span class="h1"><a href="{{ .Site.Params.mainSection | absURL }}">Writings</a></span>
+  <section id="posts">
+    <span class="h1"><a href="{{ .Site.Params.mainSection | absURL }}">Posts</a></span>
     {{ if (and (and (isset .Site.Params "tagsoverview") (eq .Site.Params.tagsOverview true)) (gt (len .Site.Taxonomies.tags) 0)) }}
     <span class="h2">Topics</span>
     <span class="widget tagcloud">

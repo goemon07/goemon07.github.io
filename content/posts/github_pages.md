@@ -1,7 +1,7 @@
 ---
 title: "How to create free static website with Hugo and Github Pages"
 date: 2021-04-02T08:47:11+01:00
-draft: true
+draft: false
 # categories: guides
 # tags:
 #     - github
