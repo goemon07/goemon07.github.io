@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Gabriele Orazi</copyright>
-    <lastBuildDate>Fri, 02 Apr 2021 08:47:11 +0100</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Aug 2023 21:53:11 +0100</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Thoughts after my first DEF CON</title>
+      <link>/posts/defcon/</link>
+      <pubDate>Fri, 18 Aug 2023 21:53:11 +0100</pubDate>
+      
+      <guid>/posts/defcon/</guid>
+      <description>My first @DEFCON 31 is just gone. I heavily wondered about how it would have been and, honestly, it just crashed my expectations. I came home with a thousand ideas and a great desire to get to work to improve. Basically, I&amp;rsquo;m now fully charged for the upcoming academic year!
+Here some of my newbie&amp;rsquo;s random thoughts/tips: 👇
+Stickers, stickers everywhere! I was planning to leave my laptop free from stickers, but now it will be so hard to stick (lol) to the plan.</description>
+    </item>
+    
     <item>
       <title>How to create free static website with Hugo and Github Pages</title>
       <link>/posts/github_pages/</link>
