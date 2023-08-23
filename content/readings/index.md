@@ -38,6 +38,8 @@ If you want to suggest me new readings, **I'm more than happy to listen to you.*
 - Into Thin Air - Jon Krakauer
 \[[EN](https://www.amazon.it/Into-thin-air-Jon-Krakauer/dp/1447200187)\]
 \[[IT](https://www.amazon.it/Aria-sottile-Jon-Krakauer/dp/8879722689)\]
+- La montagna dentro - Hervé Barmasse
+\[[IT](https://www.amazon.it/montagna-dentro-Herv%C3%A9-Barmasse/dp/8858130111/)\]
 - A passo d'uomo. Giro del mondo a piedi - Mattia Miraglio
 \[[IT](https://www.amazon.it/passo-duomo-Giro-mondo-piedi/dp/8873203884)\]
 
