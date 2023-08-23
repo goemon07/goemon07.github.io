@@ -1,6 +1,11 @@
 {
   "list": [
     {
+      "name":"stri@ck",
+      "url":"https://striack.github.io/",
+      "desc":"Active member of stri@ck, a young hackspace in Padova."
+    },
+    {
       "name":"LoSpeziale",
       "url":"https://lospeziale.github.io/",
       "desc":"Website for LoSpeziale, small business in the center of Italy producing chilli pepper derivatives."
