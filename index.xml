@@ -20,16 +20,6 @@ Stickers, stickers everywhere! I was planning to leave my laptop free from stick
     </item>
     
     <item>
-      <title>My publications</title>
-      <link>/publications/</link>
-      <pubDate>Thu, 10 Jun 2021 17:51:42 +0000</pubDate>
-      
-      <guid>/publications/</guid>
-      <description>My publications My research areas are malware detection, Machine Learning applied to Cyber Security (Adversarial attacks), and image processing-based attacks.
-Invoice #31415 attached: Automated analysis of malicious Microsoft Office documents Malware detection on Microsoft Office documents. @ Computers &amp;amp; Security 2021 V.Koutsokostas, N. Lykousas, T. Apostolopoulos, G. Orazi, A. Ghosal, F. Casino, M. Conti, C. Patsakis BLUFADER: Blurred face detection &amp;amp; recognition for privacy-friendly continuous authentication User continuous and automatic authentication and de-authentication.</description>
-    </item>
-    
-    <item>
       <title>My readings</title>
       <link>/readings/</link>
       <pubDate>Thu, 10 Jun 2021 17:51:42 +0000</pubDate>
@@ -38,6 +28,16 @@ Invoice #31415 attached: Automated analysis of malicious Microsoft Office docume
       <description>My readings Here I would like to share some of the books that I read and that I can definitively recommend.
 Whenever is possible, you will find both the Italian and English versions. If you want to suggest me new readings, I&amp;rsquo;m more than happy to listen to you. Please, drop me a message!
 Self-improvement The Subtle Art of Not Giving A F*ck - Mark Manson [EN] [IT] Scrum: The Art of Doing Twice the Work in Half the Time - Jeff Sutherland [EN] [IT] Getting Things Done: The Art of Stress-free Productivity - David Allen [EN] Meglio essere felici - Zygmunt Bauman [IT] InfoSec Permanent Record - Edward Snowden [EN] [IT] Fiction Zen and the Art of Motorcycle Maintenance - Robert M.</description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>/publications/</link>
+      <pubDate>Thu, 10 Jun 2021 17:51:42 +0000</pubDate>
+      
+      <guid>/publications/</guid>
+      <description>Publications My research areas are focused on privacy and private data leaks. I&amp;rsquo;m primarely working on obfuscation techniques, forensics and malware detection.
+Invoice #31415 attached: Automated analysis of malicious Microsoft Office documents Malware detection on Microsoft Office documents. @ Computers &amp;amp; Security 2021 V.Koutsokostas, N. Lykousas, T. Apostolopoulos, G. Orazi, A. Ghosal, F. Casino, M. Conti, C. Patsakis BLUFADER: Blurred face detection &amp;amp; recognition for privacy-friendly continuous authentication User continuous and automatic authentication and de-authentication.</description>
     </item>
     
     <item>
