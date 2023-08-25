@@ -16,8 +16,8 @@ url = "/"
 weight = 1
 
 [[menu.main]]
-name = "Teaching"
-url = "/teaching"
+name = "Short Bio"
+url = "/shortbio"
 weight = 2
 
 [[menu.main]]
@@ -26,19 +26,24 @@ url = "/publications"
 weight = 3
 
 [[menu.main]]
-name = "Posts"
-url = "/posts"
+name = "Teaching"
+url = "/teaching"
 weight = 4
 
 [[menu.main]]
-name = "Readings"
-url = "/readings"
+name = "Posts"
+url = "/posts"
 weight = 5
+
+[[menu.main]]
+name = "Suggestions"
+url = "/suggestions"
+weight = 6
 
 [[menu.main]]
 name = "About"
 url = "/about"
-weight = 6
+weight = 7
 
 [markup]
   [markup.tableOfContents]
@@ -54,7 +59,7 @@ weight = 6
   googleAnalyticsAsync = false # use asynchronous tracking. Synchronous tracking by default
 
   # Home page settings
-  description = "I received my double Master's Degree in Computer Science from the [University of Trento](https://offertaformativa.unitn.it/en/lm/computer-science/cyber-security) and the [University of Turku](https://www.utu.fi/en/study-at-utu/masters-degree-programme-in-information-and-communication-technology-cyber-security), with Cyber Security curriculum in 2020. After two short work experiences as DevSecOps, I joined the University of Padua as a research fellow in the [SPRITZ Security and Privacy Research Group](https://spritz.math.unipd.it/), under the supervision of [Prof. Mauro Conti](https://www.math.unipd.it/~conti/index.html). I am currently a Ph.D. Student in [Brain, Mind and Computer Science (BMCS)](http://hit.psy.unipd.it/BMCS), studying malware detection and privacy preserving methods applied to digital documents. I am also working with [FDM Business Services](https://fdmservices.it/), which is the company that supports my high apprenticeship program and where I try to convey my research interests. I am a GNU/Linux enthusiast, and in my spare time, I enjoy playing CTFs. If I'm away from the keyboard, you can find me rock climbing or trail running in the mountains."
+  description = "Cybersecurity Ph.D. Student in SPRITZ Group (UniPd). Strongly unprofessional climber, gravel cyclist and trail runner."
   mainSection = "posts" # your main section
   showAllPostsOnHomePage = false # default
   postsOnHomePage = 5 # this option will be ignored if showAllPostsOnHomePage is set to true
