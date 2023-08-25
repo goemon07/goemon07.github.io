@@ -37,15 +37,26 @@
   {{ if isset .Site.Params "office" }}
     <p>In person @
       {{ range $elem := .Site.Params.office }}
-      {{ $elem.department }}, office {{ $elem.office }}.
+      <a href="{{ $elem.link }}">{{ $elem.department }}</a>, office {{ $elem.office }}.
       {{ end }}
     </p>
   {{ end }}
   <p>Currently in visiting @ University of California, Irvine (UCI).</p>
   </section>
 
+  <section id="heavyrotation">
+    <span class="h1">🎧 Heavy rotation album</span>
+    <ul class="project-list">
+        {{ range .Site.Data.heavyrotation.list }}
+        <li class="project-item">
+          {{ .artist }} - <a href="{{ .url }}">{{ .album }}</a>
+        </li>
+        {{ end }}
+    </ul>
+  </section>
+
   <section id="posts">
-    <span class="h1"><a href="{{ .Site.Params.mainSection | absURL }}">Posts</a></span>
+    <span class="h1"><a href="{{ .Site.Params.mainSection | absURL }}">📝 Posts</a></span>
     {{ if (and (and (isset .Site.Params "tagsoverview") (eq .Site.Params.tagsOverview true)) (gt (len .Site.Taxonomies.tags) 0)) }}
     <span class="h2">Topics</span>
     <span class="widget tagcloud">
@@ -105,7 +116,7 @@
       {{ $projectsUrl = .Site.Params.projectsUrl }}
     {{ end }}
   <section id="projects">
-    <span class="h1"><a href="{{ $projectsUrl }}">Projects</a></span>
+    <span class="h1"><a href="{{ $projectsUrl }}">🛠 Projects</a></span>
     <ul class="project-list">
         {{ range .Site.Data.projects.list }}
         <li class="project-item">

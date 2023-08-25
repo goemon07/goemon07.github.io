@@ -10,10 +10,10 @@ disqusShortname = "goemon" # Used when comments is enabled. Cactus will use site
 # summaryLength = 2
 
 # Main menu which appears below site header.
-[[menu.main]]
-name = "Home"
-url = "/"
-weight = 1
+#[[menu.main]]
+#name = "Home"
+#url = "/"
+#weight = 1
 
 [[menu.main]]
 name = "Short Bio"
@@ -106,3 +106,4 @@ weight = 7
 [[params.office]]
     department = "Department of Mathematics “Tullio Levi-Civita”"
     office = "7D3 (ex 731)"
+    link = "https://www.google.it/maps/search/dipartimento+matematica+padova/@45.4083047,11.8743574,16z"
