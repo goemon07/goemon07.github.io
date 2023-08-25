@@ -3,7 +3,7 @@ title: Suggestions
 date: 2021-06-10 17:51:42
 ---
 
-# Books
+# 📚 Books
 Some of the books that I read and that I can definitively recommend.
 
 - The Subtle Art of Not Giving A F*ck - Mark Manson 
@@ -30,7 +30,7 @@ Some of the books that I read and that I can definitively recommend.
 \[[IT](https://www.amazon.it/montagna-dentro-Herv%C3%A9-Barmasse/dp/8858130111/)\]
 
 
-# Music
+# 🎧 Music
 **Picky** selection of albums that stack in my headphones in heavy rotation.
 No masterpieces (given for granted), just one album per band.
 - Psychedelic Porn Crumpets - [High Visceral, Pt. 1](https://open.spotify.com/album/2BlcdDBE62JOtVOgC3L3xo?si=QEo7u74zQ96qnrfW8KYTVw)
@@ -49,8 +49,9 @@ No masterpieces (given for granted), just one album per band.
 - Sufjan Stevens - [Carrie & Lowell](https://open.spotify.com/album/0U8DeqqKDgIhIiWOdqiQXE?si=ovVBoTunTbyiP6BUXbtDyg)
 - Verdena - [Wow](https://open.spotify.com/album/6kEHqRYAB608ag9q5SLUOl?si=o_bdtrnaTaaw5Gg6K1X4pw)
 
-# Podcasts
+# 🗣 Podcasts
 Non exaustive list, news shows excluded.
+
 In English:
 - [Darknet Diaries](https://open.spotify.com/show/4XPl3uEEL9hvqMkoZrzbx5?si=6a3f19b6ac604f78)
 - [CYBER](https://open.spotify.com/show/3smcGJaAF6F7sioqFDQjzn?si=5ee329942aea4513)
