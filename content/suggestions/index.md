@@ -35,6 +35,8 @@ Some of the books that I read and that I can definitively recommend.
 No masterpieces (given for granted), just one album per band.
 - Psychedelic Porn Crumpets - [High Visceral, Pt. 1](https://open.spotify.com/album/2BlcdDBE62JOtVOgC3L3xo?si=QEo7u74zQ96qnrfW8KYTVw)
 - IDLES - [Brutalism](https://open.spotify.com/album/5qag6esZLv5ySuCpzh7CE6?si=cLXqOPG8Q52iVPtzrKgAlw)
+- shame - [Food for Worms](https://open.spotify.com/album/6A3JJrCJO2TXZ9Vfy3tIbW?si=PDzRta6yREGMgxyiYdMepA)
+- Blake Mills - [Blake Mills](https://open.spotify.com/album/5DGnrJSx7nuDC8WrD2EOyu?si=msWIRiwST3a3RHv1oQ9mpw)
 - Atoms For Peace - [AMOK](https://open.spotify.com/album/77Ie9frENeQwYUGHrrS0pk?si=HSUOTX01QHq4gpI0-vrBmQ)
 - Animatronic - [REC](https://open.spotify.com/album/1WxdbtBtQpZMPMvoNegvi6?si=FAUhUIj5QtmJgLovzk94vg)
 - Iosonouncane - [IRA](https://open.spotify.com/album/4WhBN2WPPxAU5M5Tpw56PL?si=GZ-Diq_XRoWSrMGxxsiSyw)
