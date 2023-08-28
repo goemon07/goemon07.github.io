@@ -58,6 +58,7 @@ In English:
 - [Darknet Diaries](https://open.spotify.com/show/4XPl3uEEL9hvqMkoZrzbx5?si=6a3f19b6ac604f78)
 - [CYBER](https://open.spotify.com/show/3smcGJaAF6F7sioqFDQjzn?si=5ee329942aea4513)
 - [The Hacker Mind](https://open.spotify.com/show/6zkacjxPFG0qbcMWzDHvfH?si=e8e1bad877db4e8e)
+- [Critical Thinking](https://open.spotify.com/show/4GiJnv8f4a4ZR6Jc6TQJ3k)
 
 In Italian:
 - [RunningSofia](https://open.spotify.com/show/5rIJ6pt5R7oAjJ2eD2qBhB?si=116d207af2da456a)
