@@ -16,7 +16,7 @@ As a PhD student, I had the chance to be a teaching assistant of professors from
 - \[MSc\] [CyberSecurity and Cryptography: Principles and Practices](https://www.math.unipd.it/~conti/teaching/CCPP2223/index.html) - teaching assistant with [prof. Conti](https://www.math.unipd.it/~conti/index.html)
 - \[MSc\] [Security and Risk: Management and Certifications](https://www.didattica.unipd.it/off/2022/LM/SC/SC2542/000ZZ/SCQ0089517/N0) - teaching assistant with [prof. Soderi](https://www.soderi.it/index.html)
 - \[MSc\] [Ethical Hacking](https://didattica.unipd.it/off/2021/LM/SC/SC2542/000ZZ/SCQ0089518/N0) - teaching assistant with [prof. Losiouk](https://www.math.unipd.it/~elosiouk/) and [prof. Brighente](https://www.math.unipd.it/~abrighen/)
-- \[HS\] [Industrial Cyber Security Specialist](https://www.itsmeccatronico.it/industrial-cyber-security-specialist/), Teacher for [ITS Meccatronico Veneto](https://www.itsmeccatronico.it/passione-cyber-security/)
+- \[HS\] [Industrial Cyber Security Specialist](https://www.itsmeccatronico.it/), Teacher for [ITS Meccatronico Veneto](https://www.itsmeccatronico.it/passione-cyber-security/)
 
 # Talks
 - *"Digital documents pitfalls: Security and Privacy"* - November 3rd 2022, UniPd course Advanced Topics in Computer and Network Security
