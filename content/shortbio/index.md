@@ -19,5 +19,5 @@ Gabriele Orazi ha conseguito la doppia laurea magistrale in Informatica presso l
 - Second master's year spent in Finland ([University on Turku](https://www.utu.fi/en)).
 
 ## [NGI Enrichers Fellowship](https://enrichers.ngi.eu/fellow/gabriele-orazi/)
-- Winner of a scholarship program which supports European researchers and innovators to spend 3-6 months in the US.
+- Winner of a scholarship program which supports collaboration between European and US researchers and innovators.
 - Spending 6 months (July - December 2023) in [University of California, Irvine (UCI)](https://uci.edu/).
