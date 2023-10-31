@@ -1,524 +1,100 @@
-<!DOCTYPE html>
-<html lang="en-us">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> How to create free static website with Hugo and Github Pages | Gabriele Orazi</title>
-  <meta name="description" content="Cybersecurity Ph.D. Student in SPRITZ Group (UniPd). Strongly unprofessional climber, gravel cyclist and trail runner.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="all,follow">
-  <meta name="googlebot" content="index,follow,snippet,archive">
-  <meta property="og:title" content="How to create free static website with Hugo and Github Pages" />
-<meta property="og:description" content="So you&rsquo;re struggling to create your own website? Are you looking for some cheap and clean solution too? Free?
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><title>How to create free static website with Hugo and Github Pages | Gabriele Orazi</title><meta name=description content="Cybersecurity Ph.D. Student in SPRITZ Group (UniPd). Strongly unprofessional climber, gravel cyclist and trail runner."><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="all,follow"><meta name=googlebot content="index,follow,snippet,archive"><meta property="og:title" content="How to create free static website with Hugo and Github Pages"><meta property="og:description" content="So you&rsquo;re struggling to create your own website? Are you looking for some cheap and clean solution too? Free?
 Ok, probably you&rsquo;re a bit too ambitious.
 OR NOT.
 I was in your situation too and now you&rsquo;re visiting this website, which is built on top of the same advices you&rsquo;re going to follow (hopefully!).
-If you unfortunately fall into this website, probably you&rsquo;re familiar with the git versioning system. Probably you know about Github as well." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/github_pages/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-04-02T08:47:11+01:00" />
-<meta property="article:modified_time" content="2021-04-02T08:47:11+01:00" />
-
-  <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="How to create free static website with Hugo and Github Pages"/>
-<meta name="twitter:description" content="So you&rsquo;re struggling to create your own website? Are you looking for some cheap and clean solution too? Free?
+If you unfortunately fall into this website, probably you&rsquo;re familiar with the git versioning system. Probably you know about Github as well."><meta property="og:type" content="article"><meta property="og:url" content="/posts/github_pages/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2021-04-02T08:47:11+01:00"><meta property="article:modified_time" content="2021-04-02T08:47:11+01:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="How to create free static website with Hugo and Github Pages"><meta name=twitter:description content="So you&rsquo;re struggling to create your own website? Are you looking for some cheap and clean solution too? Free?
 Ok, probably you&rsquo;re a bit too ambitious.
 OR NOT.
 I was in your situation too and now you&rsquo;re visiting this website, which is built on top of the same advices you&rsquo;re going to follow (hopefully!).
-If you unfortunately fall into this website, probably you&rsquo;re familiar with the git versioning system. Probably you know about Github as well."/>
-
-  
-  
-    
-  
-  
-  <link rel="stylesheet" href="/css/style-dark.css">
-  
-   <link rel="stylesheet" href="/css/custom.css"> 
-  
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  
-
-  
-<link rel="icon" type="image/png" href="/images/favicon.ico" />
-
-  
-  
-</head>
-
-<body class="max-width mx-auto px3 ltr">
-  <div class="content index py4">
-
-  <div id="header-post">
-  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-         
-        <li><a href="/shortbio">Short Bio</a></li>
-         
-        <li><a href="/publications">Publications</a></li>
-         
-        <li><a href="/teaching">Teaching</a></li>
-         
-        <li><a href="/posts">Posts</a></li>
-         
-        <li><a href="/suggestions">Suggestions</a></li>
-         
-        <li><a href="/about">About</a></li>
-        
-      </ul>
-    </span>
-    <br/>
-    <span id="actions">
-      <ul>
-        
-        <li>
-          <a class="icon" href=" /about/">
-            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
-          </a>
-        </li>
-        
-        
-        <li>
-          <a class="icon" href="/teaching/">
-            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
-          </a>
-        </li>
-        
-        <li>
-          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
-            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
-          </a>
-        </li>
-        <li>
-          <a class="icon" href="#">
-            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
-          </a>
-        </li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none;">Previous post</span>
-      <span id="i-next" class="info" style="display:none;">Next post</span>
-      <span id="i-top" class="info" style="display:none;">Back to top</span>
-      <span id="i-share" class="info" style="display:none;">Share post</span>
-    </span>
-    <br/>
-    <div id="share" style="display: none">
-      
-      <ul>
-  
-  
-    
-  
-  
-  <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=%2fposts%2fgithub_pages%2f">
-      <i class="fab fa-facebook " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://twitter.com/share?url=%2fposts%2fgithub_pages%2f&text=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages">
-      <i class="fab fa-twitter " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=%2fposts%2fgithub_pages%2f&title=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages">
-      <i class="fab fa-linkedin " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=%2fposts%2fgithub_pages%2f&is_video=false&description=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages">
-      <i class="fab fa-pinterest " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="mailto:?subject=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages&body=Check out this article: %2fposts%2fgithub_pages%2f">
-      <i class="fas fa-envelope " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://getpocket.com/save?url=%2fposts%2fgithub_pages%2f&title=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages">
-      <i class="fab fa-get-pocket " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://reddit.com/submit?url=%2fposts%2fgithub_pages%2f&title=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages">
-      <i class="fab fa-reddit " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=%2fposts%2fgithub_pages%2f&name=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages&description=So%20you%26rsquo%3bre%20struggling%20to%20create%20your%20own%20website%3f%20Are%20you%20looking%20for%20some%20cheap%20and%20clean%20solution%20too%3f%20Free%3f%0aOk%2c%20probably%20you%26rsquo%3bre%20a%20bit%20too%20ambitious.%0aOR%20NOT.%0aI%20was%20in%20your%20situation%20too%20and%20now%20you%26rsquo%3bre%20visiting%20this%20website%2c%20which%20is%20built%20on%20top%20of%20the%20same%20advices%20you%26rsquo%3bre%20going%20to%20follow%20%28hopefully%21%29.%0aIf%20you%20unfortunately%20fall%20into%20this%20website%2c%20probably%20you%26rsquo%3bre%20familiar%20with%20the%20git%20versioning%20system.%20Probably%20you%20know%20about%20Github%20as%20well.">
-      <i class="fab fa-tumblr " aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=%2fposts%2fgithub_pages%2f&t=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages">
-      <i class="fab fa-hacker-news " aria-hidden="true"></i>
-    </a>
-  </li>
-</ul>
-
-    </div>
-    <div id="toc">
-      <nav id="TableOfContents">
-  <ul>
-    <li><a href="#step-1-init-the-repo-on-github">Step 1: init the repo on Github</a></li>
-    <li><a href="#step-2-pick-a-theme">Step 2: pick a theme</a></li>
-    <li><a href="#step-3-install-hugo">Step 3: Install Hugo</a></li>
-    <li><a href="#step-4-local-cloning-the-repo">Step 4: local cloning the repo</a></li>
-    <li><a href="#step-5-automatically-build-and-deploy">Step 5: Automatically build and deploy</a>
-      <ul>
-        <li><a href="#step--51-exclude-public-folder-from-main-branch">Step  5.1: Exclude <code>public</code> folder from main branch</a></li>
-        <li><a href="#step-52-setup-new-deploy-key">Step 5.2: Setup new Deploy key</a></li>
-        <li><a href="#step-53-setup-github-action">Step 5.3: Setup GitHub Action</a></li>
-        <li><a href="#step-54-setup-github-pages">Step 5.4: Setup GitHub Pages</a></li>
-      </ul>
-    </li>
-    <li><a href="#step-6-finally-git-push">Step 6: Finally, <code>git push</code>!</a></li>
-    <li><a href="#conclusions">Conclusions</a></li>
-  </ul>
-</nav>
-    </div>
-  </span>
-</div>
-
-
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <header>
-      <h1 class="posttitle" itemprop="name headline">
-        How to create free static website with Hugo and Github Pages
-      </h1>
-      <div class="meta">
-        
-        <div class="postdate">
-          
-          <time datetime="2021-04-02 08:47:11 &#43;0100 &#43;0100" itemprop="datePublished">2021-04-02</time>
-          
-        </div>
-        
-        
-      </div>
-    </header>
-
-  
-    <div class="content" itemprop="articleBody">
-      <p>So you&rsquo;re struggling to create your <strong>own website</strong>?
-Are you looking for some <strong>cheap and clean</strong> solution too? <strong>Free</strong>?</p>
-<p>Ok, probably you&rsquo;re a bit too ambitious.</p>
-<p><strong>OR NOT</strong>.</p>
-<p>I was in your situation too and now you&rsquo;re visiting this website, which is built on top of the same advices you&rsquo;re going to follow (hopefully!).</p>
-<p>If you unfortunately fall into this website, probably you&rsquo;re familiar with the <strong>git</strong> versioning system.
-Probably you know about <a href="https://github.com">Github</a> as well.</p>
-<p>Less likely, you know that GitHub can host a website for you.
-That&rsquo;s the purpose of <a href="https://pages.github.com/">GitHub Pages</a>!</p>
-<p>Few steps here are described to build up your infrastructure and give in your hands something to work on.</p>
-<p>I promise, <strong>you&rsquo;ll enjoy</strong>.</p>
-<h2 id="step-1-init-the-repo-on-github">Step 1: init the repo on Github</h2>
-<p>In order to embrace the opportunity that GitHub is giving us for free, you neet to init a repository on thier systems. Well, that sounds kinda obvious.
+If you unfortunately fall into this website, probably you&rsquo;re familiar with the git versioning system. Probably you know about Github as well."><link rel=stylesheet href=/css/style-dark.css><link rel=stylesheet href=/css/custom.css><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script>
+<script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]--><link rel=icon type=image/png href=/images/favicon.ico></head><body class="max-width mx-auto px3 ltr"><div class="content index py4"><div id=header-post><a id=menu-icon href=#><i class="fas fa-bars fa-lg"></i></a>
+<a id=menu-icon-tablet href=#><i class="fas fa-bars fa-lg"></i></a>
+<a id=top-icon-tablet href=# onclick='$("html, body").animate({scrollTop:0},"fast")' style=display:none><i class="fas fa-chevron-up fa-lg"></i></a>
+<span id=menu><span id=nav><ul><li><a href=/shortbio>Short Bio</a></li><li><a href=/publications>Publications</a></li><li><a href=/teaching>Teaching</a></li><li><a href=/posts>Posts</a></li><li><a href=/suggestions>Suggestions</a></li><li><a href=/about>About</a></li></ul></span><br><span id=actions><ul><li><a class=icon href=/about/><i class="fas fa-chevron-left" aria-hidden=true onmouseover='$("#i-prev").toggle()' onmouseout='$("#i-prev").toggle()'></i></a></li><li><a class=icon href=/teaching/><i class="fas fa-chevron-right" aria-hidden=true onmouseover='$("#i-next").toggle()' onmouseout='$("#i-next").toggle()'></i></a></li><li><a class=icon href=# onclick='$("html, body").animate({scrollTop:0},"fast")'><i class="fas fa-chevron-up" aria-hidden=true onmouseover='$("#i-top").toggle()' onmouseout='$("#i-top").toggle()'></i></a></li><li><a class=icon href=#><i class="fas fa-share-alt" aria-hidden=true onmouseover='$("#i-share").toggle()' onmouseout='$("#i-share").toggle()' onclick='return $("#share").toggle(),!1'></i></a></li></ul><span id=i-prev class=info style=display:none>Previous post</span>
+<span id=i-next class=info style=display:none>Next post</span>
+<span id=i-top class=info style=display:none>Back to top</span>
+<span id=i-share class=info style=display:none>Share post</span></span><br><div id=share style=display:none><ul><li><a class=icon href="http://www.facebook.com/sharer.php?u=%2fposts%2fgithub_pages%2f"><i class="fab fa-facebook" aria-hidden=true></i></a></li><li><a class=icon href="https://twitter.com/share?url=%2fposts%2fgithub_pages%2f&text=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages"><i class="fab fa-twitter" aria-hidden=true></i></a></li><li><a class=icon href="http://www.linkedin.com/shareArticle?url=%2fposts%2fgithub_pages%2f&title=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages"><i class="fab fa-linkedin" aria-hidden=true></i></a></li><li><a class=icon href="https://pinterest.com/pin/create/bookmarklet/?url=%2fposts%2fgithub_pages%2f&is_video=false&description=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages"><i class="fab fa-pinterest" aria-hidden=true></i></a></li><li><a class=icon href="mailto:?subject=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages&body=Check out this article: %2fposts%2fgithub_pages%2f"><i class="fas fa-envelope" aria-hidden=true></i></a></li><li><a class=icon href="https://getpocket.com/save?url=%2fposts%2fgithub_pages%2f&title=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages"><i class="fab fa-get-pocket" aria-hidden=true></i></a></li><li><a class=icon href="http://reddit.com/submit?url=%2fposts%2fgithub_pages%2f&title=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages"><i class="fab fa-reddit" aria-hidden=true></i></a></li><li><a class=icon href="http://www.tumblr.com/share/link?url=%2fposts%2fgithub_pages%2f&name=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages&description=So%20you%26rsquo%3bre%20struggling%20to%20create%20your%20own%20website%3f%20Are%20you%20looking%20for%20some%20cheap%20and%20clean%20solution%20too%3f%20Free%3f%0aOk%2c%20probably%20you%26rsquo%3bre%20a%20bit%20too%20ambitious.%0aOR%20NOT.%0aI%20was%20in%20your%20situation%20too%20and%20now%20you%26rsquo%3bre%20visiting%20this%20website%2c%20which%20is%20built%20on%20top%20of%20the%20same%20advices%20you%26rsquo%3bre%20going%20to%20follow%20%28hopefully%21%29.%0aIf%20you%20unfortunately%20fall%20into%20this%20website%2c%20probably%20you%26rsquo%3bre%20familiar%20with%20the%20git%20versioning%20system.%20Probably%20you%20know%20about%20Github%20as%20well."><i class="fab fa-tumblr" aria-hidden=true></i></a></li><li><a class=icon href="https://news.ycombinator.com/submitlink?u=%2fposts%2fgithub_pages%2f&t=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages"><i class="fab fa-hacker-news" aria-hidden=true></i></a></li></ul></div><div id=toc><nav id=TableOfContents><ul><li><a href=#step-1-init-the-repo-on-github>Step 1: init the repo on Github</a></li><li><a href=#step-2-pick-a-theme>Step 2: pick a theme</a></li><li><a href=#step-3-install-hugo>Step 3: Install Hugo</a></li><li><a href=#step-4-local-cloning-the-repo>Step 4: local cloning the repo</a></li><li><a href=#step-5-automatically-build-and-deploy>Step 5: Automatically build and deploy</a><ul><li><a href=#step--51-exclude-public-folder-from-main-branch>Step 5.1: Exclude <code>public</code> folder from main branch</a></li><li><a href=#step-52-setup-new-deploy-key>Step 5.2: Setup new Deploy key</a></li><li><a href=#step-53-setup-github-action>Step 5.3: Setup GitHub Action</a></li><li><a href=#step-54-setup-github-pages>Step 5.4: Setup GitHub Pages</a></li></ul></li><li><a href=#step-6-finally-git-push>Step 6: Finally, <code>git push</code>!</a></li><li><a href=#conclusions>Conclusions</a></li></ul></nav></div></span></div><article class=post itemscope itemtype=http://schema.org/BlogPosting><header><h1 class=posttitle itemprop="name headline">How to create free static website with Hugo and Github Pages</h1><div class=meta><div class=postdate><time datetime="2021-04-02 08:47:11 +0100 +0100" itemprop=datePublished>2021-04-02</time></div></div></header><div class=content itemprop=articleBody><p>So you&rsquo;re struggling to create your <strong>own website</strong>?
+Are you looking for some <strong>cheap and clean</strong> solution too? <strong>Free</strong>?</p><p>Ok, probably you&rsquo;re a bit too ambitious.</p><p><strong>OR NOT</strong>.</p><p>I was in your situation too and now you&rsquo;re visiting this website, which is built on top of the same advices you&rsquo;re going to follow (hopefully!).</p><p>If you unfortunately fall into this website, probably you&rsquo;re familiar with the <strong>git</strong> versioning system.
+Probably you know about <a href=https://github.com>Github</a> as well.</p><p>Less likely, you know that GitHub can host a website for you.
+That&rsquo;s the purpose of <a href=https://pages.github.com/>GitHub Pages</a>!</p><p>Few steps here are described to build up your infrastructure and give in your hands something to work on.</p><p>I promise, <strong>you&rsquo;ll enjoy</strong>.</p><h2 id=step-1-init-the-repo-on-github>Step 1: init the repo on Github</h2><p>In order to embrace the opportunity that GitHub is giving us for free, you neet to init a repository on thier systems. Well, that sounds kinda obvious.
 Nevertheless, it&rsquo;s not that evident that the name of your repository cannot be a random one.
-In fact, you have to name it as follows: <code>&lt;your-GitHub-username&gt;.github.io</code>.</p>
-<p>For example, my username is <code>goemon07</code>, therefore my linked repository is called <code>goemon07.github.io</code>.
-Yes, you may have noticed that this is the base URL of your web space as well.</p>
-<p><strong>BINGO!</strong> You&rsquo;re right!</p>
-<p>What are you waiting for? Just go and create it!</p>
-<h2 id="step-2-pick-a-theme">Step 2: pick a theme</h2>
-<p>That&rsquo;s a funny part.
-Head to <a href="https://themes.gohugo.io/">Hugo Themes page</a> and make your choice!
+In fact, you have to name it as follows: <code>&lt;your-GitHub-username>.github.io</code>.</p><p>For example, my username is <code>goemon07</code>, therefore my linked repository is called <code>goemon07.github.io</code>.
+Yes, you may have noticed that this is the base URL of your web space as well.</p><p><strong>BINGO!</strong> You&rsquo;re right!</p><p>What are you waiting for? Just go and create it!</p><h2 id=step-2-pick-a-theme>Step 2: pick a theme</h2><p>That&rsquo;s a funny part.
+Head to <a href=https://themes.gohugo.io/>Hugo Themes page</a> and make your choice!
 I suggest you to stay simple with the theme.
 If it&rsquo;s simple it will be easier to tweak it based on your preferences.
-Some cool features you might want to find already in the theme (or at least what I look for):</p>
-<ul>
-<li><strong>i18n</strong> integration if you want multilanguage website</li>
-<li><strong>dark/light</strong> theme trigger</li>
-<li>embedded support for <strong>third party links</strong> (i.e.: YouTube videos, Instagram pictures&hellip;)</li>
-</ul>
-<p>Despite my tips, remembe to pick the best web layout for the porposes of your site.</p>
-<p><strong>Do not focus too much on colors and fonts</strong>, since those can be easily changed!</p>
-<h2 id="step-3-install-hugo">Step 3: Install Hugo</h2>
-<p>Now you actually have to install the bad guy that will power up your <code>.md</code> files and translate them into your amazing new website.</p>
-<p>Since there&rsquo;s too many ways to install it depending on your OS, your distribution (I hope you&rsquo;re on Linux, right?) and package manager, I just leave you here the <a href="https://gohugo.io/getting-started/installing/">link to the official installation guide of Hugo</a>.</p>
-<p>Probably it&rsquo;s enough just to say that is available in all the major package manager for all distros and OSs.</p>
-<h2 id="step-4-local-cloning-the-repo">Step 4: local cloning the repo</h2>
-<p>It&rsquo;s time to get your working local folder set up.
+Some cool features you might want to find already in the theme (or at least what I look for):</p><ul><li><strong>i18n</strong> integration if you want multilanguage website</li><li><strong>dark/light</strong> theme trigger</li><li>embedded support for <strong>third party links</strong> (i.e.: YouTube videos, Instagram pictures&mldr;)</li></ul><p>Despite my tips, remembe to pick the best web layout for the porposes of your site.</p><p><strong>Do not focus too much on colors and fonts</strong>, since those can be easily changed!</p><h2 id=step-3-install-hugo>Step 3: Install Hugo</h2><p>Now you actually have to install the bad guy that will power up your <code>.md</code> files and translate them into your amazing new website.</p><p>Since there&rsquo;s too many ways to install it depending on your OS, your distribution (I hope you&rsquo;re on Linux, right?) and package manager, I just leave you here the <a href=https://gohugo.io/getting-started/installing/>link to the official installation guide of Hugo</a>.</p><p>Probably it&rsquo;s enough just to say that is available in all the major package manager for all distros and OSs.</p><h2 id=step-4-local-cloning-the-repo>Step 4: local cloning the repo</h2><p>It&rsquo;s time to get your working local folder set up.
 First step <strong>clone</strong> your plain repo somewhere in your disk.
-You can accomplish so by hitting the cloning command like so:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; git clone git@github.com:&lt;your-user-here&gt;/&lt;your-user-here&gt;.github.io.git
-</span></span></code></pre></div><p>Then, it&rsquo;s important to sync the theme repository too, but kind of detatching it from your personal one. That&rsquo;s why submodules are made for!</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; mkdir themes <span style="color:#f92672">&amp;&amp;</span> cd themes
-</span></span><span style="display:flex;"><span>&gt; git submodule add https://github.com/themefisher/vex-hugo.git
+You can accomplish so by hitting the cloning command like so:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>&gt; git clone git@github.com:&lt;your-user-here&gt;/&lt;your-user-here&gt;.github.io.git
+</span></span></code></pre></div><p>Then, it&rsquo;s important to sync the theme repository too, but kind of detatching it from your personal one. That&rsquo;s why submodules are made for!</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>&gt; mkdir themes <span style=color:#f92672>&amp;&amp;</span> cd themes
+</span></span><span style=display:flex><span>&gt; git submodule add https://github.com/themefisher/vex-hugo.git
 </span></span></code></pre></div><p>Once the submodule is up, you probably may want to see your theme running in localhost!
 Every hugo theme has a <code>exampleSite</code> folder where to run the exact landing page that captured your attenction while selecting the theme.
-Since you&rsquo;ll have to work on a copy of those files, I suggest you to copy all the content of <code>exampleSite</code> folder into your main one:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># change dir to your main one, in this case .. to move one step backwards from themes folder</span>
-</span></span><span style="display:flex;"><span>&gt; cd ..
-</span></span><span style="display:flex;"><span>&gt; cp -r themes/&lt;your-theme-folder-here&gt;/exampleSite/* .
-</span></span><span style="display:flex;"><span>&gt; cp -r themes/&lt;your-theme-folder-here&gt;/layouts/* .
-</span></span></code></pre></div><p>Once you have all the files, you should be able to show up the live of your website locally:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; hugo server -D
-</span></span></code></pre></div><p>Then head to <a href="localhost:1313">localhost:1313</a> and see if it&rsquo;s working!</p>
-<h2 id="step-5-automatically-build-and-deploy">Step 5: Automatically build and deploy</h2>
-<p>Wow, almost there!
+Since you&rsquo;ll have to work on a copy of those files, I suggest you to copy all the content of <code>exampleSite</code> folder into your main one:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># change dir to your main one, in this case .. to move one step backwards from themes folder</span>
+</span></span><span style=display:flex><span>&gt; cd ..
+</span></span><span style=display:flex><span>&gt; cp -r themes/&lt;your-theme-folder-here&gt;/exampleSite/* .
+</span></span><span style=display:flex><span>&gt; cp -r themes/&lt;your-theme-folder-here&gt;/layouts/* .
+</span></span></code></pre></div><p>Once you have all the files, you should be able to show up the live of your website locally:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>&gt; hugo server -D
+</span></span></code></pre></div><p>Then head to <a href=localhost:1313>localhost:1313</a> and see if it&rsquo;s working!</p><h2 id=step-5-automatically-build-and-deploy>Step 5: Automatically build and deploy</h2><p>Wow, almost there!
 Now we have to land, somehow, our website online.
-<em>Hugo</em> just build the website for you out of your <code>.md</code> files. What is up to you is to be sure that GitHub can receive those files and expose such in your personal web page.</p>
-<p>You can build your website by simply using <code>hugo</code> command from your main project dir.
-This will create a brand new <code>public</code> folder where all your builder store will be stored.</p>
-<p><em>Cool, ya?</em></p>
-<p>It  is, but actually we don&rsquo;t need such files in our machine. Instead, such folder should be the one from where GitHub picks from.</p>
-<p><em>So what?</em></p>
-<p>What we&rsquo;re going do to let GitHub direcly build and publish the <code>public</code> folder into a separate branch of your repo as soon as you <code>git push</code> your last commits.</p>
-<p><em>Sounds like a plan!</em></p>
-<h3 id="step--51-exclude-public-folder-from-main-branch">Step  5.1: Exclude <code>public</code> folder from main branch</h3>
-<p>As already explained, we don&rsquo;t really need our <code>public</code> folder in our <code>master</code> branch since it&rsquo;s just the product of the build that the <em>Action</em> will do for us.
-Therefore, it is worth to add <code>public</code> into the <code>.gitignore</code> file in the project directory.</p>
-<p>If you already have a <code>.gitignore</code> file, just attach the folder in a new line. If not, create the file and write down the folder too.</p>
-<p>I.e., this is how my <code>.gitignore</code> looks like:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Thumbs.db
-</span></span><span style="display:flex;"><span>*/uncompressed/
-</span></span><span style="display:flex;"><span>*/gimp/
-</span></span><span style="display:flex;"><span>.dist
-</span></span><span style="display:flex;"><span>.tmp
-</span></span><span style="display:flex;"><span>.sass-cache
-</span></span><span style="display:flex;"><span>.log
-</span></span><span style="display:flex;"><span>node_modules
-</span></span><span style="display:flex;"><span>package-lock.json
-</span></span><span style="display:flex;"><span>public/
-</span></span></code></pre></div><h3 id="step-52-setup-new-deploy-key">Step 5.2: Setup new Deploy key</h3>
-<p>A new deploy key will enable our machine, where the ssh key is stored, to being authorized to fire the Action that we&rsquo;re going to enplace.
-In order to generate the ssh key, place your terminal in the <code>~/.ssh</code> folder and then fire:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; ssh-keygen -t rsa -b <span style="color:#ae81ff">4096</span> -C <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>git config user.email<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span> -f gh-pages -N <span style="color:#e6db74">&#34;&#34;</span>
-</span></span></code></pre></div><p>This will generate a pair of new public/private <code>gh-pages</code> key files.</p>
-<p>Now we need share our public key with GitHub so that it will recognize us.</p>
-<p>Head to your repository settings and click on <strong>Deploy Key</strong> section to add a new one. Then copy it into your clipboard using:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; xclip -selection clipboard &lt; gh-pages.pub
+<em>Hugo</em> just build the website for you out of your <code>.md</code> files. What is up to you is to be sure that GitHub can receive those files and expose such in your personal web page.</p><p>You can build your website by simply using <code>hugo</code> command from your main project dir.
+This will create a brand new <code>public</code> folder where all your builder store will be stored.</p><p><em>Cool, ya?</em></p><p>It is, but actually we don&rsquo;t need such files in our machine. Instead, such folder should be the one from where GitHub picks from.</p><p><em>So what?</em></p><p>What we&rsquo;re going do to let GitHub direcly build and publish the <code>public</code> folder into a separate branch of your repo as soon as you <code>git push</code> your last commits.</p><p><em>Sounds like a plan!</em></p><h3 id=step--51-exclude-public-folder-from-main-branch>Step 5.1: Exclude <code>public</code> folder from main branch</h3><p>As already explained, we don&rsquo;t really need our <code>public</code> folder in our <code>master</code> branch since it&rsquo;s just the product of the build that the <em>Action</em> will do for us.
+Therefore, it is worth to add <code>public</code> into the <code>.gitignore</code> file in the project directory.</p><p>If you already have a <code>.gitignore</code> file, just attach the folder in a new line. If not, create the file and write down the folder too.</p><p>I.e., this is how my <code>.gitignore</code> looks like:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>Thumbs.db
+</span></span><span style=display:flex><span>*/uncompressed/
+</span></span><span style=display:flex><span>*/gimp/
+</span></span><span style=display:flex><span>.dist
+</span></span><span style=display:flex><span>.tmp
+</span></span><span style=display:flex><span>.sass-cache
+</span></span><span style=display:flex><span>.log
+</span></span><span style=display:flex><span>node_modules
+</span></span><span style=display:flex><span>package-lock.json
+</span></span><span style=display:flex><span>public/
+</span></span></code></pre></div><h3 id=step-52-setup-new-deploy-key>Step 5.2: Setup new Deploy key</h3><p>A new deploy key will enable our machine, where the ssh key is stored, to being authorized to fire the Action that we&rsquo;re going to enplace.
+In order to generate the ssh key, place your terminal in the <code>~/.ssh</code> folder and then fire:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>&gt; ssh-keygen -t rsa -b <span style=color:#ae81ff>4096</span> -C <span style=color:#e6db74>&#34;</span><span style=color:#66d9ef>$(</span>git config user.email<span style=color:#66d9ef>)</span><span style=color:#e6db74>&#34;</span> -f gh-pages -N <span style=color:#e6db74>&#34;&#34;</span>
+</span></span></code></pre></div><p>This will generate a pair of new public/private <code>gh-pages</code> key files.</p><p>Now we need share our public key with GitHub so that it will recognize us.</p><p>Head to your repository settings and click on <strong>Deploy Key</strong> section to add a new one. Then copy it into your clipboard using:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>&gt; xclip -selection clipboard &lt; gh-pages.pub
 </span></span></code></pre></div><p>And <code>ctrl+v</code> here:
-<img src="/images/posts/github_pages/deploy.png" alt="GitHub Deploy Key screenshot"></p>
-<p>Remember to enable the <em>Allow write access</em> toggle be able to <code>git push</code>.</p>
-<p>Do not leave <em>GitHub settings</em> page, since we need to set up  a new <em>secret</em>!
-Get into the <em>Secrets</em> section and click on <em>New repository secret</em> button.</p>
-<p><img src="/images/posts/github_pages/secret.png" alt="GitHub Secret screenshot"></p>
-<p>Remember to name the new secret as <code>ACTIONS_DEPLOY_KEY</code> or remember how you name it for the next step.
-This time, in the big text box you have to share the previously created private key. Copy it into your clipboard using the following command from the <code>~/.ssh</code> folder:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; xclip -selection clipboard &lt; gh-pages
-</span></span></code></pre></div><p>&hellip; and paste it into the form.</p>
-<h3 id="step-53-setup-github-action">Step 5.3: Setup GitHub Action</h3>
-<p>It is possible to automate the process of deploying changes as soon as the commit has been pushed into the GitHub repository.
-In fact, leveraging <em>Actions</em>  we can:</p>
-<ul>
-<li>build our Hugo project</li>
-<li>publish the <code>/public</code> folder into a separate branch</li>
-<li>let <em>GitHub Pages</em> watch that specific branch to</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">github pages</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">push</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">branches</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">master </span> <span style="color:#75715e"># Set a branch to deploy</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">deploy</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-18.04</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v2</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
-</span></span><span style="display:flex;"><span>          <span style="color:#f92672">submodules</span>: <span style="color:#66d9ef">true</span>  <span style="color:#75715e"># Fetch Hugo themes (true OR recursive)</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#f92672">fetch-depth</span>: <span style="color:#ae81ff">0</span>    <span style="color:#75715e"># Fetch all history for .GitInfo and .Lastmod</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Setup Hugo</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-hugo@v2</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
-</span></span><span style="display:flex;"><span>          <span style="color:#f92672">hugo-version</span>: <span style="color:#e6db74">&#39;latest&#39;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">hugo -D</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-gh-pages@v3</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
-</span></span><span style="display:flex;"><span>          <span style="color:#f92672">deploy_key</span>: <span style="color:#ae81ff">${{ secrets.ACTIONS_DEPLOY_KEY }}</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#f92672">publish_branch</span>: <span style="color:#ae81ff">gh-pages</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#f92672">publish_dir</span>: <span style="color:#ae81ff">./public</span>
-</span></span></code></pre></div><h3 id="step-54-setup-github-pages">Step 5.4: Setup GitHub Pages</h3>
-<p><em>Almost there!!!</em></p>
-<p>Last missing piece before the <code>git push</code>, I promise.
+<img src=/images/posts/github_pages/deploy.png alt="GitHub Deploy Key screenshot"></p><p>Remember to enable the <em>Allow write access</em> toggle be able to <code>git push</code>.</p><p>Do not leave <em>GitHub settings</em> page, since we need to set up a new <em>secret</em>!
+Get into the <em>Secrets</em> section and click on <em>New repository secret</em> button.</p><p><img src=/images/posts/github_pages/secret.png alt="GitHub Secret screenshot"></p><p>Remember to name the new secret as <code>ACTIONS_DEPLOY_KEY</code> or remember how you name it for the next step.
+This time, in the big text box you have to share the previously created private key. Copy it into your clipboard using the following command from the <code>~/.ssh</code> folder:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>&gt; xclip -selection clipboard &lt; gh-pages
+</span></span></code></pre></div><p>&mldr; and paste it into the form.</p><h3 id=step-53-setup-github-action>Step 5.3: Setup GitHub Action</h3><p>It is possible to automate the process of deploying changes as soon as the commit has been pushed into the GitHub repository.
+In fact, leveraging <em>Actions</em> we can:</p><ul><li>build our Hugo project</li><li>publish the <code>/public</code> folder into a separate branch</li><li>let <em>GitHub Pages</em> watch that specific branch to</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>name</span>: <span style=color:#ae81ff>github pages</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>on</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>push</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>branches</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>master </span> <span style=color:#75715e># Set a branch to deploy</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>jobs</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>deploy</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-18.04</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>steps</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@v2</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>with</span>:
+</span></span><span style=display:flex><span>          <span style=color:#f92672>submodules</span>: <span style=color:#66d9ef>true</span>  <span style=color:#75715e># Fetch Hugo themes (true OR recursive)</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>fetch-depth</span>: <span style=color:#ae81ff>0</span>    <span style=color:#75715e># Fetch all history for .GitInfo and .Lastmod</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Setup Hugo</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>peaceiris/actions-hugo@v2</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>with</span>:
+</span></span><span style=display:flex><span>          <span style=color:#f92672>hugo-version</span>: <span style=color:#e6db74>&#39;latest&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Build</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>run</span>: <span style=color:#ae81ff>hugo -D</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Deploy</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>peaceiris/actions-gh-pages@v3</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>with</span>:
+</span></span><span style=display:flex><span>          <span style=color:#f92672>deploy_key</span>: <span style=color:#ae81ff>${{ secrets.ACTIONS_DEPLOY_KEY }}</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>publish_branch</span>: <span style=color:#ae81ff>gh-pages</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>publish_dir</span>: <span style=color:#ae81ff>./public</span>
+</span></span></code></pre></div><h3 id=step-54-setup-github-pages>Step 5.4: Setup GitHub Pages</h3><p><em>Almost there!!!</em></p><p>Last missing piece before the <code>git push</code>, I promise.
 Now our <code>public</code> directory should be delivered into the <code>gh-pages</code> branch automatically.
-We just miss to let GitHub Pages know that the source is in that specific branch and not in the <code>master</code> one.</p>
-<p>We can simply tweak this from the repo settings, main section (named &ldquo;<em>Options</em>&rdquo;).
+We just miss to let GitHub Pages know that the source is in that specific branch and not in the <code>master</code> one.</p><p>We can simply tweak this from the repo settings, main section (named &ldquo;<em>Options</em>&rdquo;).
 Scroll down until you reach &ldquo;<em>GitHub Pages</em>&rdquo;.
-In the dropdown menu of &ldquo;<em>Source</em>&rdquo; section, select <code>gh-pages</code> branch and <strong>Save</strong> it!</p>
-<p><img src="/images/posts/github_pages/pages.png" alt="GitHub Pages setup screenshot"></p>
-<h2 id="step-6-finally-git-push">Step 6: Finally, <code>git push</code>!</h2>
-<p>Well, know you&rsquo;re done. Seriously.
-Type <code>git push</code> from your project folder, check your action processing from the <em>Actions</em> section in your GitHub repo page and enjoy your brand new website!</p>
-<p><img src="/images/posts/github_pages/git.gif" alt="git push"></p>
-<h2 id="conclusions">Conclusions</h2>
-<p>I hope you find this guide useful.
-GitHub pages is really a game changer when you want to publish your presentation website or simply have a place where to sponsor your small business.</p>
-<p>Thanks for being with me till the end!</p>
-
-    </div>
-  </article>
-
-  
-  
-
-
-
-
-
-  <div id="footer-post-container">
-  <div id="footer-post">
-
-    <div id="nav-footer" style="display: none">
-      <ul>
-         
-          <li><a href="/shortbio">Short Bio</a></li>
-         
-          <li><a href="/publications">Publications</a></li>
-         
-          <li><a href="/teaching">Teaching</a></li>
-         
-          <li><a href="/posts">Posts</a></li>
-         
-          <li><a href="/suggestions">Suggestions</a></li>
-         
-          <li><a href="/about">About</a></li>
-        
-      </ul>
-    </div>
-
-    <div id="toc-footer" style="display: none">
-      <nav id="TableOfContents">
-  <ul>
-    <li><a href="#step-1-init-the-repo-on-github">Step 1: init the repo on Github</a></li>
-    <li><a href="#step-2-pick-a-theme">Step 2: pick a theme</a></li>
-    <li><a href="#step-3-install-hugo">Step 3: Install Hugo</a></li>
-    <li><a href="#step-4-local-cloning-the-repo">Step 4: local cloning the repo</a></li>
-    <li><a href="#step-5-automatically-build-and-deploy">Step 5: Automatically build and deploy</a>
-      <ul>
-        <li><a href="#step--51-exclude-public-folder-from-main-branch">Step  5.1: Exclude <code>public</code> folder from main branch</a></li>
-        <li><a href="#step-52-setup-new-deploy-key">Step 5.2: Setup new Deploy key</a></li>
-        <li><a href="#step-53-setup-github-action">Step 5.3: Setup GitHub Action</a></li>
-        <li><a href="#step-54-setup-github-pages">Step 5.4: Setup GitHub Pages</a></li>
-      </ul>
-    </li>
-    <li><a href="#step-6-finally-git-push">Step 6: Finally, <code>git push</code>!</a></li>
-    <li><a href="#conclusions">Conclusions</a></li>
-  </ul>
-</nav>
-    </div>
-
-    <div id="share-footer" style="display: none">
-      
-      <ul>
-  
-  
-    
-  
-  
-  <li>
-    <a class="icon" href="http://www.facebook.com/sharer.php?u=%2fposts%2fgithub_pages%2f">
-      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://twitter.com/share?url=%2fposts%2fgithub_pages%2f&text=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages">
-      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://www.linkedin.com/shareArticle?url=%2fposts%2fgithub_pages%2f&title=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages">
-      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=%2fposts%2fgithub_pages%2f&is_video=false&description=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages">
-      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="mailto:?subject=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages&body=Check out this article: %2fposts%2fgithub_pages%2f">
-      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://getpocket.com/save?url=%2fposts%2fgithub_pages%2f&title=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages">
-      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://reddit.com/submit?url=%2fposts%2fgithub_pages%2f&title=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages">
-      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="http://www.tumblr.com/share/link?url=%2fposts%2fgithub_pages%2f&name=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages&description=So%20you%26rsquo%3bre%20struggling%20to%20create%20your%20own%20website%3f%20Are%20you%20looking%20for%20some%20cheap%20and%20clean%20solution%20too%3f%20Free%3f%0aOk%2c%20probably%20you%26rsquo%3bre%20a%20bit%20too%20ambitious.%0aOR%20NOT.%0aI%20was%20in%20your%20situation%20too%20and%20now%20you%26rsquo%3bre%20visiting%20this%20website%2c%20which%20is%20built%20on%20top%20of%20the%20same%20advices%20you%26rsquo%3bre%20going%20to%20follow%20%28hopefully%21%29.%0aIf%20you%20unfortunately%20fall%20into%20this%20website%2c%20probably%20you%26rsquo%3bre%20familiar%20with%20the%20git%20versioning%20system.%20Probably%20you%20know%20about%20Github%20as%20well.">
-      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
-    </a>
-  </li>
-  <li>
-    <a class="icon" href="https://news.ycombinator.com/submitlink?u=%2fposts%2fgithub_pages%2f&t=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages">
-      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
-    </a>
-  </li>
-</ul>
-
-    </div>
-
-    <div id="actions-footer">
-      
-        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;">
-          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
-        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;">
-          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
-        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;">
-          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
-        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
-          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
-    </div>
-
-  </div>
-</div>
-
-
-  <footer id="footer">
-  <div class="footer-left">
-    Copyright  &copy; 2023  Gabriele Orazi 
-  </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-         
-        <li><a href="/shortbio">Short Bio</a></li>
-         
-        <li><a href="/publications">Publications</a></li>
-         
-        <li><a href="/teaching">Teaching</a></li>
-         
-        <li><a href="/posts">Posts</a></li>
-         
-        <li><a href="/suggestions">Suggestions</a></li>
-         
-        <li><a href="/about">About</a></li>
-        
-      </ul>
-    </nav>
-  </div>
-</footer>
-
-
-  </div>
-</body>
-
-<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
-<script src=/lib/jquery/jquery.min.js></script>
-<script src=/js/main.js></script>
-
-
-
-</html>
+In the dropdown menu of &ldquo;<em>Source</em>&rdquo; section, select <code>gh-pages</code> branch and <strong>Save</strong> it!</p><p><img src=/images/posts/github_pages/pages.png alt="GitHub Pages setup screenshot"></p><h2 id=step-6-finally-git-push>Step 6: Finally, <code>git push</code>!</h2><p>Well, know you&rsquo;re done. Seriously.
+Type <code>git push</code> from your project folder, check your action processing from the <em>Actions</em> section in your GitHub repo page and enjoy your brand new website!</p><p><img src=/images/posts/github_pages/git.gif alt="git push"></p><h2 id=conclusions>Conclusions</h2><p>I hope you find this guide useful.
+GitHub pages is really a game changer when you want to publish your presentation website or simply have a place where to sponsor your small business.</p><p>Thanks for being with me till the end!</p></div></article><div id=footer-post-container><div id=footer-post><div id=nav-footer style=display:none><ul><li><a href=/shortbio>Short Bio</a></li><li><a href=/publications>Publications</a></li><li><a href=/teaching>Teaching</a></li><li><a href=/posts>Posts</a></li><li><a href=/suggestions>Suggestions</a></li><li><a href=/about>About</a></li></ul></div><div id=toc-footer style=display:none><nav id=TableOfContents><ul><li><a href=#step-1-init-the-repo-on-github>Step 1: init the repo on Github</a></li><li><a href=#step-2-pick-a-theme>Step 2: pick a theme</a></li><li><a href=#step-3-install-hugo>Step 3: Install Hugo</a></li><li><a href=#step-4-local-cloning-the-repo>Step 4: local cloning the repo</a></li><li><a href=#step-5-automatically-build-and-deploy>Step 5: Automatically build and deploy</a><ul><li><a href=#step--51-exclude-public-folder-from-main-branch>Step 5.1: Exclude <code>public</code> folder from main branch</a></li><li><a href=#step-52-setup-new-deploy-key>Step 5.2: Setup new Deploy key</a></li><li><a href=#step-53-setup-github-action>Step 5.3: Setup GitHub Action</a></li><li><a href=#step-54-setup-github-pages>Step 5.4: Setup GitHub Pages</a></li></ul></li><li><a href=#step-6-finally-git-push>Step 6: Finally, <code>git push</code>!</a></li><li><a href=#conclusions>Conclusions</a></li></ul></nav></div><div id=share-footer style=display:none><ul><li><a class=icon href="http://www.facebook.com/sharer.php?u=%2fposts%2fgithub_pages%2f"><i class="fab fa-facebook fa-lg" aria-hidden=true></i></a></li><li><a class=icon href="https://twitter.com/share?url=%2fposts%2fgithub_pages%2f&text=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages"><i class="fab fa-twitter fa-lg" aria-hidden=true></i></a></li><li><a class=icon href="http://www.linkedin.com/shareArticle?url=%2fposts%2fgithub_pages%2f&title=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages"><i class="fab fa-linkedin fa-lg" aria-hidden=true></i></a></li><li><a class=icon href="https://pinterest.com/pin/create/bookmarklet/?url=%2fposts%2fgithub_pages%2f&is_video=false&description=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages"><i class="fab fa-pinterest fa-lg" aria-hidden=true></i></a></li><li><a class=icon href="mailto:?subject=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages&body=Check out this article: %2fposts%2fgithub_pages%2f"><i class="fas fa-envelope fa-lg" aria-hidden=true></i></a></li><li><a class=icon href="https://getpocket.com/save?url=%2fposts%2fgithub_pages%2f&title=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages"><i class="fab fa-get-pocket fa-lg" aria-hidden=true></i></a></li><li><a class=icon href="http://reddit.com/submit?url=%2fposts%2fgithub_pages%2f&title=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages"><i class="fab fa-reddit fa-lg" aria-hidden=true></i></a></li><li><a class=icon href="http://www.tumblr.com/share/link?url=%2fposts%2fgithub_pages%2f&name=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages&description=So%20you%26rsquo%3bre%20struggling%20to%20create%20your%20own%20website%3f%20Are%20you%20looking%20for%20some%20cheap%20and%20clean%20solution%20too%3f%20Free%3f%0aOk%2c%20probably%20you%26rsquo%3bre%20a%20bit%20too%20ambitious.%0aOR%20NOT.%0aI%20was%20in%20your%20situation%20too%20and%20now%20you%26rsquo%3bre%20visiting%20this%20website%2c%20which%20is%20built%20on%20top%20of%20the%20same%20advices%20you%26rsquo%3bre%20going%20to%20follow%20%28hopefully%21%29.%0aIf%20you%20unfortunately%20fall%20into%20this%20website%2c%20probably%20you%26rsquo%3bre%20familiar%20with%20the%20git%20versioning%20system.%20Probably%20you%20know%20about%20Github%20as%20well."><i class="fab fa-tumblr fa-lg" aria-hidden=true></i></a></li><li><a class=icon href="https://news.ycombinator.com/submitlink?u=%2fposts%2fgithub_pages%2f&t=How%20to%20create%20free%20static%20website%20with%20Hugo%20and%20Github%20Pages"><i class="fab fa-hacker-news fa-lg" aria-hidden=true></i></a></li></ul></div><div id=actions-footer><a id=menu class=icon href=# onclick='return $("#nav-footer").toggle(),!1'><i class="fas fa-bars fa-lg" aria-hidden=true></i> Menu</a>
+<a id=toc class=icon href=# onclick='return $("#toc-footer").toggle(),!1'><i class="fas fa-list fa-lg" aria-hidden=true></i> TOC</a>
+<a id=share class=icon href=# onclick='return $("#share-footer").toggle(),!1'><i class="fas fa-share-alt fa-lg" aria-hidden=true></i> share</a>
+<a id=top style=display:none class=icon href=# onclick='$("html, body").animate({scrollTop:0},"fast")'><i class="fas fa-chevron-up fa-lg" aria-hidden=true></i> Top</a></div></div></div><footer id=footer><div class=footer-left>Copyright &copy; 2023 Gabriele Orazi</div><div class=footer-right><nav><ul><li><a href=/shortbio>Short Bio</a></li><li><a href=/publications>Publications</a></li><li><a href=/teaching>Teaching</a></li><li><a href=/posts>Posts</a></li><li><a href=/suggestions>Suggestions</a></li><li><a href=/about>About</a></li></ul></nav></div></footer></div></body><link rel=stylesheet href=/lib/font-awesome/css/all.min.css><script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script></html>

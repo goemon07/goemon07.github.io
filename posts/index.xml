@@ -1,36 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on Gabriele Orazi</title>
-    <link>/posts/</link>
-    <description>Recent content in Posts on Gabriele Orazi</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Gabriele Orazi</copyright>
-    <lastBuildDate>Fri, 18 Aug 2023 21:53:11 +0100</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Thoughts after my first DEF CON</title>
-      <link>/posts/defcon/</link>
-      <pubDate>Fri, 18 Aug 2023 21:53:11 +0100</pubDate>
-      
-      <guid>/posts/defcon/</guid>
-      <description>My first @DEFCON 31 is just gone. I heavily wondered about how it would have been and, honestly, it just crashed my expectations. I came home with a thousand ideas and a great desire to get to work to improve. Basically, I&amp;rsquo;m now fully charged for the upcoming academic year!
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Gabriele Orazi</title><link>/posts/</link><description>Recent content in Posts on Gabriele Orazi</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Gabriele Orazi</copyright><lastBuildDate>Fri, 18 Aug 2023 21:53:11 +0100</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Thoughts after my first DEF CON</title><link>/posts/defcon/</link><pubDate>Fri, 18 Aug 2023 21:53:11 +0100</pubDate><guid>/posts/defcon/</guid><description>My first @DEFCON 31 is just gone. I heavily wondered about how it would have been and, honestly, it just crashed my expectations. I came home with a thousand ideas and a great desire to get to work to improve. Basically, I&amp;rsquo;m now fully charged for the upcoming academic year!
 Here some of my newbie&amp;rsquo;s random thoughts/tips: 👇
-Stickers, stickers everywhere! I was planning to leave my laptop free from stickers, but now it will be so hard to stick (lol) to the plan.</description>
-    </item>
-    
-    <item>
-      <title>How to create free static website with Hugo and Github Pages</title>
-      <link>/posts/github_pages/</link>
-      <pubDate>Fri, 02 Apr 2021 08:47:11 +0100</pubDate>
-      
-      <guid>/posts/github_pages/</guid>
-      <description>So you&amp;rsquo;re struggling to create your own website? Are you looking for some cheap and clean solution too? Free?
+Stickers, stickers everywhere! I was planning to leave my laptop free from stickers, but now it will be so hard to stick (lol) to the plan.</description></item><item><title>How to create free static website with Hugo and Github Pages</title><link>/posts/github_pages/</link><pubDate>Fri, 02 Apr 2021 08:47:11 +0100</pubDate><guid>/posts/github_pages/</guid><description>So you&amp;rsquo;re struggling to create your own website? Are you looking for some cheap and clean solution too? Free?
 Ok, probably you&amp;rsquo;re a bit too ambitious.
 OR NOT.
 I was in your situation too and now you&amp;rsquo;re visiting this website, which is built on top of the same advices you&amp;rsquo;re going to follow (hopefully!).
-If you unfortunately fall into this website, probably you&amp;rsquo;re familiar with the git versioning system. Probably you know about Github as well.</description>
-    </item>
-    
-  </channel>
-</rss>
+If you unfortunately fall into this website, probably you&amp;rsquo;re familiar with the git versioning system. Probably you know about Github as well.</description></item></channel></rss>

@@ -1,85 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Gabriele Orazi</title>
-    <link>/</link>
-    <description>Recent content on Gabriele Orazi</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Gabriele Orazi</copyright>
-    <lastBuildDate>Fri, 18 Aug 2023 21:53:11 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Thoughts after my first DEF CON</title>
-      <link>/posts/defcon/</link>
-      <pubDate>Fri, 18 Aug 2023 21:53:11 +0100</pubDate>
-      
-      <guid>/posts/defcon/</guid>
-      <description>My first @DEFCON 31 is just gone. I heavily wondered about how it would have been and, honestly, it just crashed my expectations. I came home with a thousand ideas and a great desire to get to work to improve. Basically, I&amp;rsquo;m now fully charged for the upcoming academic year!
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gabriele Orazi</title><link>/</link><description>Recent content on Gabriele Orazi</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Gabriele Orazi</copyright><lastBuildDate>Fri, 18 Aug 2023 21:53:11 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Thoughts after my first DEF CON</title><link>/posts/defcon/</link><pubDate>Fri, 18 Aug 2023 21:53:11 +0100</pubDate><guid>/posts/defcon/</guid><description>My first @DEFCON 31 is just gone. I heavily wondered about how it would have been and, honestly, it just crashed my expectations. I came home with a thousand ideas and a great desire to get to work to improve. Basically, I&amp;rsquo;m now fully charged for the upcoming academic year!
 Here some of my newbie&amp;rsquo;s random thoughts/tips: 👇
-Stickers, stickers everywhere! I was planning to leave my laptop free from stickers, but now it will be so hard to stick (lol) to the plan.</description>
-    </item>
-    
-    <item>
-      <title>Publications</title>
-      <link>/publications/</link>
-      <pubDate>Thu, 10 Jun 2021 17:51:42 +0000</pubDate>
-      
-      <guid>/publications/</guid>
-      <description>Publications My research areas are focused on privacy and private data leaks. I&amp;rsquo;m primarely working on obfuscation techniques, forensics and malware detection.
-Invoice #31415 attached: Automated analysis of malicious Microsoft Office documents Malware detection on Microsoft Office documents. @ Computers &amp;amp; Security 2021 V.Koutsokostas, N. Lykousas, T. Apostolopoulos, G. Orazi, A. Ghosal, F. Casino, M. Conti, C. Patsakis BLUFADER: Blurred face detection &amp;amp; recognition for privacy-friendly continuous authentication User continuous and automatic authentication and de-authentication.</description>
-    </item>
-    
-    <item>
-      <title>Short Bio</title>
-      <link>/shortbio/</link>
-      <pubDate>Thu, 10 Jun 2021 17:51:42 +0000</pubDate>
-      
-      <guid>/shortbio/</guid>
-      <description>Short Bio English Gabriele Orazi received his double Master&amp;rsquo;s Degree in Computer Science from the University of Trento and the University of Turku, with Cyber Security curriculum in 2020. After two short work experiences as DevSecOps, he joined the University of Padua as a research fellow in the SPRITZ Security and Privacy Research Group, under the supervision of Prof. Mauro Conti. He is currently a Ph.D. Student in Brain, Mind and Computer Science (BMCS), working on privacy, obfuscation techniques, cyber forensics and malware detection.</description>
-    </item>
-    
-    <item>
-      <title>Suggestions</title>
-      <link>/suggestions/</link>
-      <pubDate>Thu, 10 Jun 2021 17:51:42 +0000</pubDate>
-      
-      <guid>/suggestions/</guid>
-      <description>📚 Books Some of the books that I read and that I can definitively recommend.
-The Subtle Art of Not Giving A F*ck - Mark Manson [EN] [IT] Scrum: The Art of Doing Twice the Work in Half the Time - Jeff Sutherland [EN] [IT] Getting Things Done: The Art of Stress-free Productivity - David Allen [EN] Permanent Record - Edward Snowden [EN] [IT] Zen and the Art of Motorcycle Maintenance - Robert M.</description>
-    </item>
-    
-    <item>
-      <title>Teaching activities</title>
-      <link>/teaching/</link>
-      <pubDate>Thu, 10 Jun 2021 17:51:42 +0000</pubDate>
-      
-      <guid>/teaching/</guid>
-      <description>Teaching activities As a PhD student, I had the chance to be a teaching assistant of professors from my own University, as well as few other experiences as lecturer.
-A.A. 2023/2024 [MSc] CyberSecurity and Cryptography: Principles and Practices - teaching assistant with prof. Conti [MSc] Ethical Hacking - teaching assistant with prof. Losiouk and prof. Brighente A.A. 2022/2023 [MSc] CyberSecurity and Cryptography: Principles and Practices - teaching assistant with prof. Conti [MSc] Security and Risk: Management and Certifications - teaching assistant with prof.</description>
-    </item>
-    
-    <item>
-      <title>How to create free static website with Hugo and Github Pages</title>
-      <link>/posts/github_pages/</link>
-      <pubDate>Fri, 02 Apr 2021 08:47:11 +0100</pubDate>
-      
-      <guid>/posts/github_pages/</guid>
-      <description>So you&amp;rsquo;re struggling to create your own website? Are you looking for some cheap and clean solution too? Free?
+Stickers, stickers everywhere! I was planning to leave my laptop free from stickers, but now it will be so hard to stick (lol) to the plan.</description></item><item><title>Publications</title><link>/publications/</link><pubDate>Thu, 10 Jun 2021 17:51:42 +0000</pubDate><guid>/publications/</guid><description>Publications My research areas are focused on privacy and private data leaks. I&amp;rsquo;m primarely working on obfuscation techniques, forensics and malware detection.
+Invoice #31415 attached: Automated analysis of malicious Microsoft Office documents Malware detection on Microsoft Office documents. @ Computers &amp;amp; Security 2021 V.Koutsokostas, N. Lykousas, T. Apostolopoulos, G. Orazi, A. Ghosal, F. Casino, M. Conti, C. Patsakis BLUFADER: Blurred face detection &amp;amp; recognition for privacy-friendly continuous authentication User continuous and automatic authentication and de-authentication.</description></item><item><title>Short Bio</title><link>/shortbio/</link><pubDate>Thu, 10 Jun 2021 17:51:42 +0000</pubDate><guid>/shortbio/</guid><description>Short Bio English Gabriele Orazi holds a double Master&amp;rsquo;s Degree in Computer Science (Cyber Security) from the University of Trento and Turku. After brief experience in DevSecOps, he became a research fellow at the University of Padua in the SPRITZ Security and Privacy Research Group, supervised by Prof. Mauro Conti. He is currently a Ph.D. student in Brain, Mind and Computer Science (BMCS), focusing on privacy, obfuscation, cyber forensics, and malware detection.</description></item><item><title>Suggestions</title><link>/suggestions/</link><pubDate>Thu, 10 Jun 2021 17:51:42 +0000</pubDate><guid>/suggestions/</guid><description>📚 Books Some of the books that I read and that I can definitively recommend.
+The Subtle Art of Not Giving A F*ck - Mark Manson [EN] [IT] Scrum: The Art of Doing Twice the Work in Half the Time - Jeff Sutherland [EN] [IT] Getting Things Done: The Art of Stress-free Productivity - David Allen [EN] Permanent Record - Edward Snowden [EN] [IT] Zen and the Art of Motorcycle Maintenance - Robert M.</description></item><item><title>Teaching activities</title><link>/teaching/</link><pubDate>Thu, 10 Jun 2021 17:51:42 +0000</pubDate><guid>/teaching/</guid><description>Teaching activities As a PhD student, I had the chance to be a teaching assistant of professors from my own University, as well as few other experiences as lecturer.
+A.A. 2023/2024 [MSc] CyberSecurity and Cryptography: Principles and Practices - teaching assistant with prof. Conti [MSc] Ethical Hacking - teaching assistant with prof. Losiouk and prof. Brighente A.A. 2022/2023 [MSc] CyberSecurity and Cryptography: Principles and Practices - teaching assistant with prof. Conti [MSc] Security and Risk: Management and Certifications - teaching assistant with prof.</description></item><item><title>How to create free static website with Hugo and Github Pages</title><link>/posts/github_pages/</link><pubDate>Fri, 02 Apr 2021 08:47:11 +0100</pubDate><guid>/posts/github_pages/</guid><description>So you&amp;rsquo;re struggling to create your own website? Are you looking for some cheap and clean solution too? Free?
 Ok, probably you&amp;rsquo;re a bit too ambitious.
 OR NOT.
 I was in your situation too and now you&amp;rsquo;re visiting this website, which is built on top of the same advices you&amp;rsquo;re going to follow (hopefully!).
-If you unfortunately fall into this website, probably you&amp;rsquo;re familiar with the git versioning system. Probably you know about Github as well.</description>
-    </item>
-    
-    <item>
-      <title>whoami</title>
-      <link>/about/</link>
-      <pubDate>Wed, 24 Aug 2016 17:51:42 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>whoami Adaptable, hyperactive and tireless, I like challenges and adventures. I always wonder why things happen. I have difficulties in surviving without running and climbing. I do research in the InfoSec field. Currently based in Padua, working with SPRITZ research group.
-Education I fell in love with Bologna, where I studied Computer Science for my Bachelor. Did you ever seen a bot for a smartphone game? That’s what I did with RoboRK for my Bachelor thesis!</description>
-    </item>
-    
-  </channel>
-</rss>
+If you unfortunately fall into this website, probably you&amp;rsquo;re familiar with the git versioning system. Probably you know about Github as well.</description></item><item><title>whoami</title><link>/about/</link><pubDate>Wed, 24 Aug 2016 17:51:42 +0000</pubDate><guid>/about/</guid><description>whoami Adaptable, hyperactive and tireless, I like challenges and adventures. I always wonder why things happen. I have difficulties in surviving without running and climbing. I do research in the InfoSec field. Currently based in Padua, working with SPRITZ research group.
+Education I fell in love with Bologna, where I studied Computer Science for my Bachelor. Did you ever seen a bot for a smartphone game? That’s what I did with RoboRK for my Bachelor thesis!</description></item></channel></rss>
