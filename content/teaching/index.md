@@ -25,3 +25,4 @@ As a PhD student, I had the chance to be a teaching assistant of professors from
 
 # Talks
 - *"Digital documents pitfalls: Security and Privacy"* - November 3rd 2022, UniPd course Advanced Topics in Computer and Network Security
+- *"RedactBuster: Robustness Analysis of Document Redaction for Personally Identifiable Information Protection"* - February 16th 2024, TUDelft
