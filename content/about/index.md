@@ -38,7 +38,9 @@ Lastly, I join [XTN Cognitive Security](https://xtn-lab.com/) as a DevOps.
 After few months, I decided to jump into a totally different kind of experience.
 
 I became a PhD student at the [University of Padua](https://www.math.unipd.it/) with the [SPRITZ Research Group](https://spritz.math.unipd.it/team.html) in late October 2021. My main topics are privacy and forensics.
-I'm currently in visiting at [University of California, Irvine (UCI)](https://catalogue.uci.edu/donaldbrenschoolofinformationandcomputersciences/departmentofcomputerscience/).
+I've been visiting [University of California, Irvine (UCI)](https://catalogue.uci.edu/donaldbrenschoolofinformationandcomputersciences/departmentofcomputerscience/) for six months in 2023.
+
+![California](/images/about/california.jpg)
 
 ## Not enough?
 

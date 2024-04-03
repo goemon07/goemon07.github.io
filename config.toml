@@ -103,7 +103,11 @@ weight = 7
     name = "linkedin"
     link = "https://www.linkedin.com/in/gabriele-orazi/"
 
+  [[params.social]]
+    name = "strava"
+    link = "https://www.strava.com/athletes/39260108"
+
 [[params.office]]
     department = "Department of Mathematics “Tullio Levi-Civita”"
-    office = "7D3 (ex 731)"
+    office = "7D4"
     link = "https://www.google.it/maps/search/dipartimento+matematica+padova/@45.4083047,11.8743574,16z"

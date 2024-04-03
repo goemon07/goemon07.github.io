@@ -33,6 +33,7 @@ Some of the books that I read and that I can definitively recommend.
 # 🎧 Music
 **Picky** selection of albums that stack in my headphones in heavy rotation.
 No masterpieces (given for granted), just one album per band.
+- IDLES - [TANGK](https://open.spotify.com/album/6U11VNHZAfYY3E9V4oFB2p?si=C-DUklDiT8GUTY7zCl740A)
 - Hermanos Gutiérrez - [Hijos Del Sol](https://open.spotify.com/album/6gnYcXVaffdG0vwVM34cr8?si=VlhzzS8fS7SC185Vw-ZvkA)
 - Psychedelic Porn Crumpets - [High Visceral, Pt. 1](https://open.spotify.com/album/2BlcdDBE62JOtVOgC3L3xo?si=QEo7u74zQ96qnrfW8KYTVw)
 - IDLES - [Brutalism](https://open.spotify.com/album/5qag6esZLv5ySuCpzh7CE6?si=cLXqOPG8Q52iVPtzrKgAlw)
