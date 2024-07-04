@@ -56,7 +56,7 @@ weight = 7
   colortheme = "dark" # dark, light, white, or classic
   css = ["css/custom.css"] # here path of css custom file
   rss = false # generate rss feed. default value is false
-  googleAnalyticsAsync = false # use asynchronous tracking. Synchronous tracking by default
+  # googleAnalyticsAsync = false # use asynchronous tracking. Synchronous tracking by default
 
   # Home page settings
   description = "Cybersecurity Ph.D. Student in SPRITZ Group (UniPd). Strongly unprofessional climber, gravel cyclist and trail runner."

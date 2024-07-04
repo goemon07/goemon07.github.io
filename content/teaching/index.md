@@ -9,6 +9,7 @@ As a PhD student, I had the chance to be a teaching assistant of professors from
 ## A.A. 2023/2024
 - \[MSc\] [CyberSecurity and Cryptography: Principles and Practices](https://www.math.unipd.it/~conti/teaching/CCPP2324/index.html) - teaching assistant with [prof. Conti](https://www.math.unipd.it/~conti/index.html)
 - \[MSc\] [Ethical Hacking](https://didattica.unipd.it/off/2022/LM/SC/SC2542/000ZZ/SCQ0089518/N0) - teaching assistant with [prof. Losiouk](https://www.math.unipd.it/~elosiouk/) and [prof. Brighente](https://www.math.unipd.it/~abrighen/)
+- \[HS\] [Cyber Security Specialist](https://itsdigitalacademy.com/), Teacher for [ITS Digital Academy "Mario Volpato"](https://itsdigitalacademy.com/corsi/cyber-security-specialist/)
 
 ## A.A. 2022/2023
 - \[MSc\] [CyberSecurity and Cryptography: Principles and Practices](https://www.math.unipd.it/~conti/teaching/CCPP2223/index.html) - teaching assistant with [prof. Conti](https://www.math.unipd.it/~conti/index.html)
