@@ -11,7 +11,7 @@ My research areas are focused on privacy and private data leaks. I'm primarely w
 - @ [ESORICS 2024](https://esorics2024.org/)
 - M. Beltrame, M. Conti, P. Guglielmin, F. Marchiori, G. Orazi
 
-## [Acoustic Side-Channel Attacks on a Computer Mouse](https://sprout.ics.uci.edu/pubs/DIMVA_Acoustic_Side_Channel_Attacks_on_a_Computer_Mouse.pdf)
+## [Acoustic Side-Channel Attacks on a Computer Mouse](https://link.springer.com/chapter/10.1007/978-3-031-64171-8_3)
 - An innovative information leakage attack based on mice noise.
 - @ [DIMVA 2024](https://www.dimva.org/dimva2024/)
 -  M. Conti, M. Duroyon, G. Orazi, G. Tsudik
