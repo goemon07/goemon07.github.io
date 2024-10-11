@@ -71,3 +71,8 @@ In Italian:
 - [Venticinque](https://open.spotify.com/show/0KELXXzIx3nL3tAJW4zdho?si=2c9f57b113f74f12)
 - [BARTALI - Una guerra in bicicletta](https://open.spotify.com/show/06RozEOOmjZS4ktwVIEYzT?si=813d09802c4946b7)
 - [Cose molto umane](https://open.spotify.com/show/79AqdlUNncp3KZQJqKv8I7?si=d51292ebab804a3e)
+
+# 📬 Misc
+Articles, blogposts or small references falls into this.
+
+- [How to Read a Paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf)
