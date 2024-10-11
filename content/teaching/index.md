@@ -22,9 +22,3 @@ As a PhD student, I had the chance to be a teaching assistant of professors from
 - \[MSc\] [Security and Risk: Management and Certifications](https://www.didattica.unipd.it/off/2020/LM/SC/SC2542/000ZZ/SCQ0089517/N0) - teaching assistant with [prof. Soderi](https://www.soderi.it/index.html)
 - \[MSc\] [Ethical Hacking](https://spritz.math.unipd.it/events/2022/Ethical_Hacking/index.html) - teaching assistant with [prof. Losiouk](https://www.math.unipd.it/~elosiouk/)
 - \[HS\] [Industrial Cyber Security Specialist](https://www.itsmeccatronico.it/), Teacher for [ITS Meccatronico Veneto](https://www.itsmeccatronico.it/passione-cyber-security/)
-
-
-# Talks
-- *"Digital documents pitfalls: Security and Privacy"* - November 3rd 2022, UniPd course Advanced Topics in Computer and Network Security
-- *"RedactBuster: Robustness Analysis of Document Redaction for Personally Identifiable Information Protection"* - February 16th 2024, TUDelft
-- *"Acoustic Side-Channel Attacks on a Computer Mouse"* - July 18th 2024, DIMVA 2024 (EPFL)

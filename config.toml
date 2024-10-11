@@ -31,19 +31,24 @@ url = "/teaching"
 weight = 4
 
 [[menu.main]]
+name = "Activities"
+url = "/activities"
+weight = 5
+
+[[menu.main]]
 name = "Posts"
 url = "/posts"
-weight = 5
+weight = 6
 
 [[menu.main]]
 name = "Suggestions"
 url = "/suggestions"
-weight = 6
+weight = 7
 
 [[menu.main]]
 name = "About"
 url = "/about"
-weight = 7
+weight = 8
 
 [markup]
   [markup.tableOfContents]
