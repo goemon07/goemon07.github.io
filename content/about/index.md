@@ -4,7 +4,7 @@ date: 2016-08-24 17:51:42
 ---
 
 # whoami
-Adaptable, hyperactive and tireless, I like challenges and adventures. I always wonder why things happen. I have difficulties in surviving without running and climbing.
+Adaptable, hyperactive and tireless, I like challenges and adventures. I always wonder why things happen. I have difficulties in surviving without running, cycling and climbing.
 I do research in the InfoSec field. Currently based in Padua, working with [SPRITZ research group](https://spritz.math.unipd.it/).
 
 ![While reaching the highest peak of Gran Sasso.](/images/about/gransasso.jpg)
@@ -41,6 +41,8 @@ I became a PhD student at the [University of Padua](https://www.math.unipd.it/) 
 I've been visiting [University of California, Irvine (UCI)](https://catalogue.uci.edu/donaldbrenschoolofinformationandcomputersciences/departmentofcomputerscience/) for six months in 2023.
 
 ![California](/images/about/california.jpg)
+
+I am currently a Postdoctoral Researcher in Unipd and a PhD Candidate waiting to defend my thesis within the first months of 2025.
 
 ## Not enough?
 

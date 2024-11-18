@@ -4,7 +4,7 @@ date: 2021-06-10 17:51:42
 ---
 
 # Teaching activities
-As a PhD student, I had the chance to be a teaching assistant of professors from University of Padua, as well as few other experiences as lecturer.
+Along my journey in academia, I had the chance to be a teaching assistant of professors from University of Padua, as well as few other experiences as lecturer.
 
 ## A.A. 2023/2024
 - \[MSc\] [CyberSecurity and Cryptography: Principles and Practices](https://www.math.unipd.it/~conti/teaching/CCPP2324/index.html) - teaching assistant with [prof. Conti](https://www.math.unipd.it/~conti/index.html)
