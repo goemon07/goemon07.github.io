@@ -86,7 +86,7 @@ weight = 8
   # https://fontawesome.com/icons?d=gallery&s=brands
   [[params.social]]
     name = "email"
-    link = "gabriele.orazi@phd.unipd.com"  # no need for "mailto:" in the head
+    link = "gabriele.orazi@unipd.com"  # no need for "mailto:" in the head
 
   [[params.social]]
     name = "scholar"
