@@ -64,7 +64,7 @@ weight = 8
   # googleAnalyticsAsync = false # use asynchronous tracking. Synchronous tracking by default
 
   # Home page settings
-  description = "Cybersecurity PostDoc & Ph.D. Candidate in SPRITZ Group (UniPd). Strongly unprofessional climber, cyclist and trail runner."
+  description = "Cybersecurity PostDoc in SPRITZ Group (UniPd). Strongly unprofessional climber, cyclist and trail runner."
   mainSection = "posts" # your main section
   showAllPostsOnHomePage = false # default
   postsOnHomePage = 5 # this option will be ignored if showAllPostsOnHomePage is set to true
