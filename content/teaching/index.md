@@ -6,6 +6,10 @@ date: 2021-06-10 17:51:42
 # Teaching activities
 Along my journey in academia, I had the chance to be a teaching assistant of professors from University of Padua, as well as few other experiences as lecturer.
 
+## A.A. 2025/2026
+- \[BSc\] [FISICA, MATEMATICA, STATISTICA E INFORMATICA](https://didattica.unipd.it/off/2025/LT/ME/ME2944/000ZZ/MEQ5108687/N0), Professor for undergraduate program of [Scienze e tecnologie erboristiche](https://www.medicinachirurgia.unipd.it/offerta-didattica/corsi-di-laurea-triennale?tipo=L&ordinamento=2025&key=ME2944) at [Unipd DSF](https://www.dsfarm.unipd.it/)
+- \[BSc\] [STATISTICA E BIOLOGIA QUANTITATIVA 1](https://didattica.unipd.it/off/2025/LT/SC/SC2977/000ZZ/SCQ5108100/N0), Professor for undergraduate program of [Biologia](https://didattica.unipd.it/off/2024/LT/SC/SC1165) at [DiBio Unipd](https://www.biologia.unipd.it/)
+
 ## A.A. 2023/2024
 - \[MSc\] [CyberSecurity and Cryptography: Principles and Practices](https://www.math.unipd.it/~conti/teaching/CCPP2324/index.html) - teaching assistant with [prof. Conti](https://www.math.unipd.it/~conti/index.html)
 - \[MSc\] [Ethical Hacking](https://didattica.unipd.it/off/2022/LM/SC/SC2542/000ZZ/SCQ0089518/N0) - teaching assistant with [prof. Losiouk](https://www.math.unipd.it/~elosiouk/) and [prof. Brighente](https://www.math.unipd.it/~abrighen/)

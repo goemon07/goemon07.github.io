@@ -6,6 +6,9 @@ date: 2021-06-10 17:51:42
 # 📚 Books
 Some of the books that I read and that I can definitively recommend.
 
+- Atomic Habits -  James Clear 
+\[[EN](https://www.amazon.it/Atomic-Habits-Proven-Build-Break/dp/0593189647/ref=sr_1_2?__mk_it_IT=%EF%BF%BDM%EF%BF%BD%25u017D%EF%BF%BD%EF%BF%BD&crid=36YICKWSOMUO2&dib=eyJ2IjoiMSJ9.MtdfdYPi-DUc5khBE3berh9xbBhJLyZAM4NcT3PybU4k5qxk4LKc2pjlxRmBPxKy-JlZAzERwvPz1N7dDbrHwi3WLvVNncbhk78ZFnXo1sSUTMU64zMHAS1z4i5nuyBM40RG2owDM-iATaRXzQGquWzQayxuXqB9l_52tk0vRGe9pldX8il0m3ZdQ9x8QPrrNNXjPEad3S3vGAlCHBRoaw8ikDwbJSBcIjUjnqSvueXKRXYZdjC9Aut_JHYbmLSanIubn2fjB6i1mKme9qomGv4G-tPBKu9K1AUPV9CFco4.DWAzMYvhsh4E2g94YZJnxsgFO8256djG8bzIBHOIwHw&dib_tag=se&keywords=atomic+habits&qid=1760607168&sprefix=%2Caps%2C888&sr=8-2)\]
+\[[IT](https://www.amazon.it/Atomic-habits-Piccole-abitudini-cambiamenti/dp/B0C7FQW26M/ref=sr_1_1?__mk_it_IT=%EF%BF%BDM%EF%BF%BD%25u017D%EF%BF%BD%EF%BF%BD&crid=36YICKWSOMUO2&dib=eyJ2IjoiMSJ9.MtdfdYPi-DUc5khBE3berh9xbBhJLyZAM4NcT3PybU4k5qxk4LKc2pjlxRmBPxKy-JlZAzERwvPz1N7dDbrHwi3WLvVNncbhk78ZFnXo1sSUTMU64zMHAS1z4i5nuyBM40RG2owDM-iATaRXzQGquWzQayxuXqB9l_52tk0vRGe9pldX8il0m3ZdQ9x8QPrrNNXjPEad3S3vGAlCHBRoaw8ikDwbJSBcIjUjnqSvueXKRXYZdjC9Aut_JHYbmLSanIubn2fjB6i1mKme9qomGv4G-tPBKu9K1AUPV9CFco4.DWAzMYvhsh4E2g94YZJnxsgFO8256djG8bzIBHOIwHw&dib_tag=se&keywords=atomic+habits&qid=1760607168&sprefix=%2Caps%2C888&sr=8-1)\]
 - The Subtle Art of Not Giving A F*ck - Mark Manson 
 \[[EN](https://www.amazon.it/subtle-art-not-giving-Counterintuitive/dp/0062641549)\]
 \[[IT](https://www.amazon.it/scorretto-efficace-liberarsi-irritanti-problemi/dp/8822707451)\]
@@ -33,6 +36,7 @@ Some of the books that I read and that I can definitively recommend.
 # 🎧 Music
 **Picky** selection of albums that stack in my headphones in heavy rotation.
 No masterpieces (given for granted), just one album per band.
+- Maruja - [Pain to Power](https://open.spotify.com/album/6wymdowW8HbQ4H3nVs93Hj?si=pnMg8fzjQCGOO2volTu3ZQ)
 - IDLES - [TANGK](https://open.spotify.com/album/6U11VNHZAfYY3E9V4oFB2p?si=C-DUklDiT8GUTY7zCl740A)
 - Hermanos Gutiérrez - [Hijos Del Sol](https://open.spotify.com/album/6gnYcXVaffdG0vwVM34cr8?si=VlhzzS8fS7SC185Vw-ZvkA)
 - Psychedelic Porn Crumpets - [High Visceral, Pt. 1](https://open.spotify.com/album/2BlcdDBE62JOtVOgC3L3xo?si=QEo7u74zQ96qnrfW8KYTVw)
