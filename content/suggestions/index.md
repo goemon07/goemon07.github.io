@@ -80,3 +80,4 @@ In Italian:
 Articles, blogposts or small references falls into this.
 
 - [How to Read a Paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf)
+- [Atomic Habits Cheatsheet](https://s3.amazonaws.com/jamesclear/Atomic+Habits/Habits+Cheat+Sheet.pdf)
