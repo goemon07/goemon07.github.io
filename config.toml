@@ -69,7 +69,7 @@ weight = 8
   showAllPostsOnHomePage = false # default
   postsOnHomePage = 5 # this option will be ignored if showAllPostsOnHomePage is set to true
   tagsOverview = false # show tags overview by default.
-  showProjectsList = true # show projects list by default (if projects data file exists).
+  showProjectsList = false # show projects list by default (if projects data file exists).
   projectsUrl = "https://github.com/goemon07" # title link for projects list
 
   # https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
