@@ -50,6 +50,11 @@ name = "About"
 url = "/about"
 weight = 8
 
+[[menu.main]]
+name = "Carbo Calc"
+url = "/carbo"
+weight = 9
+
 [markup]
   [markup.tableOfContents]
     endLevel = 6
