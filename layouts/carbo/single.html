@@ -39,7 +39,6 @@
   margin-bottom: 1.8rem;
 }
 
-/* --- Section blocks --- */
 .carbo-section {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -57,7 +56,6 @@
   border-bottom: 1px solid var(--border);
 }
 
-/* --- Duration --- */
 .duration-row {
   display: flex;
   align-items: center;
@@ -80,18 +78,12 @@
   padding: 0.4rem 0.5rem;
   transition: border-color 0.15s;
 }
-.duration-input:focus {
-  outline: none;
-  border-color: var(--yellow);
-}
-.duration-sep { color: var(--text-muted); font-size: 0.9rem; }
+.duration-input:focus { outline: none; border-color: var(--yellow); }
 
-/* --- Summary cards --- */
 .summary-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 0.8rem;
-  margin-bottom: 0;
 }
 .summary-card {
   background: var(--bg-input);
@@ -108,10 +100,10 @@
   top: 0; left: 0; right: 0;
   height: 3px;
 }
-.card-carbo::before { background: var(--text-muted); }
-.card-carbo-h::before { background: var(--yellow); }
-.card-sodio-h::before { background: var(--red-soft); }
-.card-caff::before { background: #9b7fd4; }
+.card-carbo::before    { background: var(--text-muted); }
+.card-carbo-h::before  { background: var(--yellow); }
+.card-sodio-h::before  { background: var(--red-soft); }
+.card-caff::before     { background: #9b7fd4; }
 
 .summary-card .card-label {
   font-size: 0.68rem;
@@ -126,16 +118,12 @@
   line-height: 1;
   margin-bottom: 0.2rem;
 }
-.summary-card .card-unit {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-}
-.card-carbo .card-value { color: var(--text-bright); }
-.card-carbo-h .card-value { color: var(--yellow); }
-.card-sodio-h .card-value { color: #d4805a; }
-.card-caff .card-value { color: #b89fd4; }
+.summary-card .card-unit { font-size: 0.75rem; color: var(--text-muted); }
+.card-carbo .card-value    { color: var(--text-bright); }
+.card-carbo-h .card-value  { color: var(--yellow); }
+.card-sodio-h .card-value  { color: #d4805a; }
+.card-caff .card-value     { color: #b89fd4; }
 
-/* --- Add product --- */
 .add-row {
   display: flex;
   gap: 0.6rem;
@@ -155,10 +143,8 @@
   transition: border-color 0.15s;
 }
 .carbo-select:focus { outline: none; border-color: var(--yellow); }
-.carbo-select option, .carbo-select optgroup {
-  background: #252729;
-  color: var(--text-bright);
-}
+.carbo-select option, .carbo-select optgroup { background: #252729; color: var(--text-bright); }
+
 .qty-input {
   width: 70px;
   background: var(--bg-input);
@@ -187,33 +173,16 @@
   white-space: nowrap;
 }
 .btn:active { transform: scale(0.97); }
-.btn-add {
-  background: var(--red-soft);
-  color: #fff;
-}
+.btn-add       { background: var(--red-soft); color: #fff; }
 .btn-add:hover { background: var(--red); }
-.btn-screenshot {
-  background: var(--yellow-dim);
-  color: #1a1a1a;
-}
+.btn-screenshot       { background: var(--yellow-dim); color: #1a1a1a; }
 .btn-screenshot:hover { background: var(--yellow); }
-.btn-reset {
-  background: transparent;
-  color: var(--text-muted);
-  border: 1px solid var(--border);
-}
+.btn-reset       { background: transparent; color: var(--text-muted); border: 1px solid var(--border); }
 .btn-reset:hover { border-color: var(--border-light); color: var(--text); }
-.btn-save-custom {
-  background: #2a4a3a;
-  color: var(--green);
-  border: 1px solid #2bbc8a44;
-}
+.btn-save-custom       { background: #2a4a3a; color: var(--green); border: 1px solid #2bbc8a44; }
 .btn-save-custom:hover { background: #2f5844; }
 
-/* --- Products table --- */
-.products-table-wrap {
-  overflow-x: auto;
-}
+.products-table-wrap { overflow-x: auto; }
 .products-table {
   width: 100%;
   border-collapse: collapse;
@@ -276,7 +245,6 @@
   font-size: 0.88rem;
 }
 
-/* --- Custom product form --- */
 .custom-form-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
@@ -309,26 +277,30 @@
 }
 .custom-field { display: flex; flex-direction: column; }
 .custom-actions { display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap; }
-.custom-saved-msg {
+.custom-saved-msg { font-size: 0.8rem; color: var(--green); display: none; }
+
+.actions-bar { display: flex; gap: 0.8rem; align-items: center; flex-wrap: wrap; }
+
+#report-area { background: var(--bg); }
+
+.report-header { display: none; }
+#report-area.screenshotting .report-header {
+  display: block;
+  padding: 1rem 1.4rem 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0;
+}
+#report-area.screenshotting .report-header h3 {
+  color: var(--red-soft);
+  font-size: 1.1rem;
+  margin: 0 0 0.2rem 0;
+}
+#report-area.screenshotting .report-header p {
+  color: var(--text-muted);
   font-size: 0.8rem;
-  color: var(--green);
-  display: none;
+  margin: 0 0 0.8rem 0;
 }
 
-/* --- Actions bar --- */
-.actions-bar {
-  display: flex;
-  gap: 0.8rem;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-/* --- Screenshot target area --- */
-#report-area {
-  background: var(--bg);
-}
-
-/* --- Toast notification --- */
 .toast {
   position: fixed;
   bottom: 1.5rem;
@@ -347,27 +319,6 @@
   z-index: 9999;
 }
 .toast.show { opacity: 1; transform: translateY(0); }
-
-/* Print/screenshot report styles */
-.report-header {
-  display: none;
-}
-#report-area.screenshotting .report-header {
-  display: block;
-  padding: 1rem 1.4rem 0;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 0;
-}
-#report-area.screenshotting .report-header h3 {
-  color: var(--red-soft);
-  font-size: 1.1rem;
-  margin: 0 0 0.2rem 0;
-}
-#report-area.screenshotting .report-header p {
-  color: var(--text-muted);
-  font-size: 0.8rem;
-  margin: 0 0 0.8rem 0;
-}
 </style>
 
 <div class="carbo-wrap">
@@ -378,16 +329,15 @@
   <div class="carbo-section">
     <h2>Durata Allenamento</h2>
     <div class="duration-row">
-      <input class="duration-input" type="number" id="dur-h" min="0" max="24" value="2" title="Ore">
+      <input class="duration-input" type="number" id="dur-h" min="0" max="24" value="2">
       <label for="dur-h">ore</label>
-      <span class="duration-sep">&nbsp;</span>
-      <input class="duration-input" type="number" id="dur-m" min="0" max="59" value="30" title="Minuti">
+      <input class="duration-input" type="number" id="dur-m" min="0" max="59" value="30">
       <label for="dur-m">minuti</label>
-      <span class="duration-sep" style="margin-left:0.5rem; color: var(--yellow); font-weight:600; font-size:0.85rem;" id="dur-display">→ 2h 30min</span>
+      <span id="dur-display" style="margin-left:0.5rem; color:var(--yellow); font-weight:600; font-size:0.85rem;">→ 2h 30min</span>
     </div>
   </div>
 
-  <!-- Summary cards -->
+  <!-- Summary + table (screenshot area) -->
   <div class="carbo-section" id="report-area">
     <div class="report-header">
       <h3>Carbo Calculator — Report</h3>
@@ -417,7 +367,6 @@
       </div>
     </div>
 
-    <!-- Products table (in report area for screenshot) -->
     <div style="margin-top:1.2rem;">
       <h2 style="margin-bottom:0.8rem;">Prodotti Consumati</h2>
       <div class="products-table-wrap">
@@ -450,7 +399,7 @@
       <select class="carbo-select" id="product-select">
         <option value="">— seleziona prodotto —</option>
       </select>
-      <input class="qty-input" type="number" id="qty-input" min="1" max="50" value="1" title="Quantità">
+      <input class="qty-input" type="number" id="qty-input" min="1" max="50" value="1">
       <button class="btn btn-add" id="btn-add-product">+ Aggiungi</button>
     </div>
     <div id="product-preview" style="margin-top:0.7rem; font-size:0.8rem; color:var(--text-muted); min-height:1.2em;"></div>
@@ -470,11 +419,11 @@
       </div>
       <div class="custom-field">
         <label class="custom-label">Sodio (mg)</label>
-        <input class="custom-input" type="number" id="c-sodio" placeholder="0" min="0" step="1">
+        <input class="custom-input" type="number" id="c-sodio" placeholder="0" min="0">
       </div>
       <div class="custom-field">
         <label class="custom-label">Caffeina (mg)</label>
-        <input class="custom-input" type="number" id="c-caff" placeholder="0" min="0" step="1">
+        <input class="custom-input" type="number" id="c-caff" placeholder="0" min="0">
       </div>
       <div class="custom-field">
         <label class="custom-label">Proteine (g)</label>
@@ -482,7 +431,7 @@
       </div>
     </div>
     <div class="custom-actions">
-      <button class="btn btn-add" id="btn-add-custom" style="background:#2a3f5a; color:#6aacdc; border:1px solid #3d6a94;">+ Aggiungi alla sessione</button>
+      <button class="btn" id="btn-add-custom" style="background:#2a3f5a;color:#6aacdc;border:1px solid #3d6a94;">+ Aggiungi alla sessione</button>
       <button class="btn btn-save-custom" id="btn-save-custom">💾 Salva nel database</button>
       <span class="custom-saved-msg" id="custom-saved-msg">✓ Salvato nel database locale</span>
     </div>
@@ -493,129 +442,115 @@
     <button class="btn btn-screenshot" id="btn-screenshot">📸 Scarica Screenshot</button>
     <button class="btn btn-reset" id="btn-reset">🗑 Reset sessione</button>
   </div>
-
-  <p style="font-size:0.72rem; color:var(--text-muted); margin-top:0.8rem;">
+  <p style="font-size:0.72rem;color:var(--text-muted);margin-top:0.8rem;">
     I prodotti personalizzati vengono salvati nel browser (localStorage) e restano disponibili nelle sessioni successive.
   </p>
 </div>
 
 <div class="toast" id="toast"></div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" crossorigin="anonymous"></script>
+<script src="{{ "js/html2canvas.min.js" | relURL }}"></script>
 <script>
 (function () {
+  // ── Product database injected by Hugo at build time ────────────
+  var DB_PRODUCTS = {{ .Site.Data.products | jsonify }};
+
   // ── State ──────────────────────────────────────────────────────
-  let products = [];   // { name, categoria, carbo_g, sodio_mg, caffeina_mg, proteine_g }
-  let consumed = [];   // { id, product, qty }
-  let nextId = 1;
+  var products = [];
+  var consumed = [];
+  var nextId = 1;
 
-  // ── Load CSV ───────────────────────────────────────────────────
-  function parseCSV(text) {
-    const lines = text.trim().split('\n');
-    const headers = lines[0].split(',').map(h => h.trim());
-    return lines.slice(1).map(line => {
-      const vals = line.split(',');
-      const obj = {};
-      headers.forEach((h, i) => {
-        const v = (vals[i] || '').trim();
-        obj[h] = isNaN(v) || v === '' ? v : parseFloat(v);
-      });
-      return obj;
-    }).filter(p => p.name);
+  function init() {
+    products = DB_PRODUCTS.slice();
+    loadCustomProducts();
+    buildSelect();
+    updateDurDisplay();
+    recalc();
   }
 
-  function loadCSV() {
-    return fetch('/data/products.csv')
-      .then(r => r.text())
-      .then(text => {
-        products = parseCSV(text);
-        loadCustomProducts();
-        buildSelect();
-      })
-      .catch(() => {
-        loadCustomProducts();
-        buildSelect();
-      });
-  }
-
+  // ── Custom products (localStorage) ────────────────────────────
   function loadCustomProducts() {
     try {
-      const stored = JSON.parse(localStorage.getItem('carbo_custom_products') || '[]');
-      stored.forEach(p => {
-        if (!products.find(x => x.name === p.name)) {
-          products.push({ ...p, categoria: p.categoria || 'Custom' });
+      var stored = JSON.parse(localStorage.getItem('carbo_custom_products') || '[]');
+      stored.forEach(function(p) {
+        if (!products.find(function(x){ return x.name === p.name; })) {
+          products.push(Object.assign({categoria:'Custom'}, p));
         }
       });
-    } catch (e) {}
+    } catch(e) {}
   }
 
   function saveCustomProduct(p) {
     try {
-      const stored = JSON.parse(localStorage.getItem('carbo_custom_products') || '[]');
-      if (!stored.find(x => x.name === p.name)) {
+      var stored = JSON.parse(localStorage.getItem('carbo_custom_products') || '[]');
+      if (!stored.find(function(x){ return x.name === p.name; })) {
         stored.push(p);
         localStorage.setItem('carbo_custom_products', JSON.stringify(stored));
       }
-    } catch (e) {}
+    } catch(e) {}
   }
 
-  // ── Build select ───────────────────────────────────────────────
-  const CATEGORY_ORDER = ['Gel', 'Barretta', 'Snack', 'Flask', 'Drink Mix', 'Sali', 'Caffeina', 'Bevanda', 'Custom'];
+  // ── Build dropdown ─────────────────────────────────────────────
+  var CAT_ORDER = ['Gel','Barretta','Snack','Flask','Drink Mix','Sali','Caffeina','Bevanda','Custom'];
 
   function buildSelect() {
-    const sel = document.getElementById('product-select');
+    var sel = document.getElementById('product-select');
     sel.innerHTML = '<option value="">— seleziona prodotto —</option>';
-    const groups = {};
-    products.forEach((p, i) => {
-      const cat = p.categoria || 'Altro';
+    var groups = {};
+    products.forEach(function(p, i) {
+      var cat = p.categoria || 'Altro';
       if (!groups[cat]) groups[cat] = [];
-      groups[cat].push({ ...p, _idx: i });
+      groups[cat].push({p: p, idx: i});
     });
-    const cats = CATEGORY_ORDER.filter(c => groups[c]).concat(
-      Object.keys(groups).filter(c => !CATEGORY_ORDER.includes(c))
+    var cats = CAT_ORDER.filter(function(c){ return groups[c]; }).concat(
+      Object.keys(groups).filter(function(c){ return CAT_ORDER.indexOf(c) === -1; })
     );
-    cats.forEach(cat => {
-      const og = document.createElement('optgroup');
+    cats.forEach(function(cat) {
+      var og = document.createElement('optgroup');
       og.label = cat;
-      groups[cat].forEach(p => {
-        const opt = document.createElement('option');
-        opt.value = p._idx;
-        opt.textContent = p.name;
+      groups[cat].forEach(function(item) {
+        var opt = document.createElement('option');
+        opt.value = item.idx;
+        opt.textContent = item.p.name;
         og.appendChild(opt);
       });
       sel.appendChild(og);
     });
   }
 
-  // ── Duration helpers ───────────────────────────────────────────
+  // ── Duration ───────────────────────────────────────────────────
   function getDurationH() {
-    const h = parseFloat(document.getElementById('dur-h').value) || 0;
-    const m = parseFloat(document.getElementById('dur-m').value) || 0;
+    var h = parseFloat(document.getElementById('dur-h').value) || 0;
+    var m = parseFloat(document.getElementById('dur-m').value) || 0;
     return h + m / 60;
   }
 
   function updateDurDisplay() {
-    const h = parseInt(document.getElementById('dur-h').value) || 0;
-    const m = parseInt(document.getElementById('dur-m').value) || 0;
-    document.getElementById('dur-display').textContent = `→ ${h}h ${m}min`;
+    var h = parseInt(document.getElementById('dur-h').value) || 0;
+    var m = parseInt(document.getElementById('dur-m').value) || 0;
+    document.getElementById('dur-display').textContent = '→ ' + h + 'h ' + m + 'min';
     recalc();
   }
 
-  // ── Recalculate stats ──────────────────────────────────────────
+  // ── Recalculate ────────────────────────────────────────────────
   function recalc() {
-    let totCarbo = 0, totSodio = 0, totCaff = 0, totProt = 0;
-    consumed.forEach(({ product: p, qty }) => {
-      totCarbo += p.carbo_g * qty;
-      totSodio += p.sodio_mg * qty;
-      totCaff += p.caffeina_mg * qty;
-      totProt += p.proteine_g * qty;
+    var totCarbo = 0, totSodio = 0, totCaff = 0, totProt = 0;
+    consumed.forEach(function(item) {
+      totCarbo += item.product.carbo_g * item.qty;
+      totSodio += item.product.sodio_mg * item.qty;
+      totCaff  += item.product.caffeina_mg * item.qty;
+      totProt  += item.product.proteine_g * item.qty;
     });
 
-    const durH = getDurationH();
-    const fmt = (v, dec = 1) => v === 0 ? '0' : v.toFixed(dec).replace(/\.0$/, '');
+    var durH = getDurationH();
+
+    function fmt(v, dec) {
+      if (dec === undefined) dec = 1;
+      return v === 0 ? '0' : parseFloat(v.toFixed(dec)).toString();
+    }
 
     document.getElementById('stat-carbo-tot').textContent = fmt(totCarbo);
-    document.getElementById('stat-caff-tot').textContent = fmt(totCaff, 0);
+    document.getElementById('stat-caff-tot').textContent  = fmt(totCaff, 0);
 
     if (durH > 0) {
       document.getElementById('stat-carbo-h').textContent = fmt(totCarbo / durH);
@@ -628,10 +563,20 @@
     renderTable(totCarbo, totSodio, totCaff, totProt);
   }
 
-  // ── Render table ───────────────────────────────────────────────
+  // ── Table ──────────────────────────────────────────────────────
+  function esc(s) {
+    return String(s)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+
   function renderTable(totCarbo, totSodio, totCaff, totProt) {
-    const tbody = document.getElementById('consumed-body');
-    const tfoot = document.getElementById('consumed-foot');
+    var tbody = document.getElementById('consumed-body');
+    var tfoot = document.getElementById('consumed-foot');
+
+    function fmt(v, dec) {
+      if (dec === undefined) dec = 1;
+      return v === 0 ? '0' : parseFloat(v.toFixed(dec)).toString();
+    }
 
     if (consumed.length === 0) {
       tbody.innerHTML = '<tr><td colspan="8" class="empty-state">Nessun prodotto aggiunto. Usa il selettore sotto.</td></tr>';
@@ -639,125 +584,112 @@
       return;
     }
 
-    const fmt = (v, dec = 1) => v === 0 ? '0' : parseFloat(v.toFixed(dec)).toString();
+    tbody.innerHTML = consumed.map(function(item) {
+      var p = item.product;
+      return '<tr>' +
+        '<td class="td-name">' + esc(p.name) + '</td>' +
+        '<td><span class="td-cat">' + esc(p.categoria || 'Custom') + '</span></td>' +
+        '<td class="td-num">' + item.qty + '</td>' +
+        '<td class="td-num td-carbo">' + fmt(p.carbo_g * item.qty) + '</td>' +
+        '<td class="td-num">' + fmt(p.sodio_mg * item.qty, 0) + '</td>' +
+        '<td class="td-num">' + fmt(p.caffeina_mg * item.qty, 0) + '</td>' +
+        '<td class="td-num">' + fmt(p.proteine_g * item.qty) + '</td>' +
+        '<td><button class="td-remove" data-id="' + item.id + '" title="Rimuovi">×</button></td>' +
+        '</tr>';
+    }).join('');
 
-    tbody.innerHTML = consumed.map(({ id, product: p, qty }) => `
-      <tr>
-        <td class="td-name">${esc(p.name)}</td>
-        <td><span class="td-cat">${esc(p.categoria || 'Custom')}</span></td>
-        <td class="td-num">${qty}</td>
-        <td class="td-num td-carbo">${fmt(p.carbo_g * qty)}</td>
-        <td class="td-num">${fmt(p.sodio_mg * qty, 0)}</td>
-        <td class="td-num">${fmt(p.caffeina_mg * qty, 0)}</td>
-        <td class="td-num">${fmt(p.proteine_g * qty)}</td>
-        <td><button class="td-remove" data-id="${id}" title="Rimuovi">×</button></td>
-      </tr>
-    `).join('');
+    tfoot.innerHTML =
+      '<tr class="total-row">' +
+      '<td colspan="2"><strong>Totale</strong></td><td></td>' +
+      '<td class="td-num td-carbo"><strong>' + fmt(totCarbo) + '</strong></td>' +
+      '<td class="td-num"><strong>' + fmt(totSodio, 0) + '</strong></td>' +
+      '<td class="td-num"><strong>' + fmt(totCaff, 0) + '</strong></td>' +
+      '<td class="td-num"><strong>' + fmt(totProt) + '</strong></td>' +
+      '<td></td></tr>';
 
-    tfoot.innerHTML = `
-      <tr class="total-row">
-        <td colspan="2"><strong>Totale</strong></td>
-        <td></td>
-        <td class="td-num td-carbo"><strong>${fmt(totCarbo)}</strong></td>
-        <td class="td-num"><strong>${fmt(totSodio, 0)}</strong></td>
-        <td class="td-num"><strong>${fmt(totCaff, 0)}</strong></td>
-        <td class="td-num"><strong>${fmt(totProt)}</strong></td>
-        <td></td>
-      </tr>
-    `;
-
-    tbody.querySelectorAll('.td-remove').forEach(btn => {
-      btn.addEventListener('click', () => removeItem(parseInt(btn.dataset.id)));
+    tbody.querySelectorAll('.td-remove').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        removeItem(parseInt(btn.dataset.id));
+      });
     });
-  }
-
-  function esc(str) {
-    return String(str)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;');
   }
 
   // ── Add / Remove ───────────────────────────────────────────────
   function addItem(product, qty) {
-    const existing = consumed.find(c => c.product.name === product.name);
+    var existing = consumed.find(function(c) { return c.product.name === product.name; });
     if (existing) {
       existing.qty += qty;
     } else {
-      consumed.push({ id: nextId++, product, qty });
+      consumed.push({id: nextId++, product: product, qty: qty});
     }
     recalc();
   }
 
   function removeItem(id) {
-    consumed = consumed.filter(c => c.id !== id);
+    consumed = consumed.filter(function(c) { return c.id !== id; });
     recalc();
   }
 
   // ── Product preview ────────────────────────────────────────────
   function updatePreview() {
-    const sel = document.getElementById('product-select');
-    const preview = document.getElementById('product-preview');
-    const idx = sel.value;
-    if (idx === '') { preview.textContent = ''; return; }
-    const p = products[parseInt(idx)];
-    if (!p) { preview.textContent = ''; return; }
+    var sel = document.getElementById('product-select');
+    var preview = document.getElementById('product-preview');
+    if (sel.value === '') { preview.innerHTML = ''; return; }
+    var p = products[parseInt(sel.value)];
+    if (!p) { preview.innerHTML = ''; return; }
     preview.innerHTML =
-      `<span style="color:var(--yellow)">Carbo: ${p.carbo_g}g</span> &nbsp;·&nbsp; ` +
-      `Sodio: ${p.sodio_mg}mg &nbsp;·&nbsp; ` +
-      `Caffeina: ${p.caffeina_mg}mg &nbsp;·&nbsp; ` +
-      `Proteine: ${p.proteine_g}g`;
+      '<span style="color:var(--yellow)">Carbo: ' + p.carbo_g + 'g</span> &nbsp;·&nbsp; ' +
+      'Sodio: ' + p.sodio_mg + 'mg &nbsp;·&nbsp; ' +
+      'Caffeina: ' + p.caffeina_mg + 'mg &nbsp;·&nbsp; ' +
+      'Proteine: ' + p.proteine_g + 'g';
   }
 
   // ── Screenshot ────────────────────────────────────────────────
   function takeScreenshot() {
-    const area = document.getElementById('report-area');
-    const removeCol = document.getElementById('remove-col-header');
-    const removeBtns = document.querySelectorAll('.td-remove');
-    const catSpans = document.querySelectorAll('.td-cat');
+    if (typeof html2canvas === 'undefined') {
+      showToast('html2canvas non disponibile. Ricarica la pagina.');
+      return;
+    }
+    var area = document.getElementById('report-area');
+    var removeHeader = document.getElementById('remove-col-header');
+    var removeBtns = document.querySelectorAll('.td-remove');
 
-    // Prepare report meta
-    const h = parseInt(document.getElementById('dur-h').value) || 0;
-    const m = parseInt(document.getElementById('dur-m').value) || 0;
-    const now = new Date().toLocaleDateString('it-IT', { day:'2-digit', month:'2-digit', year:'numeric' });
+    var h = parseInt(document.getElementById('dur-h').value) || 0;
+    var m = parseInt(document.getElementById('dur-m').value) || 0;
+    var now = new Date().toLocaleDateString('it-IT', {day:'2-digit',month:'2-digit',year:'numeric'});
     document.getElementById('report-meta').textContent =
-      `Data: ${now} · Durata: ${h}h ${m}min`;
+      'Data: ' + now + ' · Durata: ' + h + 'h ' + m + 'min';
 
-    // Temporarily hide remove buttons and col header
     area.classList.add('screenshotting');
-    removeCol.style.display = 'none';
-    removeBtns.forEach(b => b.style.visibility = 'hidden');
+    removeHeader.style.display = 'none';
+    removeBtns.forEach(function(b){ b.style.visibility = 'hidden'; });
 
-    html2canvas(area, {
-      backgroundColor: '#1d1f21',
-      scale: 2,
-      useCORS: true,
-      logging: false
-    }).then(canvas => {
-      area.classList.remove('screenshotting');
-      removeCol.style.display = '';
-      removeBtns.forEach(b => b.style.visibility = '');
-
-      const link = document.createElement('a');
-      const dateStr = new Date().toISOString().slice(0,10);
-      link.download = `carbo-${dateStr}.png`;
-      link.href = canvas.toDataURL('image/png');
-      link.click();
-      showToast('📸 Screenshot salvato!');
-    }).catch(() => {
-      area.classList.remove('screenshotting');
-      removeCol.style.display = '';
-      removeBtns.forEach(b => b.style.visibility = '');
-      showToast('Errore nel download. Prova con il tasto destro → Salva immagine.');
-    });
+    html2canvas(area, {backgroundColor:'#1d1f21', scale:2, useCORS:true, logging:false})
+      .then(function(canvas) {
+        area.classList.remove('screenshotting');
+        removeHeader.style.display = '';
+        removeBtns.forEach(function(b){ b.style.visibility = ''; });
+        var link = document.createElement('a');
+        var d = new Date().toISOString().slice(0,10);
+        link.download = 'carbo-' + d + '.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+        showToast('📸 Screenshot salvato!');
+      })
+      .catch(function() {
+        area.classList.remove('screenshotting');
+        removeHeader.style.display = '';
+        removeBtns.forEach(function(b){ b.style.visibility = ''; });
+        showToast('Errore screenshot. Prova tasto destro → Salva immagine.');
+      });
   }
 
   // ── Toast ──────────────────────────────────────────────────────
   function showToast(msg) {
-    const t = document.getElementById('toast');
+    var t = document.getElementById('toast');
     t.textContent = msg;
     t.classList.add('show');
-    setTimeout(() => t.classList.remove('show'), 2800);
+    setTimeout(function(){ t.classList.remove('show'); }, 2800);
   }
 
   // ── Event listeners ────────────────────────────────────────────
@@ -765,58 +697,58 @@
   document.getElementById('dur-m').addEventListener('input', updateDurDisplay);
   document.getElementById('product-select').addEventListener('change', updatePreview);
 
-  document.getElementById('btn-add-product').addEventListener('click', () => {
-    const sel = document.getElementById('product-select');
-    const idx = sel.value;
-    if (idx === '') { showToast('Seleziona un prodotto prima.'); return; }
-    const p = products[parseInt(idx)];
-    const qty = parseInt(document.getElementById('qty-input').value) || 1;
-    if (qty < 1) { showToast('La quantità deve essere almeno 1.'); return; }
+  document.getElementById('btn-add-product').addEventListener('click', function() {
+    var sel = document.getElementById('product-select');
+    if (sel.value === '') { showToast('Seleziona un prodotto prima.'); return; }
+    var p = products[parseInt(sel.value)];
+    var qty = parseInt(document.getElementById('qty-input').value) || 1;
+    if (qty < 1) { showToast('Quantità minima: 1.'); return; }
     addItem(p, qty);
-    showToast(`✓ ${p.name} × ${qty} aggiunto`);
+    showToast('✓ ' + p.name + ' × ' + qty + ' aggiunto');
   });
 
-  document.getElementById('btn-add-custom').addEventListener('click', () => {
-    const name = document.getElementById('c-name').value.trim();
-    if (!name) { showToast('Inserisci il nome del prodotto.'); return; }
-    const p = {
-      name,
-      categoria: 'Custom',
-      carbo_g: parseFloat(document.getElementById('c-carbo').value) || 0,
-      sodio_mg: parseFloat(document.getElementById('c-sodio').value) || 0,
-      caffeina_mg: parseFloat(document.getElementById('c-caff').value) || 0,
-      proteine_g: parseFloat(document.getElementById('c-prot').value) || 0,
-    };
-    const qty = 1;
-    addItem(p, qty);
-    showToast(`✓ ${p.name} aggiunto alla sessione`);
+  document.getElementById('qty-input').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') document.getElementById('btn-add-product').click();
   });
 
-  document.getElementById('btn-save-custom').addEventListener('click', () => {
-    const name = document.getElementById('c-name').value.trim();
+  document.getElementById('btn-add-custom').addEventListener('click', function() {
+    var name = document.getElementById('c-name').value.trim();
     if (!name) { showToast('Inserisci il nome del prodotto.'); return; }
-    const p = {
-      name,
-      categoria: 'Custom',
-      carbo_g: parseFloat(document.getElementById('c-carbo').value) || 0,
-      sodio_mg: parseFloat(document.getElementById('c-sodio').value) || 0,
-      caffeina_mg: parseFloat(document.getElementById('c-caff').value) || 0,
-      proteine_g: parseFloat(document.getElementById('c-prot').value) || 0,
+    var p = {
+      name: name, categoria: 'Custom',
+      carbo_g:     parseFloat(document.getElementById('c-carbo').value) || 0,
+      sodio_mg:    parseFloat(document.getElementById('c-sodio').value) || 0,
+      caffeina_mg: parseFloat(document.getElementById('c-caff').value)  || 0,
+      proteine_g:  parseFloat(document.getElementById('c-prot').value)  || 0
     };
-    if (!products.find(x => x.name === name)) {
+    addItem(p, 1);
+    showToast('✓ ' + p.name + ' aggiunto alla sessione');
+  });
+
+  document.getElementById('btn-save-custom').addEventListener('click', function() {
+    var name = document.getElementById('c-name').value.trim();
+    if (!name) { showToast('Inserisci il nome del prodotto.'); return; }
+    var p = {
+      name: name, categoria: 'Custom',
+      carbo_g:     parseFloat(document.getElementById('c-carbo').value) || 0,
+      sodio_mg:    parseFloat(document.getElementById('c-sodio').value) || 0,
+      caffeina_mg: parseFloat(document.getElementById('c-caff').value)  || 0,
+      proteine_g:  parseFloat(document.getElementById('c-prot').value)  || 0
+    };
+    if (!products.find(function(x){ return x.name === name; })) {
       products.push(p);
       buildSelect();
     }
     saveCustomProduct(p);
-    const msg = document.getElementById('custom-saved-msg');
+    var msg = document.getElementById('custom-saved-msg');
     msg.style.display = 'inline';
-    setTimeout(() => msg.style.display = 'none', 3000);
+    setTimeout(function(){ msg.style.display = 'none'; }, 3000);
     showToast('💾 Prodotto salvato nel database locale');
   });
 
   document.getElementById('btn-screenshot').addEventListener('click', takeScreenshot);
 
-  document.getElementById('btn-reset').addEventListener('click', () => {
+  document.getElementById('btn-reset').addEventListener('click', function() {
     if (!consumed.length || confirm('Resettare la sessione corrente?')) {
       consumed = [];
       recalc();
@@ -824,14 +756,8 @@
     }
   });
 
-  // Keyboard shortcut: Enter on product select / qty
-  document.getElementById('qty-input').addEventListener('keydown', e => {
-    if (e.key === 'Enter') document.getElementById('btn-add-product').click();
-  });
-
-  // ── Init ───────────────────────────────────────────────────────
-  updateDurDisplay();
-  loadCSV();
+  // ── Start ──────────────────────────────────────────────────────
+  init();
 })();
 </script>
 {{ end }}
