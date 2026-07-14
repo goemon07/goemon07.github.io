@@ -1,7 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Gabriele Orazi</title><link>/posts/</link><description>Recent content in Posts on Gabriele Orazi</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Gabriele Orazi</copyright><lastBuildDate>Fri, 18 Aug 2023 21:53:11 +0100</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Thoughts after my first DEF CON</title><link>/posts/defcon/</link><pubDate>Fri, 18 Aug 2023 21:53:11 +0100</pubDate><guid>/posts/defcon/</guid><description>My first @DEFCON 31 is just gone. I heavily wondered about how it would have been and, honestly, it just crashed my expectations. I came home with a thousand ideas and a great desire to get to work to improve. Basically, I&amp;rsquo;m now fully charged for the upcoming academic year!
-Here some of my newbie&amp;rsquo;s random thoughts/tips: 👇
-Stickers, stickers everywhere! I was planning to leave my laptop free from stickers, but now it will be so hard to stick (lol) to the plan.</description></item><item><title>How to create free static website with Hugo and Github Pages</title><link>/posts/github_pages/</link><pubDate>Fri, 02 Apr 2021 08:47:11 +0100</pubDate><guid>/posts/github_pages/</guid><description>So you&amp;rsquo;re struggling to create your own website? Are you looking for some cheap and clean solution too? Free?
-Ok, probably you&amp;rsquo;re a bit too ambitious.
-OR NOT.
-I was in your situation too and now you&amp;rsquo;re visiting this website, which is built on top of the same advices you&amp;rsquo;re going to follow (hopefully!).
-If you unfortunately fall into this website, probably you&amp;rsquo;re familiar with the git versioning system. Probably you know about Github as well.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Gabriele Orazi</title><link>/posts/</link><description>Recent content in Posts on Gabriele Orazi</description><generator>Hugo</generator><language>en-us</language><copyright>Gabriele Orazi</copyright><lastBuildDate>Fri, 18 Aug 2023 21:53:11 +0100</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Thoughts after my first DEF CON</title><link>/posts/defcon/</link><pubDate>Fri, 18 Aug 2023 21:53:11 +0100</pubDate><guid>/posts/defcon/</guid><description>&lt;p>My first &lt;a href="https://twitter.com/defcon">@DEFCON&lt;/a> 31 is just gone. I heavily wondered about how it would have been and, honestly, it just crashed my expectations.
+I came home with a thousand ideas and a great desire to get to work to improve. Basically, I&amp;rsquo;m now fully charged for the upcoming academic year!&lt;/p>
+&lt;p>&lt;img src="/images/posts/defcon/defcon_conf.jpg" alt="The main stage in Caesars Forum.">&lt;/p>
+&lt;p>&lt;img src="/images/posts/defcon/chill_area.jpg" alt="The chill area, great music by SomaFM.">&lt;/p>
+&lt;p>Here some of my newbie&amp;rsquo;s random thoughts/tips: 👇&lt;/p>
+&lt;ol>
+&lt;li>Stickers, stickers everywhere! I was planning to leave my laptop free from stickers, but now it will be so hard to stick (lol) to the plan.&lt;/li>
+&lt;li>Better keep airplane mode whenever possible, but do not freak out too much. Just take precautions. Burner phone and laptop are the best choice. If you cannot, just be careful.&lt;/li>
+&lt;li>The hacker community is one of the most inclusive I ever know. Be yourself, enjoy your time with folks that share with you a true passion for cybersec.&lt;/li>
+&lt;li>Ask questions. Get out of your specific field and explore villages. Villages&amp;rsquo; volunteers are expert waiting for you to share their experience. Their time and experience is precious.&lt;/li>
+&lt;li>&lt;a href="https://twitter.com/hashtag/linecon?src=hashtag_click">#linecon&lt;/a> is the best way to socialize. I made a lot of new friends during these days, most of them just while waiting in the line. And do not let the ball touch the ground!!!&lt;/li>
+&lt;li>Do not ask specific personal questions. Might sound stupid, but IMHO it&amp;rsquo;s not. E.g., ask &amp;ldquo;What is your job?&amp;rdquo; rather then &amp;ldquo;What company do you work for?&amp;rdquo;. Privacy-awareness is a must.&lt;/li>
+&lt;li>Time is limited: accurately review the talks you must attend and be there in advance to be sure to get in. Remember that a lot of those are recorded, so give priority to those who are not.&lt;/li>
+&lt;li>Last but not least. Drink. More. Water.&lt;/li>
+&lt;li>Follow the 3-2-1 rule. If you are not too much into CTFs and challenges, I would go for a 5-2-1 rule instead.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="/images/posts/defcon/321_rule.jpg" alt="3-2-1 rule explanation while in linecon.">&lt;/p></description></item><item><title>How to create free static website with Hugo and Github Pages</title><link>/posts/github_pages/</link><pubDate>Fri, 02 Apr 2021 08:47:11 +0100</pubDate><guid>/posts/github_pages/</guid><description>&lt;p>So you&amp;rsquo;re struggling to create your &lt;strong>own website&lt;/strong>?
+Are you looking for some &lt;strong>cheap and clean&lt;/strong> solution too? &lt;strong>Free&lt;/strong>?&lt;/p>
+&lt;p>Ok, probably you&amp;rsquo;re a bit too ambitious.&lt;/p>
+&lt;p>&lt;strong>OR NOT&lt;/strong>.&lt;/p>
+&lt;p>I was in your situation too and now you&amp;rsquo;re visiting this website, which is built on top of the same advices you&amp;rsquo;re going to follow (hopefully!).&lt;/p>
+&lt;p>If you unfortunately fall into this website, probably you&amp;rsquo;re familiar with the &lt;strong>git&lt;/strong> versioning system.
+Probably you know about &lt;a href="https://github.com">Github&lt;/a> as well.&lt;/p></description></item></channel></rss>
