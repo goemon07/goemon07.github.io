@@ -449,11 +449,12 @@
 
 <div class="toast" id="toast"></div>
 
+<script src="{{ "js/carbo-data.js" | relURL }}"></script>
 <script src="{{ "js/html2canvas.min.js" | relURL }}"></script>
 <script>
 (function () {
-  // ── Product database injected by Hugo at build time ────────────
-  var DB_PRODUCTS = {{ .Site.Data.products | jsonify }};
+  // ── Product database (from /js/carbo-data.js, not minified) ───
+  var DB_PRODUCTS = window.CARBO_DB || [];
 
   // ── State ──────────────────────────────────────────────────────
   var products = [];
