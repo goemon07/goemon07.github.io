@@ -1,0 +1,44 @@
+/* "Coaching" side of the site: same font & layout as the main site,
+   just re-accented (amber instead of red) so it reads as a distinct space. */
+
+body.coaching #header h1 .coach-badge {
+    display: inline-block;
+    margin-left: 0.6rem;
+    padding: 0.15rem 0.55rem;
+    vertical-align: middle;
+    border-radius: 20px;
+    background: #e8b84b;
+    color: #1a1a1a;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+body.coaching h1,
+body.coaching .h1,
+body.coaching #header h1,
+body.coaching #header .h1 {
+    color: #e8b84b;
+}
+
+body.coaching #header #nav {
+    color: #e8b84b;
+}
+body.coaching #header #nav ul a {
+    color: #e8b84b;
+}
+body.coaching #header #nav ul a:hover {
+    background-image: linear-gradient(transparent, transparent 5px, #e8b84b 5px, #e8b84b);
+}
+body.coaching #header #nav ul li {
+    border-color: #e8b84b;
+}
+
+body.coaching .content h2:before {
+    color: #e8b84b;
+}
+
+body.coaching .search-input:focus {
+    border-color: #e8b84b;
+}

@@ -1,37 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gabriele Orazi</title><link>/</link><description>Recent content on Gabriele Orazi</description><generator>Hugo</generator><language>en-us</language><copyright>Gabriele Orazi</copyright><lastBuildDate>Tue, 14 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Carbo Calculator</title><link>/carbo/</link><pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate><guid>/carbo/</guid><description/></item><item><title>Thoughts after my first DEF CON</title><link>/posts/defcon/</link><pubDate>Fri, 18 Aug 2023 21:53:11 +0100</pubDate><guid>/posts/defcon/</guid><description>&lt;p>My first &lt;a href="https://twitter.com/defcon">@DEFCON&lt;/a> 31 is just gone. I heavily wondered about how it would have been and, honestly, it just crashed my expectations.
-I came home with a thousand ideas and a great desire to get to work to improve. Basically, I&amp;rsquo;m now fully charged for the upcoming academic year!&lt;/p>
-&lt;p>&lt;img src="/images/posts/defcon/defcon_conf.jpg" alt="The main stage in Caesars Forum.">&lt;/p>
-&lt;p>&lt;img src="/images/posts/defcon/chill_area.jpg" alt="The chill area, great music by SomaFM.">&lt;/p>
-&lt;p>Here some of my newbie&amp;rsquo;s random thoughts/tips: 👇&lt;/p>
-&lt;ol>
-&lt;li>Stickers, stickers everywhere! I was planning to leave my laptop free from stickers, but now it will be so hard to stick (lol) to the plan.&lt;/li>
-&lt;li>Better keep airplane mode whenever possible, but do not freak out too much. Just take precautions. Burner phone and laptop are the best choice. If you cannot, just be careful.&lt;/li>
-&lt;li>The hacker community is one of the most inclusive I ever know. Be yourself, enjoy your time with folks that share with you a true passion for cybersec.&lt;/li>
-&lt;li>Ask questions. Get out of your specific field and explore villages. Villages&amp;rsquo; volunteers are expert waiting for you to share their experience. Their time and experience is precious.&lt;/li>
-&lt;li>&lt;a href="https://twitter.com/hashtag/linecon?src=hashtag_click">#linecon&lt;/a> is the best way to socialize. I made a lot of new friends during these days, most of them just while waiting in the line. And do not let the ball touch the ground!!!&lt;/li>
-&lt;li>Do not ask specific personal questions. Might sound stupid, but IMHO it&amp;rsquo;s not. E.g., ask &amp;ldquo;What is your job?&amp;rdquo; rather then &amp;ldquo;What company do you work for?&amp;rdquo;. Privacy-awareness is a must.&lt;/li>
-&lt;li>Time is limited: accurately review the talks you must attend and be there in advance to be sure to get in. Remember that a lot of those are recorded, so give priority to those who are not.&lt;/li>
-&lt;li>Last but not least. Drink. More. Water.&lt;/li>
-&lt;li>Follow the 3-2-1 rule. If you are not too much into CTFs and challenges, I would go for a 5-2-1 rule instead.&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="/images/posts/defcon/321_rule.jpg" alt="3-2-1 rule explanation while in linecon.">&lt;/p></description></item><item><title>Activities &amp; Services</title><link>/activities/</link><pubDate>Thu, 10 Jun 2021 17:51:42 +0000</pubDate><guid>/activities/</guid><description>&lt;h1 id="talks">Talks&lt;/h1>
-&lt;ul>
-&lt;li>&lt;em>&amp;ldquo;Digital documents pitfalls: Security and Privacy&amp;rdquo;&lt;/em> - November 3rd 2022, UniPd course Advanced Topics in Computer and Network Security&lt;/li>
-&lt;li>&lt;em>&amp;ldquo;RedactBuster: Robustness Analysis of Document Redaction for Personally Identifiable Information Protection&amp;rdquo;&lt;/em> - February 16th 2024, TUDelft&lt;/li>
-&lt;li>&lt;em>&amp;ldquo;Acoustic Side-Channel Attacks on a Computer Mouse&amp;rdquo;&lt;/em> - July 18th 2024, DIMVA 2024 (EPFL)&lt;/li>
-&lt;li>&lt;em>&amp;ldquo;RedactBuster: Entity Type Recognition from Redacted Documents&amp;rdquo;&lt;/em> - September 18th 2024, ESORICS 2024 (Politechnika Bydgoska)&lt;/li>
-&lt;/ul>
-&lt;h1 id="services">Services&lt;/h1>
-&lt;h2 id="web-chair">Web Chair&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://spritz.math.unipd.it/events/2023/devSecOpsRO/">1st Workshop on DevSecOps Research and Opportunities (DevSecOpsRO)&lt;/a>, co-located with EuroS&amp;amp;P 2023&lt;/li>
-&lt;li>&lt;a href="https://spritz.math.unipd.it/events/2024/devSecOpsRO/">2nd Workshop on DevSecOps Research and Opportunities (DevSecOpsRO)&lt;/a>, co-located with EuroS&amp;amp;P 2024&lt;/li>
-&lt;li>&lt;a href="https://spritz.math.unipd.it/events/2025/devSecOpsRO/">3rd Workshop on DevSecOps Research and Opportunities (DevSecOpsRO)&lt;/a>, co-located with EuroS&amp;amp;P 2025&lt;/li>
-&lt;/ul>
-&lt;h2 id="technical-program-committee-member">Technical Program Committee Member&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://waiti-workshop.github.io/">Workshop on AI for Cyber Threat Intelligence (WAITI) 2024&lt;/a>, co-located with the ACSAC 2024&lt;/li>
-&lt;/ul></description></item><item><title>Publications</title><link>/publications/</link><pubDate>Thu, 10 Jun 2021 17:51:42 +0000</pubDate><guid>/publications/</guid><description>&lt;h1 id="publications">Publications&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gabriele Orazi</title><link>/</link><description>Recent content on Gabriele Orazi</description><generator>Hugo</generator><language>en-us</language><copyright>Gabriele Orazi</copyright><lastBuildDate>Tue, 14 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Carbo Calculator</title><link>/coach/carbo/</link><pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate><guid>/coach/carbo/</guid><description/></item><item><title>Research</title><link>/publications/</link><pubDate>Thu, 10 Jun 2021 17:51:42 +0000</pubDate><guid>/publications/</guid><description>&lt;h1 id="publications">Publications&lt;/h1>
 &lt;p>My research areas are focused on privacy and private data leaks. I&amp;rsquo;m primarely working on obfuscation techniques, forensics and malware detection.&lt;/p>
 &lt;h2 id="redactbuster-entity-type-recognition-from-redacted-documents">&lt;a href="https://arxiv.org/abs/2404.12991">RedactBuster: Entity Type Recognition from Redacted Documents&lt;/a>&lt;/h2>
 &lt;ul>
@@ -56,6 +23,24 @@ I came home with a thousand ideas and a great desire to get to work to improve. 
 &lt;li>User continuous and automatic authentication and de-authentication.&lt;/li>
 &lt;li>@ Pervasive and Mobile Computing Journal 2023&lt;/li>
 &lt;li>M. Cardaioli, M. Conti, G. Orazi, P. P. Tricomi, G. Tsudik&lt;/li>
+&lt;/ul>
+&lt;h1 id="talks">Talks&lt;/h1>
+&lt;ul>
+&lt;li>&lt;em>&amp;ldquo;Digital documents pitfalls: Security and Privacy&amp;rdquo;&lt;/em> - November 3rd 2022, UniPd course Advanced Topics in Computer and Network Security&lt;/li>
+&lt;li>&lt;em>&amp;ldquo;RedactBuster: Robustness Analysis of Document Redaction for Personally Identifiable Information Protection&amp;rdquo;&lt;/em> - February 16th 2024, TUDelft&lt;/li>
+&lt;li>&lt;em>&amp;ldquo;Acoustic Side-Channel Attacks on a Computer Mouse&amp;rdquo;&lt;/em> - July 18th 2024, DIMVA 2024 (EPFL)&lt;/li>
+&lt;li>&lt;em>&amp;ldquo;RedactBuster: Entity Type Recognition from Redacted Documents&amp;rdquo;&lt;/em> - September 18th 2024, ESORICS 2024 (Politechnika Bydgoska)&lt;/li>
+&lt;/ul>
+&lt;h1 id="services">Services&lt;/h1>
+&lt;h2 id="web-chair">Web Chair&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://spritz.math.unipd.it/events/2023/devSecOpsRO/">1st Workshop on DevSecOps Research and Opportunities (DevSecOpsRO)&lt;/a>, co-located with EuroS&amp;amp;P 2023&lt;/li>
+&lt;li>&lt;a href="https://spritz.math.unipd.it/events/2024/devSecOpsRO/">2nd Workshop on DevSecOps Research and Opportunities (DevSecOpsRO)&lt;/a>, co-located with EuroS&amp;amp;P 2024&lt;/li>
+&lt;li>&lt;a href="https://spritz.math.unipd.it/events/2025/devSecOpsRO/">3rd Workshop on DevSecOps Research and Opportunities (DevSecOpsRO)&lt;/a>, co-located with EuroS&amp;amp;P 2025&lt;/li>
+&lt;/ul>
+&lt;h2 id="technical-program-committee-member">Technical Program Committee Member&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://waiti-workshop.github.io/">Workshop on AI for Cyber Threat Intelligence (WAITI) 2024&lt;/a>, co-located with the ACSAC 2024&lt;/li>
 &lt;/ul></description></item><item><title>Short Bio</title><link>/shortbio/</link><pubDate>Thu, 10 Jun 2021 17:51:42 +0000</pubDate><guid>/shortbio/</guid><description>&lt;h1 id="short-bio">Short Bio&lt;/h1>
 &lt;h2 id="english">English&lt;/h2>
 &lt;p>Gabriele Orazi holds a Ph.D. in &lt;a href="http://hit.psy.unipd.it/BMCS">Brain, Mind and Computer Science (BMCS)&lt;/a>, with a focus on privacy, obfuscation, cyber forensics, and malware detection. He conducts research at the University of Padua as part of the &lt;a href="https://spritz.math.unipd.it/">SPRITZ Security and Privacy Research Group&lt;/a>, under the supervision of &lt;a href="https://www.math.unipd.it/~conti/index.html">Prof. Mauro Conti&lt;/a>. As part of his Ph.D., he spent six months as a visiting researcher at &lt;a href="https://catalogue.uci.edu/donaldbrenschoolofinformationandcomputersciences/departmentofcomputerscience/">UCI&lt;/a>.&lt;/p>
@@ -120,13 +105,7 @@ No masterpieces (given for granted), just one album per band.&lt;/p></descriptio
 &lt;h1 id="open-projects-for-students">Open projects for students&lt;/h1>
 &lt;p>I&amp;rsquo;m always eager to collaborate with motivated students on projects that falls within my research interests.
 In this section I list a non-exaustive set of ideas to work on.
-If you are interested, please contact me so that we can discuss.&lt;/p></description></item><item><title>How to create free static website with Hugo and Github Pages</title><link>/posts/github_pages/</link><pubDate>Fri, 02 Apr 2021 08:47:11 +0100</pubDate><guid>/posts/github_pages/</guid><description>&lt;p>So you&amp;rsquo;re struggling to create your &lt;strong>own website&lt;/strong>?
-Are you looking for some &lt;strong>cheap and clean&lt;/strong> solution too? &lt;strong>Free&lt;/strong>?&lt;/p>
-&lt;p>Ok, probably you&amp;rsquo;re a bit too ambitious.&lt;/p>
-&lt;p>&lt;strong>OR NOT&lt;/strong>.&lt;/p>
-&lt;p>I was in your situation too and now you&amp;rsquo;re visiting this website, which is built on top of the same advices you&amp;rsquo;re going to follow (hopefully!).&lt;/p>
-&lt;p>If you unfortunately fall into this website, probably you&amp;rsquo;re familiar with the &lt;strong>git&lt;/strong> versioning system.
-Probably you know about &lt;a href="https://github.com">Github&lt;/a> as well.&lt;/p></description></item><item><title>whoami</title><link>/about/</link><pubDate>Wed, 24 Aug 2016 17:51:42 +0000</pubDate><guid>/about/</guid><description>&lt;h1 id="whoami">whoami&lt;/h1>
+If you are interested, please contact me so that we can discuss.&lt;/p></description></item><item><title>whoami</title><link>/about/</link><pubDate>Wed, 24 Aug 2016 17:51:42 +0000</pubDate><guid>/about/</guid><description>&lt;h1 id="whoami">whoami&lt;/h1>
 &lt;p>Adaptable, hyperactive and tireless, I like challenges and adventures. I always wonder why things happen. I have difficulties in surviving without running, cycling and climbing.
 I do research in the InfoSec field. Currently based in Padua, working with &lt;a href="https://spritz.math.unipd.it/">SPRITZ research group&lt;/a>.&lt;/p>
 &lt;p>&lt;img src="/images/about/gransasso.jpg" alt="While reaching the highest peak of Gran Sasso.">&lt;/p>

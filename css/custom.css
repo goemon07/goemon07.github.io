@@ -1,3 +1,37 @@
 body .h1 {
     color: #bc2b2b;
 }
+
+/* About page: shrink inline photos to 75% of their natural width */
+body.page-about .content img {
+    width: 75%;
+    height: auto;
+}
+
+/* Site switcher pill in the header/footer nav (personal <-> coaching) */
+#header #nav ul li.site-switch,
+#footer .footer-right li:last-child {
+    border-right: none;
+}
+#header #nav ul li.site-switch a,
+#footer .footer-right nav li:last-child a {
+    display: inline-block;
+    padding: 0.1rem 0.55rem;
+    border: 1px solid currentColor;
+    border-radius: 20px;
+    line-height: 1.4;
+}
+
+/* The pill is taller than the plain text links around it (border + padding),
+   which made it visually overlap the row above/below when the nav wraps
+   onto multiple lines with the theme's tight 15px line-height. Switching to
+   flex-wrap with a row-gap gives wrapped rows real vertical spacing so
+   nothing overlaps, without touching the mobile hamburger menu below 480px. */
+@media (min-width: 481px) {
+    #header #nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        row-gap: 0.6rem;
+    }
+}
