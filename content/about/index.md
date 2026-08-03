@@ -42,7 +42,7 @@ I've been visiting [University of California, Irvine (UCI)](https://catalogue.uc
 
 ![California](/images/about/california.jpg)
 
-I am currently a Postdoctoral Researcher in Unipd and a PhD Candidate waiting to defend my thesis within the first months of 2025.
+I successfully obtained my PhD in March 2025 and I'm currently a Postdoctoral Researcher in Unipd.
 
 ## Not enough?
 

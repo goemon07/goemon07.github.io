@@ -5,9 +5,19 @@
   <div class="footer-right">
     <nav>
       <ul>
-        {{ range .Site.Menus.main }} 
+        {{ $inCoach := strings.HasPrefix .RelPermalink "/coach/" }}
+        {{ $menu := .Site.Menus.main }}
+        {{ if $inCoach }}{{ $menu = .Site.Menus.coach }}{{ end }}
+        {{ range $menu }}
         <li><a href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
+        <li>
+          {{ if $inCoach }}
+            <a href="{{ "/" | absURL }}">Sito personale</a>
+          {{ else }}
+            <a href="{{ "/coach/" | absURL }}">Coaching</a>
+          {{ end }}
+        </li>
       </ul>
     </nav>
   </div>

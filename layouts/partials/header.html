@@ -8,7 +8,7 @@
     <div id="logo" style="background-image: url({{ "images/logo.png" | absURL }})"></div>
   {{ end}}
   <div id="title">
-    <h1>{{ .Site.Title }}</h1>
+    <h1>{{ .Site.Title }}{{ if strings.HasPrefix .RelPermalink "/coach/" }} <span class="coach-badge">Coaching</span>{{ end }}</h1>
   </div>
   </a>
   <div id="nav">
@@ -16,9 +16,19 @@
       <li class="icon">
         <a href="#"><i class="fas fa-bars fa-2x"></i></a>
       </li>
-      {{ range .Site.Menus.main }}
+      {{ $inCoach := strings.HasPrefix .RelPermalink "/coach/" }}
+      {{ $menu := .Site.Menus.main }}
+      {{ if $inCoach }}{{ $menu = .Site.Menus.coach }}{{ end }}
+      {{ range $menu }}
         <li><a href="{{ .URL }}">{{ .Name }}</a></li>
       {{ end }}
+      <li class="site-switch">
+        {{ if $inCoach }}
+          <a href="{{ "/" | absURL }}">🏠 Sito personale</a>
+        {{ else }}
+          <a href="{{ "/coach/" | absURL }}">🏃 Coaching</a>
+        {{ end }}
+      </li>
     </ul>
   </div>
 </header>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
 {{ partial "head.html" . }}
-<body class="max-width mx-auto px3 ltr">
+<body class="max-width mx-auto px3 ltr{{ if strings.HasPrefix .RelPermalink "/coach/" }} coaching{{ end }}{{ if eq .RelPermalink "/about/" }} page-about{{ end }}">
   <div class="content index py4">
 
     {{ partial "header.html" . }}

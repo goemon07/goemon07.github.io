@@ -1,0 +1,204 @@
+{{ define "main" }}
+<style>
+.coach-wrap {
+  --c-bg-card: #252729;
+  --c-bg-input: #2a2d2f;
+  --c-border: #3d4042;
+  --c-text: #c9cacc;
+  --c-text-muted: #777;
+  --c-text-bright: #eaeaec;
+  --c-accent: #e8b84b;
+  --c-radius: 6px;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 0 3rem 0;
+  font-family: inherit;
+  color: var(--c-text);
+}
+
+.coach-intro h1.coach-title {
+  font-size: 1.6rem;
+  color: var(--c-accent);
+  margin-bottom: 1rem;
+  letter-spacing: 0.03em;
+}
+.coach-wrap > .coach-intro:first-child h1.coach-title {
+  margin-top: 0;
+}
+.coach-bio {
+  background: var(--c-bg-card);
+  border: 1px solid var(--c-border);
+  border-radius: var(--c-radius);
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 2.4rem;
+  line-height: 1.7;
+}
+.coach-bio p { margin: 0 0 1rem 0; }
+.coach-bio p:last-child { margin-bottom: 0; }
+
+.coach-photo {
+  margin: 0 0 2.4rem 0;
+}
+.coach-photo img {
+  display: block;
+  width: 75%;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid var(--c-border);
+  border-radius: var(--c-radius);
+}
+
+.coach-contact-sub {
+  color: var(--c-text-muted);
+  font-size: 0.85rem;
+  margin: 0 0 1.2rem 0;
+}
+
+.coach-form {
+  background: var(--c-bg-card);
+  border: 1px solid var(--c-border);
+  border-radius: var(--c-radius);
+  padding: 1.2rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.coach-field { display: flex; flex-direction: column; }
+.coach-field label {
+  font-size: 0.68rem;
+  color: var(--c-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.3rem;
+}
+.coach-field input,
+.coach-field textarea {
+  background: var(--c-bg-input);
+  border: 1px solid var(--c-border);
+  border-radius: var(--c-radius);
+  color: var(--c-text-bright);
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 0.55rem 0.7rem;
+  resize: vertical;
+  transition: border-color 0.15s;
+}
+.coach-field input:focus,
+.coach-field textarea:focus {
+  outline: none;
+  border-color: var(--c-accent);
+}
+
+.coach-btn {
+  align-self: flex-start;
+  background: var(--c-accent);
+  color: #1a1a1a;
+  border: none;
+  border-radius: var(--c-radius);
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.55rem 1.3rem;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.coach-btn:hover { opacity: 0.85; }
+.coach-btn:disabled { opacity: 0.6; cursor: default; }
+
+.coach-form-status {
+  margin: 0.7rem 0 0 0;
+  font-size: 0.85rem;
+  min-height: 1.2em;
+}
+.coach-form-status.success { color: #2bbc8a; }
+.coach-form-status.error { color: #d93025; }
+</style>
+
+<div class="coach-wrap">
+  <section class="coach-intro">
+    <h1 class="coach-title">About</h1>
+    <div class="coach-bio">
+      {{ .Params.about | markdownify }}
+    </div>
+  </section>
+
+  <section class="coach-intro">
+    <h1 class="coach-title">Coaching Philosophy</h1>
+    <div class="coach-bio">
+      {{ .Params.philosophy | markdownify }}
+    </div>
+  </section>
+
+  <figure class="coach-photo">
+    <img src="{{ "images/coach/coaching-trail.jpg" | absURL }}" alt="Gabriele durante un allenamento trail running, in affiancamento a un atleta su uno sterrato tra i vigneti">
+  </figure>
+
+  <section class="coach-contact" id="contatti">
+    <h1 class="coach-title">Scrivimi</h1>
+    <p class="coach-contact-sub">Scrivimi compilando il form qui sotto.</p>
+    <form class="coach-form" id="coach-contact-form" action="https://formsubmit.co/gabtrailcoach@gmail.com" method="POST">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="coach-field">
+        <label for="cf-name">Nome</label>
+        <input type="text" id="cf-name" name="name" required>
+      </div>
+      <div class="coach-field">
+        <label for="cf-email">La tua email</label>
+        <input type="email" id="cf-email" name="email" required>
+      </div>
+      <div class="coach-field">
+        <label for="cf-message">Messaggio</label>
+        <textarea id="cf-message" name="message" rows="6" required></textarea>
+      </div>
+      <button type="submit" class="coach-btn" id="coach-submit-btn">Invia messaggio</button>
+      <p class="coach-form-status" id="coach-form-status" role="status"></p>
+    </form>
+  </section>
+</div>
+
+<script>
+(function () {
+  var form = document.getElementById('coach-contact-form');
+  var btn = document.getElementById('coach-submit-btn');
+  var status = document.getElementById('coach-form-status');
+  var AJAX_ENDPOINT = 'https://formsubmit.co/ajax/gabtrailcoach@gmail.com';
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.textContent = 'Invio...';
+    status.textContent = '';
+    status.className = 'coach-form-status';
+
+    fetch(AJAX_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        name: document.getElementById('cf-name').value.trim(),
+        email: document.getElementById('cf-email').value.trim(),
+        message: document.getElementById('cf-message').value.trim(),
+        _subject: 'Nuovo messaggio dal sito - Coaching',
+        _template: 'table',
+        _captcha: 'false'
+      })
+    })
+      .then(function (res) {
+        if (!res.ok) throw new Error('bad status');
+        return res.json();
+      })
+      .then(function () {
+        status.textContent = '✓ Messaggio inviato! Ti risponderò il prima possibile.';
+        status.className = 'coach-form-status success';
+        form.reset();
+      })
+      .catch(function () {
+        status.textContent = 'Errore nell\'invio. Riprova, oppure scrivi direttamente a gabtrailcoach@gmail.com.';
+        status.className = 'coach-form-status error';
+      })
+      .finally(function () {
+        btn.disabled = false;
+        btn.textContent = 'Invia messaggio';
+      });
+  });
+})();
+</script>
+{{ end }}

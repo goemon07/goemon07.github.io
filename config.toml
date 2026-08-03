@@ -3,7 +3,6 @@ languageCode = "en-us"
 title = "Gabriele Orazi"
 theme = "hugo-theme-cactus"
 copyright = "Gabriele Orazi" # cactus will use title if copyright is not set
-disqusShortname = "goemon" # Used when comments is enabled. Cactus will use site title if not set
 # googleAnalytics = "UA-1234-5"
 
 
@@ -21,7 +20,7 @@ url = "/shortbio"
 weight = 2
 
 [[menu.main]]
-name = "Publications"
+name = "Research"
 url = "/publications"
 weight = 3
 
@@ -29,16 +28,6 @@ weight = 3
 name = "Teaching"
 url = "/teaching"
 weight = 4
-
-[[menu.main]]
-name = "Activities"
-url = "/activities"
-weight = 5
-
-[[menu.main]]
-name = "Posts"
-url = "/posts"
-weight = 6
 
 [[menu.main]]
 name = "Suggestions"
@@ -50,10 +39,16 @@ name = "About"
 url = "/about"
 weight = 8
 
-[[menu.main]]
+# Menu for the "coaching" side of the site (toggled from the header switcher)
+[[menu.coach]]
+name = "Home"
+url = "/coach/"
+weight = 1
+
+[[menu.coach]]
 name = "Carbo Calc"
-url = "/carbo"
-weight = 9
+url = "/coach/carbo/"
+weight = 2
 
 [markup]
   [markup.tableOfContents]
@@ -64,28 +59,15 @@ weight = 9
 [params]
 
   colortheme = "dark" # dark, light, white, or classic
-  css = ["css/custom.css"] # here path of css custom file
+  css = ["css/custom.css", "css/coach.css"] # here path of css custom file
   rss = false # generate rss feed. default value is false
   # googleAnalyticsAsync = false # use asynchronous tracking. Synchronous tracking by default
 
   # Home page settings
   description = "Cybersecurity PostDoc in SPRITZ Group (UniPd). Strongly unprofessional climber, cyclist and trail runner."
-  mainSection = "posts" # your main section
-  showAllPostsOnHomePage = false # default
-  postsOnHomePage = 5 # this option will be ignored if showAllPostsOnHomePage is set to true
-  tagsOverview = false # show tags overview by default.
-  showProjectsList = false # show projects list by default (if projects data file exists).
-  projectsUrl = "https://github.com/goemon07" # title link for projects list
 
   # https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
   dateFormat = "2006-01-02" # default
-
-  # Post page settings
-  show_updated = false # default
-
-  [params.comments]
-    enabled = false # default
-    engine = "disqus" # more supported engines will be added.
 
   # the value of name should be an valid font awesome icon name (brands type)
   # https://fontawesome.com/icons?d=gallery&s=brands
@@ -105,21 +87,21 @@ weight = 9
 #    name = "telegram"
 #    link = "https://t.me/goemon07"
 
-  [[params.social]]
-    name = "twitter"
-    link = "https://twitter.com/_goemon07"
+#  [[params.social]]
+#    name = "twitter"
+#    link = "https://twitter.com/_goemon07"
 
-  [[params.social]]
-    name = "bluesky"
-    link = "https://bsky.app/profile/gorazi.bsky.social"
+#  [[params.social]]
+#    name = "bluesky"
+#   link = "https://bsky.app/profile/gorazi.bsky.social"
 
   [[params.social]]
     name = "linkedin"
     link = "https://www.linkedin.com/in/gabriele-orazi/"
 
-  [[params.social]]
-    name = "strava"
-    link = "https://www.strava.com/athletes/39260108"
+#  [[params.social]]
+#    name = "strava"
+#   link = "https://www.strava.com/athletes/39260108"
 
 [[params.office]]
     department = "Department of Mathematics “Tullio Levi-Civita”"
