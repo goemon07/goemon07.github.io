@@ -20,8 +20,16 @@
 }
 
 .carbo-wrap {
+  /* No horizontal margin: this is a flex item inside the theme's column
+     flex wrapper (.content), where "margin: auto" on a cross-axis disables
+     align-items:stretch and falls back to shrink-to-fit sizing instead of
+     filling the available width — harmless on desktop (content is already
+     narrower than the available space there) but on mobile it kept the
+     calculator pinned to its own min-content width, overflowing the
+     viewport. The theme's own body-level max-width already centers/caps
+     the page, so this doesn't need to do it again. */
   max-width: 820px;
-  margin: 0 auto;
+  width: 100%;
   padding: 0 0 3rem 0;
   font-family: inherit;
   color: var(--text);
@@ -251,9 +259,6 @@
   gap: 0.5rem;
   margin-bottom: 0.8rem;
 }
-@media (max-width: 600px) {
-  .custom-form-grid { grid-template-columns: 1fr 1fr; }
-}
 .custom-input {
   background: var(--bg-input);
   border: 1px solid var(--border);
@@ -319,6 +324,60 @@
   z-index: 9999;
 }
 .toast.show { opacity: 1; transform: translateY(0); }
+
+/* ── Mobile ───────────────────────────────────────────────────
+   Desktop layout (above) is untouched. Below ~640px: grid tracks
+   get an explicit 0 floor (plain "1fr" defaults to min-width:auto,
+   which lets a wide child force the whole row to overflow instead
+   of shrinking), rows that used to sit side by side stack full
+   width, and the data table shrinks its own type/padding before
+   falling back to its own horizontal scroll. */
+@media (max-width: 640px) {
+  .carbo-wrap { padding: 0 0 2rem 0; }
+  .carbo-wrap h1.carbo-title { font-size: 1.35rem; }
+  .carbo-subtitle { font-size: 0.8rem; }
+
+  .carbo-section { padding: 1rem; }
+
+  .summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+  }
+  .summary-card { padding: 0.8rem 0.9rem; min-width: 0; }
+  .summary-card .card-value { font-size: 1.4rem; }
+
+  .duration-row { gap: 0.6rem; }
+  .duration-input { width: 56px; }
+
+  .add-row { flex-wrap: wrap; }
+  .carbo-select { flex: 1 1 100%; min-width: 0; }
+  .add-row .qty-input { flex: 1 1 auto; }
+  #btn-add-product { flex: 1 1 auto; justify-content: center; }
+
+  .custom-form-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .custom-actions { flex-direction: column; align-items: stretch; }
+  .custom-actions .btn { width: 100%; justify-content: center; }
+
+  .actions-bar { flex-direction: column; align-items: stretch; }
+  .actions-bar .btn { width: 100%; justify-content: center; }
+
+  .products-table { font-size: 0.78rem; }
+  .products-table th,
+  .products-table td { padding: 0.4rem 0.4rem; }
+}
+
+@media (max-width: 420px) {
+  /* Drop the least essential columns so the table fits without
+     scrolling on small phones; still available on wider mobiles. */
+  .products-table th:nth-child(2),
+  .products-table td:nth-child(2),
+  .products-table th:nth-child(7),
+  .products-table td:nth-child(7) {
+    display: none;
+  }
+
+  .toast { left: 1rem; right: 1rem; text-align: center; }
+}
 </style>
 
 <div class="carbo-wrap">
