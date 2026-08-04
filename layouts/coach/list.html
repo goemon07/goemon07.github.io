@@ -51,6 +51,31 @@
   border-radius: var(--c-radius);
 }
 
+.coach-clpv {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 2.4rem 0;
+}
+.coach-clpv iframe {
+  max-width: 100%;
+}
+
+.coach-bmc {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 0 0 2.4rem 0;
+}
+.coach-bmc iframe {
+  /* Narrower than the 480px default so it can sit next to the coffee
+     button on one row within the page's ~700px content width, rather
+     than always wrapping to its own row. */
+  max-width: 380px;
+  border-radius: var(--c-radius);
+}
+
 .coach-contact-sub {
   color: var(--c-text-muted);
   font-size: 0.85rem;
@@ -124,6 +149,10 @@
     </div>
   </section>
 
+  <div class="coach-clpv">
+    <iframe src="https://corsalentapensieriveloci.substack.com/embed?transparent=1&light=1" width="480" height="320" style="border: 0; background: transparent" frameborder="0" scrolling="no"></iframe>
+  </div>
+
   <section class="coach-intro">
     <h1 class="coach-title">Coaching Philosophy</h1>
     <div class="coach-bio">
@@ -134,6 +163,10 @@
   <figure class="coach-photo">
     <img src="{{ "images/coach/coaching-trail.jpg" | absURL }}" alt="Gabriele durante un allenamento trail running, in affiancamento a un atleta su uno sterrato tra i vigneti">
   </figure>
+
+  <div class="coach-bmc">
+    <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="gabriele.orazi" data-color="#FFDD00" data-emoji="☕"  data-font="Inter" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
+  </div>
 
   <section class="coach-contact" id="contatti">
     <h1 class="coach-title">Scrivimi</h1>
