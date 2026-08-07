@@ -5,50 +5,97 @@ theme = "hugo-theme-cactus"
 copyright = "Gabriele Orazi" # cactus will use title if copyright is not set
 # googleAnalytics = "UA-1234-5"
 
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
 
 # summaryLength = 2
 
-# Main menu which appears below site header.
-#[[menu.main]]
-#name = "Home"
-#url = "/"
-#weight = 1
+[languages]
+  [languages.en]
+    languageName = "English"
+    languageCode = "en-us"
+    weight = 1
 
-[[menu.main]]
-name = "Short Bio"
-url = "/shortbio"
-weight = 2
+    [languages.en.params]
+      description = "Cybersecurity PostDoc in SPRITZ Group (UniPd). Strongly unprofessional climber, cyclist and trail runner."
 
-[[menu.main]]
-name = "Research"
-url = "/publications"
-weight = 3
+    [[languages.en.menu.main]]
+      name = "Short Bio"
+      url = "/shortbio"
+      weight = 2
 
-[[menu.main]]
-name = "Teaching"
-url = "/teaching"
-weight = 4
+    [[languages.en.menu.main]]
+      name = "Research"
+      url = "/publications"
+      weight = 3
 
-[[menu.main]]
-name = "Suggestions"
-url = "/suggestions"
-weight = 7
+    [[languages.en.menu.main]]
+      name = "Teaching"
+      url = "/teaching"
+      weight = 4
 
-[[menu.main]]
-name = "About"
-url = "/about"
-weight = 8
+    [[languages.en.menu.main]]
+      name = "Suggestions"
+      url = "/suggestions"
+      weight = 7
 
-# Menu for the "coaching" side of the site (toggled from the header switcher)
-[[menu.coach]]
-name = "Home"
-url = "/coach/"
-weight = 1
+    [[languages.en.menu.main]]
+      name = "About"
+      url = "/about"
+      weight = 8
 
-[[menu.coach]]
-name = "Carbo Calc"
-url = "/coach/carbo/"
-weight = 2
+    [[languages.en.menu.coach]]
+      name = "Home"
+      url = "/coach/"
+      weight = 1
+
+    [[languages.en.menu.coach]]
+      name = "Carbo Calc"
+      url = "/coach/carbo/"
+      weight = 2
+
+  [languages.it]
+    languageName = "Italiano"
+    languageCode = "it-it"
+    weight = 2
+
+    [languages.it.params]
+      description = "PostDoc in Cybersecurity nel gruppo SPRITZ (UniPd). Scalatore, ciclista e trail runner molto poco professionista."
+
+    [[languages.it.menu.main]]
+      name = "Bio Breve"
+      url = "/it/shortbio"
+      weight = 2
+
+    [[languages.it.menu.main]]
+      name = "Ricerca"
+      url = "/it/publications"
+      weight = 3
+
+    [[languages.it.menu.main]]
+      name = "Didattica"
+      url = "/it/teaching"
+      weight = 4
+
+    [[languages.it.menu.main]]
+      name = "Consigli"
+      url = "/it/suggestions"
+      weight = 7
+
+    [[languages.it.menu.main]]
+      name = "Chi sono"
+      url = "/it/about"
+      weight = 8
+
+    [[languages.it.menu.coach]]
+      name = "Home"
+      url = "/it/coach/"
+      weight = 1
+
+    [[languages.it.menu.coach]]
+      name = "Calcola Carbo"
+      url = "/it/coach/carbo/"
+      weight = 2
 
 [markup]
   [markup.tableOfContents]
@@ -62,9 +109,6 @@ weight = 2
   css = ["css/custom.css", "css/coach.css"] # here path of css custom file
   rss = false # generate rss feed. default value is false
   # googleAnalyticsAsync = false # use asynchronous tracking. Synchronous tracking by default
-
-  # Home page settings
-  description = "Cybersecurity PostDoc in SPRITZ Group (UniPd). Strongly unprofessional climber, cyclist and trail runner."
 
   # https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
   dateFormat = "2006-01-02" # default

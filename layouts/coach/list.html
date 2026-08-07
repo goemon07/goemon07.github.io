@@ -143,7 +143,7 @@
 
 <div class="coach-wrap">
   <section class="coach-intro">
-    <h1 class="coach-title">About</h1>
+    <h1 class="coach-title">{{ i18n "coach_about_heading" }}</h1>
     <div class="coach-bio">
       {{ .Params.about | markdownify }}
     </div>
@@ -154,7 +154,7 @@
   </div>
 
   <section class="coach-intro">
-    <h1 class="coach-title">Coaching Philosophy</h1>
+    <h1 class="coach-title">{{ i18n "coach_philosophy_heading" }}</h1>
     <div class="coach-bio">
       {{ .Params.philosophy | markdownify }}
     </div>
@@ -169,23 +169,23 @@
   </div>
 
   <section class="coach-contact" id="contatti">
-    <h1 class="coach-title">Scrivimi</h1>
-    <p class="coach-contact-sub">Scrivimi compilando il form qui sotto.</p>
+    <h1 class="coach-title">{{ i18n "coach_contact_heading" }}</h1>
+    <p class="coach-contact-sub">{{ i18n "coach_contact_sub" }}</p>
     <form class="coach-form" id="coach-contact-form" action="https://formsubmit.co/gabtrailcoach@gmail.com" method="POST">
       <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
       <div class="coach-field">
-        <label for="cf-name">Nome</label>
+        <label for="cf-name">{{ i18n "coach_form_name" }}</label>
         <input type="text" id="cf-name" name="name" required>
       </div>
       <div class="coach-field">
-        <label for="cf-email">La tua email</label>
+        <label for="cf-email">{{ i18n "coach_form_email" }}</label>
         <input type="email" id="cf-email" name="email" required>
       </div>
       <div class="coach-field">
-        <label for="cf-message">Messaggio</label>
+        <label for="cf-message">{{ i18n "coach_form_message" }}</label>
         <textarea id="cf-message" name="message" rows="6" required></textarea>
       </div>
-      <button type="submit" class="coach-btn" id="coach-submit-btn">Invia messaggio</button>
+      <button type="submit" class="coach-btn" id="coach-submit-btn">{{ i18n "coach_form_submit" }}</button>
       <p class="coach-form-status" id="coach-form-status" role="status"></p>
     </form>
   </section>
@@ -193,6 +193,13 @@
 
 <script>
 (function () {
+  var COACH_I18N = {
+    sending: {{ i18n "coach_form_sending" | jsonify }},
+    submit: {{ i18n "coach_form_submit" | jsonify }},
+    success: {{ i18n "coach_form_success" | jsonify }},
+    error: {{ i18n "coach_form_error" | jsonify }}
+  };
+
   var form = document.getElementById('coach-contact-form');
   var btn = document.getElementById('coach-submit-btn');
   var status = document.getElementById('coach-form-status');
@@ -201,7 +208,7 @@
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     btn.disabled = true;
-    btn.textContent = 'Invio...';
+    btn.textContent = COACH_I18N.sending;
     status.textContent = '';
     status.className = 'coach-form-status';
 
@@ -222,17 +229,17 @@
         return res.json();
       })
       .then(function () {
-        status.textContent = '✓ Messaggio inviato! Ti risponderò il prima possibile.';
+        status.textContent = COACH_I18N.success;
         status.className = 'coach-form-status success';
         form.reset();
       })
       .catch(function () {
-        status.textContent = 'Errore nell\'invio. Riprova, oppure scrivi direttamente a gabtrailcoach@gmail.com.';
+        status.textContent = COACH_I18N.error;
         status.className = 'coach-form-status error';
       })
       .finally(function () {
         btn.disabled = false;
-        btn.textContent = 'Invia messaggio';
+        btn.textContent = COACH_I18N.submit;
       });
   });
 })();

@@ -4,7 +4,7 @@
     {{ .Site.Params.description | $.Page.RenderString }}
   {{ end }}
   {{ if isset .Site.Params "social" }}
-      <p>Find me on
+      <p>{{ i18n "find_me_on" }}
       {{ $length := (len .Site.Params.social) }}
       {{ range $index, $elem := .Site.Params.social}}
       {{ if eq $elem.name "email" }}
@@ -27,7 +27,7 @@
         {{ if (lt (add $index 2) $length) }}
           {{- print " , " -}}
         {{ else if (lt (add $index 1) $length) }}
-          {{- print " and " -}}
+          {{- printf " %s " (i18n "and_word") -}}
         {{ else }}
           {{- print "." -}}
         {{ end }}
@@ -35,16 +35,16 @@
       </p>
   {{ end }}
   {{ if isset .Site.Params "office" }}
-    <p>In person @
+    <p>{{ i18n "in_person_at" }}
       {{ range $elem := .Site.Params.office }}
-      <a href="{{ $elem.link }}">{{ $elem.department }}</a>, office {{ $elem.office }}.
+      <a href="{{ $elem.link }}">{{ $elem.department }}</a>, {{ i18n "office_word" }} {{ $elem.office }}.
       {{ end }}
     </p>
   {{ end }}
   </section>
 
   <section id="heavyrotation">
-    <span class="h1">🎧 Heavy rotation album</span>
+    <span class="h1">{{ i18n "heavy_rotation" }}</span>
     <ul class="project-list">
         {{ range .Site.Data.heavyrotation.list }}
         <li class="project-item">

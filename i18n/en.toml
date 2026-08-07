@@ -1,0 +1,237 @@
+# Header / nav
+[switch_to_coaching]
+other = "🏃 Coaching"
+
+[switch_to_personal]
+other = "🏠 Personal site"
+
+# Homepage (layouts/index.html)
+[find_me_on]
+other = "Find me on"
+
+[and_word]
+other = "and"
+
+[in_person_at]
+other = "In person @"
+
+[office_word]
+other = "office"
+
+[heavy_rotation]
+other = "🎧 Heavy rotation album"
+
+# Coach homepage (layouts/coach/list.html)
+[coach_about_heading]
+other = "About"
+
+[coach_philosophy_heading]
+other = "Coaching Philosophy"
+
+[coach_contact_heading]
+other = "Get in Touch"
+
+[coach_contact_sub]
+other = "Get in touch using the form below."
+
+[coach_form_name]
+other = "Name"
+
+[coach_form_email]
+other = "Your email"
+
+[coach_form_message]
+other = "Message"
+
+[coach_form_submit]
+other = "Send message"
+
+[coach_form_sending]
+other = "Sending..."
+
+[coach_form_success]
+other = "✓ Message sent! I'll get back to you as soon as possible."
+
+[coach_form_error]
+other = "Error sending. Please try again, or write directly to gabtrailcoach@gmail.com."
+
+# Carbo Calculator (layouts/carbo/single.html)
+[carbo_subtitle]
+other = "Calculate carbs, sodium and caffeine per hour during training and races."
+
+[carbo_duration_heading]
+other = "Workout Duration"
+
+[carbo_hours]
+other = "hours"
+
+[carbo_minutes]
+other = "minutes"
+
+[carbo_summary_heading]
+other = "Summary"
+
+[carbo_carbo_total]
+other = "Total Carbs"
+
+[carbo_carbo_per_hour]
+other = "Carbs / Hour"
+
+[carbo_sodium_per_hour]
+other = "Sodium / Hour"
+
+[carbo_caffeine_total]
+other = "Total Caffeine"
+
+[carbo_products_consumed]
+other = "Products Consumed"
+
+[carbo_th_product]
+other = "Product"
+
+[carbo_th_category]
+other = "Cat."
+
+[carbo_th_qty]
+other = "Qty"
+
+[carbo_th_carbo]
+other = "Carbs (g)"
+
+[carbo_th_sodium]
+other = "Sodium (mg)"
+
+[carbo_th_caffeine]
+other = "Caffeine (mg)"
+
+[carbo_th_protein]
+other = "Protein (g)"
+
+[carbo_th_remove]
+other = "Remove"
+
+[carbo_empty_state]
+other = "No products added yet. Use the selector below."
+
+[carbo_add_product_heading]
+other = "Add Product"
+
+[carbo_select_placeholder]
+other = "— select a product —"
+
+[carbo_btn_add]
+other = "+ Add"
+
+[carbo_add_custom_heading]
+other = "Add Custom Product"
+
+[carbo_custom_name_label]
+other = "Name *"
+
+[carbo_custom_name_placeholder]
+other = "e.g. Gel XYZ"
+
+[carbo_custom_carbo_label]
+other = "Carbs (g)"
+
+[carbo_custom_sodium_label]
+other = "Sodium (mg)"
+
+[carbo_custom_caffeine_label]
+other = "Caffeine (mg)"
+
+[carbo_custom_protein_label]
+other = "Protein (g)"
+
+[carbo_btn_add_session]
+other = "+ Add to session"
+
+[carbo_btn_save_db]
+other = "💾 Save to database"
+
+[carbo_saved_msg]
+other = "✓ Saved to local database"
+
+[carbo_btn_screenshot]
+other = "📸 Download Screenshot"
+
+[carbo_btn_reset]
+other = "🗑 Reset session"
+
+[carbo_footer_note]
+other = "Custom products are saved in your browser (localStorage) and remain available in future sessions."
+
+[carbo_report_title]
+other = "Carbo Calculator — Report"
+
+[carbo_report_meta]
+other = "Date: %s · Duration: %sh %smin"
+
+[carbo_dur_display]
+other = "→ %sh %smin"
+
+[carbo_toast_select_first]
+other = "Select a product first."
+
+[carbo_toast_min_qty]
+other = "Minimum quantity: 1."
+
+[carbo_toast_added]
+other = "✓ %s × %s added"
+
+[carbo_toast_enter_name]
+other = "Enter the product name."
+
+[carbo_toast_added_session]
+other = "✓ %s added to session"
+
+[carbo_toast_saved_db]
+other = "💾 Product saved to local database"
+
+[carbo_toast_screenshot_saved]
+other = "📸 Screenshot saved!"
+
+[carbo_toast_screenshot_error]
+other = "Screenshot error. Try right-click → Save image."
+
+[carbo_toast_session_reset]
+other = "Session reset."
+
+[carbo_confirm_reset]
+other = "Reset the current session?"
+
+[carbo_table_total]
+other = "Total"
+
+[carbo_category_custom]
+other = "Custom"
+
+[carbo_cat_bar]
+other = "Bar"
+
+[carbo_cat_electrolytes]
+other = "Electrolytes"
+
+[carbo_cat_caffeine]
+other = "Caffeine"
+
+[carbo_cat_drink]
+other = "Drink"
+
+[carbo_cat_other]
+other = "Other"
+
+[carbo_preview_carbo]
+other = "Carbs"
+
+[carbo_preview_sodium]
+other = "Sodium"
+
+[carbo_preview_caffeine]
+other = "Caffeine"
+
+[carbo_preview_protein]
+other = "Protein"
+
+[carbo_toast_html2canvas_unavailable]
+other = "html2canvas not available. Please reload the page."

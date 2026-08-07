@@ -381,69 +381,69 @@
 </style>
 
 <div class="carbo-wrap">
-  <h1 class="carbo-title">Carbo Calculator</h1>
-  <p class="carbo-subtitle">Calcola i grammi di carboidrati, sodio e caffeina per ora durante allenamenti e gare.</p>
+  <h1 class="carbo-title">{{ .Title }}</h1>
+  <p class="carbo-subtitle">{{ i18n "carbo_subtitle" }}</p>
 
   <!-- Duration -->
   <div class="carbo-section">
-    <h2>Durata Allenamento</h2>
+    <h2>{{ i18n "carbo_duration_heading" }}</h2>
     <div class="duration-row">
       <input class="duration-input" type="number" id="dur-h" min="0" max="24" value="2">
-      <label for="dur-h">ore</label>
+      <label for="dur-h">{{ i18n "carbo_hours" }}</label>
       <input class="duration-input" type="number" id="dur-m" min="0" max="59" value="30">
-      <label for="dur-m">minuti</label>
-      <span id="dur-display" style="margin-left:0.5rem; color:var(--yellow); font-weight:600; font-size:0.85rem;">→ 2h 30min</span>
+      <label for="dur-m">{{ i18n "carbo_minutes" }}</label>
+      <span id="dur-display" style="margin-left:0.5rem; color:var(--yellow); font-weight:600; font-size:0.85rem;"></span>
     </div>
   </div>
 
   <!-- Summary + table (screenshot area) -->
   <div class="carbo-section" id="report-area">
     <div class="report-header">
-      <h3>Carbo Calculator — Report</h3>
+      <h3>{{ i18n "carbo_report_title" }}</h3>
       <p id="report-meta"></p>
     </div>
-    <h2>Riepilogo</h2>
+    <h2>{{ i18n "carbo_summary_heading" }}</h2>
     <div class="summary-grid">
       <div class="summary-card card-carbo">
-        <div class="card-label">Carbo Totali</div>
+        <div class="card-label">{{ i18n "carbo_carbo_total" }}</div>
         <div class="card-value" id="stat-carbo-tot">0</div>
         <div class="card-unit">g</div>
       </div>
       <div class="summary-card card-carbo-h">
-        <div class="card-label">Carbo / Ora</div>
+        <div class="card-label">{{ i18n "carbo_carbo_per_hour" }}</div>
         <div class="card-value" id="stat-carbo-h">—</div>
         <div class="card-unit">g/h</div>
       </div>
       <div class="summary-card card-sodio-h">
-        <div class="card-label">Sodio / Ora</div>
+        <div class="card-label">{{ i18n "carbo_sodium_per_hour" }}</div>
         <div class="card-value" id="stat-sodio-h">—</div>
         <div class="card-unit">mg/h</div>
       </div>
       <div class="summary-card card-caff">
-        <div class="card-label">Caffeina Totale</div>
+        <div class="card-label">{{ i18n "carbo_caffeine_total" }}</div>
         <div class="card-value" id="stat-caff-tot">0</div>
         <div class="card-unit">mg</div>
       </div>
     </div>
 
     <div style="margin-top:1.2rem;">
-      <h2 style="margin-bottom:0.8rem;">Prodotti Consumati</h2>
+      <h2 style="margin-bottom:0.8rem;">{{ i18n "carbo_products_consumed" }}</h2>
       <div class="products-table-wrap">
         <table class="products-table" id="consumed-table">
           <thead>
             <tr>
-              <th>Prodotto</th>
-              <th>Cat.</th>
-              <th class="td-num">Qtà</th>
-              <th class="td-num">Carbo (g)</th>
-              <th class="td-num">Sodio (mg)</th>
-              <th class="td-num">Caffeina (mg)</th>
-              <th class="td-num">Prot. (g)</th>
+              <th>{{ i18n "carbo_th_product" }}</th>
+              <th>{{ i18n "carbo_th_category" }}</th>
+              <th class="td-num">{{ i18n "carbo_th_qty" }}</th>
+              <th class="td-num">{{ i18n "carbo_th_carbo" }}</th>
+              <th class="td-num">{{ i18n "carbo_th_sodium" }}</th>
+              <th class="td-num">{{ i18n "carbo_th_caffeine" }}</th>
+              <th class="td-num">{{ i18n "carbo_th_protein" }}</th>
               <th id="remove-col-header"></th>
             </tr>
           </thead>
           <tbody id="consumed-body">
-            <tr><td colspan="8" class="empty-state">Nessun prodotto aggiunto. Usa il selettore sotto.</td></tr>
+            <tr><td colspan="8" class="empty-state">{{ i18n "carbo_empty_state" }}</td></tr>
           </tbody>
           <tfoot id="consumed-foot"></tfoot>
         </table>
@@ -453,56 +453,56 @@
 
   <!-- Add product -->
   <div class="carbo-section">
-    <h2>Aggiungi Prodotto</h2>
+    <h2>{{ i18n "carbo_add_product_heading" }}</h2>
     <div class="add-row">
       <select class="carbo-select" id="product-select">
-        <option value="">— seleziona prodotto —</option>
+        <option value="">{{ i18n "carbo_select_placeholder" }}</option>
       </select>
       <input class="qty-input" type="number" id="qty-input" min="1" max="50" value="1">
-      <button class="btn btn-add" id="btn-add-product">+ Aggiungi</button>
+      <button class="btn btn-add" id="btn-add-product">{{ i18n "carbo_btn_add" }}</button>
     </div>
     <div id="product-preview" style="margin-top:0.7rem; font-size:0.8rem; color:var(--text-muted); min-height:1.2em;"></div>
   </div>
 
   <!-- Custom product -->
   <div class="carbo-section">
-    <h2>Aggiungi Prodotto Personalizzato</h2>
+    <h2>{{ i18n "carbo_add_custom_heading" }}</h2>
     <div class="custom-form-grid">
       <div class="custom-field">
-        <label class="custom-label">Nome *</label>
-        <input class="custom-input" type="text" id="c-name" placeholder="es. Gel XYZ">
+        <label class="custom-label">{{ i18n "carbo_custom_name_label" }}</label>
+        <input class="custom-input" type="text" id="c-name" placeholder="{{ i18n "carbo_custom_name_placeholder" }}">
       </div>
       <div class="custom-field">
-        <label class="custom-label">Carbo (g)</label>
+        <label class="custom-label">{{ i18n "carbo_custom_carbo_label" }}</label>
         <input class="custom-input" type="number" id="c-carbo" placeholder="0" min="0" step="0.1">
       </div>
       <div class="custom-field">
-        <label class="custom-label">Sodio (mg)</label>
+        <label class="custom-label">{{ i18n "carbo_custom_sodium_label" }}</label>
         <input class="custom-input" type="number" id="c-sodio" placeholder="0" min="0">
       </div>
       <div class="custom-field">
-        <label class="custom-label">Caffeina (mg)</label>
+        <label class="custom-label">{{ i18n "carbo_custom_caffeine_label" }}</label>
         <input class="custom-input" type="number" id="c-caff" placeholder="0" min="0">
       </div>
       <div class="custom-field">
-        <label class="custom-label">Proteine (g)</label>
+        <label class="custom-label">{{ i18n "carbo_custom_protein_label" }}</label>
         <input class="custom-input" type="number" id="c-prot" placeholder="0" min="0" step="0.1">
       </div>
     </div>
     <div class="custom-actions">
-      <button class="btn" id="btn-add-custom" style="background:#2a3f5a;color:#6aacdc;border:1px solid #3d6a94;">+ Aggiungi alla sessione</button>
-      <button class="btn btn-save-custom" id="btn-save-custom">💾 Salva nel database</button>
-      <span class="custom-saved-msg" id="custom-saved-msg">✓ Salvato nel database locale</span>
+      <button class="btn" id="btn-add-custom" style="background:#2a3f5a;color:#6aacdc;border:1px solid #3d6a94;">{{ i18n "carbo_btn_add_session" }}</button>
+      <button class="btn btn-save-custom" id="btn-save-custom">{{ i18n "carbo_btn_save_db" }}</button>
+      <span class="custom-saved-msg" id="custom-saved-msg">{{ i18n "carbo_saved_msg" }}</span>
     </div>
   </div>
 
   <!-- Actions -->
   <div class="actions-bar">
-    <button class="btn btn-screenshot" id="btn-screenshot">📸 Scarica Screenshot</button>
-    <button class="btn btn-reset" id="btn-reset">🗑 Reset sessione</button>
+    <button class="btn btn-screenshot" id="btn-screenshot">{{ i18n "carbo_btn_screenshot" }}</button>
+    <button class="btn btn-reset" id="btn-reset">{{ i18n "carbo_btn_reset" }}</button>
   </div>
   <p style="font-size:0.72rem;color:var(--text-muted);margin-top:0.8rem;">
-    I prodotti personalizzati vengono salvati nel browser (localStorage) e restano disponibili nelle sessioni successive.
+    {{ i18n "carbo_footer_note" }}
   </p>
 </div>
 
@@ -512,6 +512,50 @@
 <script src="{{ "js/html2canvas.min.js" | relURL }}"></script>
 <script>
 (function () {
+  // ── i18n ──────────────────────────────────────────────────────
+  var CARBO_I18N = {
+    locale: {{ if eq .Site.Language.Lang "it" }}"it-IT"{{ else }}"en-US"{{ end }},
+    selectPlaceholder: {{ i18n "carbo_select_placeholder" | jsonify }},
+    removeTitle: {{ i18n "carbo_th_remove" | jsonify }},
+    emptyState: {{ i18n "carbo_empty_state" | jsonify }},
+    tableTotal: {{ i18n "carbo_table_total" | jsonify }},
+    durDisplay: {{ i18n "carbo_dur_display" | jsonify }},
+    reportMeta: {{ i18n "carbo_report_meta" | jsonify }},
+    previewCarbo: {{ i18n "carbo_preview_carbo" | jsonify }},
+    previewSodium: {{ i18n "carbo_preview_sodium" | jsonify }},
+    previewCaffeine: {{ i18n "carbo_preview_caffeine" | jsonify }},
+    previewProtein: {{ i18n "carbo_preview_protein" | jsonify }},
+    toastSelectFirst: {{ i18n "carbo_toast_select_first" | jsonify }},
+    toastMinQty: {{ i18n "carbo_toast_min_qty" | jsonify }},
+    toastAdded: {{ i18n "carbo_toast_added" | jsonify }},
+    toastEnterName: {{ i18n "carbo_toast_enter_name" | jsonify }},
+    toastAddedSession: {{ i18n "carbo_toast_added_session" | jsonify }},
+    toastSavedDb: {{ i18n "carbo_toast_saved_db" | jsonify }},
+    toastScreenshotSaved: {{ i18n "carbo_toast_screenshot_saved" | jsonify }},
+    toastScreenshotError: {{ i18n "carbo_toast_screenshot_error" | jsonify }},
+    toastSessionReset: {{ i18n "carbo_toast_session_reset" | jsonify }},
+    toastHtml2canvasUnavailable: {{ i18n "carbo_toast_html2canvas_unavailable" | jsonify }},
+    confirmReset: {{ i18n "carbo_confirm_reset" | jsonify }},
+    catLabels: {
+      "Gel": "Gel",
+      "Barretta": {{ i18n "carbo_cat_bar" | jsonify }},
+      "Snack": "Snack",
+      "Flask": "Flask",
+      "Drink Mix": "Drink Mix",
+      "Sali": {{ i18n "carbo_cat_electrolytes" | jsonify }},
+      "Caffeina": {{ i18n "carbo_cat_caffeine" | jsonify }},
+      "Bevanda": {{ i18n "carbo_cat_drink" | jsonify }},
+      "Custom": {{ i18n "carbo_category_custom" | jsonify }},
+      "Altro": {{ i18n "carbo_cat_other" | jsonify }}
+    }
+  };
+
+  function fmtStr(tpl) {
+    var args = Array.prototype.slice.call(arguments, 1);
+    var i = 0;
+    return tpl.replace(/%s/g, function () { return args[i++]; });
+  }
+
   // ── Product database (from /js/carbo-data.js, not minified) ───
   var DB_PRODUCTS = window.CARBO_DB || [];
 
@@ -555,7 +599,7 @@
 
   function buildSelect() {
     var sel = document.getElementById('product-select');
-    sel.innerHTML = '<option value="">— seleziona prodotto —</option>';
+    sel.innerHTML = '<option value="">' + esc(CARBO_I18N.selectPlaceholder) + '</option>';
     var groups = {};
     products.forEach(function(p, i) {
       var cat = p.categoria || 'Altro';
@@ -567,7 +611,7 @@
     );
     cats.forEach(function(cat) {
       var og = document.createElement('optgroup');
-      og.label = cat;
+      og.label = CARBO_I18N.catLabels[cat] || cat;
       groups[cat].forEach(function(item) {
         var opt = document.createElement('option');
         opt.value = item.idx;
@@ -588,7 +632,7 @@
   function updateDurDisplay() {
     var h = parseInt(document.getElementById('dur-h').value) || 0;
     var m = parseInt(document.getElementById('dur-m').value) || 0;
-    document.getElementById('dur-display').textContent = '→ ' + h + 'h ' + m + 'min';
+    document.getElementById('dur-display').textContent = fmtStr(CARBO_I18N.durDisplay, h, m);
     recalc();
   }
 
@@ -639,7 +683,7 @@
     }
 
     if (consumed.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="8" class="empty-state">Nessun prodotto aggiunto. Usa il selettore sotto.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="8" class="empty-state">' + esc(CARBO_I18N.emptyState) + '</td></tr>';
       tfoot.innerHTML = '';
       return;
     }
@@ -648,19 +692,19 @@
       var p = item.product;
       return '<tr>' +
         '<td class="td-name">' + esc(p.name) + '</td>' +
-        '<td><span class="td-cat">' + esc(p.categoria || 'Custom') + '</span></td>' +
+        '<td><span class="td-cat">' + esc(CARBO_I18N.catLabels[p.categoria] || CARBO_I18N.catLabels['Custom']) + '</span></td>' +
         '<td class="td-num">' + item.qty + '</td>' +
         '<td class="td-num td-carbo">' + fmt(p.carbo_g * item.qty) + '</td>' +
         '<td class="td-num">' + fmt(p.sodio_mg * item.qty, 0) + '</td>' +
         '<td class="td-num">' + fmt(p.caffeina_mg * item.qty, 0) + '</td>' +
         '<td class="td-num">' + fmt(p.proteine_g * item.qty) + '</td>' +
-        '<td><button class="td-remove" data-id="' + item.id + '" title="Rimuovi">×</button></td>' +
+        '<td><button class="td-remove" data-id="' + item.id + '" title="' + esc(CARBO_I18N.removeTitle) + '">×</button></td>' +
         '</tr>';
     }).join('');
 
     tfoot.innerHTML =
       '<tr class="total-row">' +
-      '<td colspan="2"><strong>Totale</strong></td><td></td>' +
+      '<td colspan="2"><strong>' + esc(CARBO_I18N.tableTotal) + '</strong></td><td></td>' +
       '<td class="td-num td-carbo"><strong>' + fmt(totCarbo) + '</strong></td>' +
       '<td class="td-num"><strong>' + fmt(totSodio, 0) + '</strong></td>' +
       '<td class="td-num"><strong>' + fmt(totCaff, 0) + '</strong></td>' +
@@ -698,16 +742,16 @@
     var p = products[parseInt(sel.value)];
     if (!p) { preview.innerHTML = ''; return; }
     preview.innerHTML =
-      '<span style="color:var(--yellow)">Carbo: ' + p.carbo_g + 'g</span> &nbsp;·&nbsp; ' +
-      'Sodio: ' + p.sodio_mg + 'mg &nbsp;·&nbsp; ' +
-      'Caffeina: ' + p.caffeina_mg + 'mg &nbsp;·&nbsp; ' +
-      'Proteine: ' + p.proteine_g + 'g';
+      '<span style="color:var(--yellow)">' + esc(CARBO_I18N.previewCarbo) + ': ' + p.carbo_g + 'g</span> &nbsp;·&nbsp; ' +
+      esc(CARBO_I18N.previewSodium) + ': ' + p.sodio_mg + 'mg &nbsp;·&nbsp; ' +
+      esc(CARBO_I18N.previewCaffeine) + ': ' + p.caffeina_mg + 'mg &nbsp;·&nbsp; ' +
+      esc(CARBO_I18N.previewProtein) + ': ' + p.proteine_g + 'g';
   }
 
   // ── Screenshot ────────────────────────────────────────────────
   function takeScreenshot() {
     if (typeof html2canvas === 'undefined') {
-      showToast('html2canvas non disponibile. Ricarica la pagina.');
+      showToast(CARBO_I18N.toastHtml2canvasUnavailable);
       return;
     }
     var area = document.getElementById('report-area');
@@ -716,9 +760,8 @@
 
     var h = parseInt(document.getElementById('dur-h').value) || 0;
     var m = parseInt(document.getElementById('dur-m').value) || 0;
-    var now = new Date().toLocaleDateString('it-IT', {day:'2-digit',month:'2-digit',year:'numeric'});
-    document.getElementById('report-meta').textContent =
-      'Data: ' + now + ' · Durata: ' + h + 'h ' + m + 'min';
+    var now = new Date().toLocaleDateString(CARBO_I18N.locale, {day:'2-digit',month:'2-digit',year:'numeric'});
+    document.getElementById('report-meta').textContent = fmtStr(CARBO_I18N.reportMeta, now, h, m);
 
     area.classList.add('screenshotting');
     removeHeader.style.display = 'none';
@@ -734,13 +777,13 @@
         link.download = 'carbo-' + d + '.png';
         link.href = canvas.toDataURL('image/png');
         link.click();
-        showToast('📸 Screenshot salvato!');
+        showToast(CARBO_I18N.toastScreenshotSaved);
       })
       .catch(function() {
         area.classList.remove('screenshotting');
         removeHeader.style.display = '';
         removeBtns.forEach(function(b){ b.style.visibility = ''; });
-        showToast('Errore screenshot. Prova tasto destro → Salva immagine.');
+        showToast(CARBO_I18N.toastScreenshotError);
       });
   }
 
@@ -759,12 +802,12 @@
 
   document.getElementById('btn-add-product').addEventListener('click', function() {
     var sel = document.getElementById('product-select');
-    if (sel.value === '') { showToast('Seleziona un prodotto prima.'); return; }
+    if (sel.value === '') { showToast(CARBO_I18N.toastSelectFirst); return; }
     var p = products[parseInt(sel.value)];
     var qty = parseInt(document.getElementById('qty-input').value) || 1;
-    if (qty < 1) { showToast('Quantità minima: 1.'); return; }
+    if (qty < 1) { showToast(CARBO_I18N.toastMinQty); return; }
     addItem(p, qty);
-    showToast('✓ ' + p.name + ' × ' + qty + ' aggiunto');
+    showToast(fmtStr(CARBO_I18N.toastAdded, p.name, qty));
   });
 
   document.getElementById('qty-input').addEventListener('keydown', function(e) {
@@ -773,7 +816,7 @@
 
   document.getElementById('btn-add-custom').addEventListener('click', function() {
     var name = document.getElementById('c-name').value.trim();
-    if (!name) { showToast('Inserisci il nome del prodotto.'); return; }
+    if (!name) { showToast(CARBO_I18N.toastEnterName); return; }
     var p = {
       name: name, categoria: 'Custom',
       carbo_g:     parseFloat(document.getElementById('c-carbo').value) || 0,
@@ -782,12 +825,12 @@
       proteine_g:  parseFloat(document.getElementById('c-prot').value)  || 0
     };
     addItem(p, 1);
-    showToast('✓ ' + p.name + ' aggiunto alla sessione');
+    showToast(fmtStr(CARBO_I18N.toastAddedSession, p.name));
   });
 
   document.getElementById('btn-save-custom').addEventListener('click', function() {
     var name = document.getElementById('c-name').value.trim();
-    if (!name) { showToast('Inserisci il nome del prodotto.'); return; }
+    if (!name) { showToast(CARBO_I18N.toastEnterName); return; }
     var p = {
       name: name, categoria: 'Custom',
       carbo_g:     parseFloat(document.getElementById('c-carbo').value) || 0,
@@ -803,16 +846,16 @@
     var msg = document.getElementById('custom-saved-msg');
     msg.style.display = 'inline';
     setTimeout(function(){ msg.style.display = 'none'; }, 3000);
-    showToast('💾 Prodotto salvato nel database locale');
+    showToast(CARBO_I18N.toastSavedDb);
   });
 
   document.getElementById('btn-screenshot').addEventListener('click', takeScreenshot);
 
   document.getElementById('btn-reset').addEventListener('click', function() {
-    if (!consumed.length || confirm('Resettare la sessione corrente?')) {
+    if (!consumed.length || confirm(CARBO_I18N.confirmReset)) {
       consumed = [];
       recalc();
-      showToast('Sessione resettata.');
+      showToast(CARBO_I18N.toastSessionReset);
     }
   });
 

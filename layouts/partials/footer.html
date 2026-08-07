@@ -5,17 +5,24 @@
   <div class="footer-right">
     <nav>
       <ul>
-        {{ $inCoach := strings.HasPrefix .RelPermalink "/coach/" }}
+        {{ $inCoach := strings.Contains .RelPermalink "/coach/" }}
         {{ $menu := .Site.Menus.main }}
         {{ if $inCoach }}{{ $menu = .Site.Menus.coach }}{{ end }}
         {{ range $menu }}
         <li><a href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
-        <li>
+        <li class="site-switch">
           {{ if $inCoach }}
-            <a href="{{ "/" | absURL }}">Sito personale</a>
+            <a href="{{ relLangURL "/" }}">{{ i18n "switch_to_personal" }}</a>
           {{ else }}
-            <a href="{{ "/coach/" | absURL }}">Coaching</a>
+            <a href="{{ relLangURL "/coach/" }}">{{ i18n "switch_to_coaching" }}</a>
+          {{ end }}
+        </li>
+        <li class="lang-switch">
+          {{ range .AllTranslations }}
+            <a href="{{ .Permalink }}" class="{{ if eq .Language.Lang $.Language.Lang }}active{{ end }}" title="{{ .Language.LanguageName }}">
+              {{ if eq .Language.Lang "en" }}🇬🇧{{ else if eq .Language.Lang "it" }}🇮🇹{{ end }}
+            </a>
           {{ end }}
         </li>
       </ul>
