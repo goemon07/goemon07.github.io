@@ -10,16 +10,46 @@ body.page-about .content img {
 
 /* Site switcher pill in the header/footer nav (personal <-> coaching) */
 #header #nav ul li.site-switch,
-#footer .footer-right li:last-child {
+#footer .footer-right li.site-switch {
     border-right: none;
 }
 #header #nav ul li.site-switch a,
-#footer .footer-right nav li:last-child a {
+#footer .footer-right nav li.site-switch a {
     display: inline-block;
     padding: 0.1rem 0.55rem;
     border: 1px solid currentColor;
     border-radius: 20px;
     line-height: 1.4;
+}
+
+/* Language switcher (flag emoji) in the header/footer nav */
+#header #nav ul li.lang-switch,
+#footer .footer-right li.lang-switch {
+    border-right: none;
+    margin-right: 0;
+}
+#header #nav ul li.lang-switch a,
+#footer .footer-right nav li.lang-switch a {
+    display: inline-block;
+    margin-right: 0.4rem;
+    font-size: 1rem;
+    opacity: 0.45;
+    filter: grayscale(60%);
+    transition: opacity 0.15s, filter 0.15s;
+}
+#header #nav ul li.lang-switch a:last-child,
+#footer .footer-right nav li.lang-switch a:last-child {
+    margin-right: 0;
+}
+#header #nav ul li.lang-switch a.active,
+#footer .footer-right nav li.lang-switch a.active {
+    opacity: 1;
+    filter: none;
+}
+#header #nav ul li.lang-switch a:hover,
+#footer .footer-right nav li.lang-switch a:hover {
+    opacity: 1;
+    filter: none;
 }
 
 /* The pill is taller than the plain text links around it (border + padding),
