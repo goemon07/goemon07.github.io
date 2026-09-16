@@ -194,10 +194,10 @@
 <script>
 (function () {
   var COACH_I18N = {
-    sending: {{ i18n "coach_form_sending" | jsonify }},
-    submit: {{ i18n "coach_form_submit" | jsonify }},
-    success: {{ i18n "coach_form_success" | jsonify }},
-    error: {{ i18n "coach_form_error" | jsonify }}
+    sending: {{ i18n "coach_form_sending" | jsonify | safeJS }},
+    submit: {{ i18n "coach_form_submit" | jsonify | safeJS }},
+    success: {{ i18n "coach_form_success" | jsonify | safeJS }},
+    error: {{ i18n "coach_form_error" | jsonify | safeJS }}
   };
 
   var form = document.getElementById('coach-contact-form');

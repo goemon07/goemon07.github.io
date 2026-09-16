@@ -134,8 +134,17 @@ other = "e.g. Gel XYZ"
 [carbo_custom_carbo_label]
 other = "Carbs (g)"
 
+[carbo_custom_category_label]
+other = "Category"
+
 [carbo_custom_sodium_label]
-other = "Sodium (mg)"
+other = "Sodium / Salt"
+
+[carbo_custom_sodium_unit_mg]
+other = "mg sodium"
+
+[carbo_custom_sodium_unit_salt]
+other = "g salt"
 
 [carbo_custom_caffeine_label]
 other = "Caffeine (mg)"
@@ -143,23 +152,26 @@ other = "Caffeine (mg)"
 [carbo_custom_protein_label]
 other = "Protein (g)"
 
-[carbo_btn_add_session]
-other = "+ Add to session"
+[carbo_btn_open_custom_modal]
+other = "+ Add custom product"
+
+[carbo_modal_close]
+other = "Close"
+
+[carbo_btn_cancel]
+other = "Cancel"
 
 [carbo_btn_save_db]
 other = "💾 Save to database"
 
-[carbo_saved_msg]
-other = "✓ Saved to local database"
+[carbo_custom_save_note]
+other = "Saved only on this device/browser (no server behind this site), so it won't appear if you switch device or browser. It survives closing and reopening this same browser."
 
 [carbo_btn_screenshot]
 other = "📸 Download Screenshot"
 
 [carbo_btn_reset]
 other = "🗑 Reset session"
-
-[carbo_footer_note]
-other = "Custom products are saved in your browser (localStorage) and remain available in future sessions."
 
 [carbo_report_title]
 other = "Carbo Calculator — Report"
@@ -182,11 +194,11 @@ other = "✓ %s × %s added"
 [carbo_toast_enter_name]
 other = "Enter the product name."
 
-[carbo_toast_added_session]
-other = "✓ %s added to session"
-
 [carbo_toast_saved_db]
 other = "💾 Product saved to local database"
+
+[carbo_toast_save_failed]
+other = "Could not save: storage unavailable in this browser."
 
 [carbo_toast_screenshot_saved]
 other = "📸 Screenshot saved!"

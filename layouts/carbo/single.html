@@ -255,9 +255,8 @@
 
 .custom-form-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-  gap: 0.5rem;
-  margin-bottom: 0.8rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
 }
 .custom-input {
   background: var(--bg-input);
@@ -281,10 +280,62 @@
   display: block;
 }
 .custom-field { display: flex; flex-direction: column; }
-.custom-actions { display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap; }
-.custom-saved-msg { font-size: 0.8rem; color: var(--green); display: none; }
 
 .actions-bar { display: flex; gap: 0.8rem; align-items: center; flex-wrap: wrap; }
+
+/* ── Custom product modal ─────────────────────────────────────── */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.modal-overlay.show { display: flex; }
+.modal-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid var(--border);
+}
+.modal-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-bright);
+}
+.modal-close {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+.modal-close:hover { color: var(--red); background: rgba(188,43,43,0.12); }
+.modal-body { padding: 1.2rem; }
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  padding: 1rem 1.2rem;
+  border-top: 1px solid var(--border);
+}
 
 #report-area { background: var(--bg); }
 
@@ -353,10 +404,11 @@
   .carbo-select { flex: 1 1 100%; min-width: 0; }
   .add-row .qty-input { flex: 1 1 auto; }
   #btn-add-product { flex: 1 1 auto; justify-content: center; }
+  #btn-open-custom-modal { flex: 1 1 100%; justify-content: center; }
 
-  .custom-form-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
-  .custom-actions { flex-direction: column; align-items: stretch; }
-  .custom-actions .btn { width: 100%; justify-content: center; }
+  .custom-form-grid { grid-template-columns: minmax(0, 1fr); }
+  .modal-footer { flex-direction: column-reverse; align-items: stretch; }
+  .modal-footer .btn { width: 100%; justify-content: center; }
 
   .actions-bar { flex-direction: column; align-items: stretch; }
   .actions-bar .btn { width: 100%; justify-content: center; }
@@ -460,39 +512,59 @@
       </select>
       <input class="qty-input" type="number" id="qty-input" min="1" max="50" value="1">
       <button class="btn btn-add" id="btn-add-product">{{ i18n "carbo_btn_add" }}</button>
+      <button class="btn btn-save-custom" id="btn-open-custom-modal">{{ i18n "carbo_btn_open_custom_modal" }}</button>
     </div>
     <div id="product-preview" style="margin-top:0.7rem; font-size:0.8rem; color:var(--text-muted); min-height:1.2em;"></div>
   </div>
 
-  <!-- Custom product -->
-  <div class="carbo-section">
-    <h2>{{ i18n "carbo_add_custom_heading" }}</h2>
-    <div class="custom-form-grid">
-      <div class="custom-field">
-        <label class="custom-label">{{ i18n "carbo_custom_name_label" }}</label>
-        <input class="custom-input" type="text" id="c-name" placeholder="{{ i18n "carbo_custom_name_placeholder" }}">
+  <!-- Custom product modal -->
+  <div class="modal-overlay" id="custom-modal-overlay">
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="custom-modal-title">
+      <div class="modal-header">
+        <h3 id="custom-modal-title">{{ i18n "carbo_add_custom_heading" }}</h3>
+        <button class="modal-close" id="btn-close-custom-modal" aria-label="{{ i18n "carbo_modal_close" }}">×</button>
       </div>
-      <div class="custom-field">
-        <label class="custom-label">{{ i18n "carbo_custom_carbo_label" }}</label>
-        <input class="custom-input" type="number" id="c-carbo" placeholder="0" min="0" step="0.1">
+      <div class="modal-body">
+        <div class="custom-form-grid">
+          <div class="custom-field">
+            <label class="custom-label">{{ i18n "carbo_custom_name_label" }}</label>
+            <input class="custom-input" type="text" id="c-name" placeholder="{{ i18n "carbo_custom_name_placeholder" }}">
+          </div>
+          <div class="custom-field">
+            <label class="custom-label">{{ i18n "carbo_custom_category_label" }}</label>
+            <select class="custom-input" id="c-categoria"></select>
+          </div>
+          <div class="custom-field">
+            <label class="custom-label">{{ i18n "carbo_custom_carbo_label" }}</label>
+            <input class="custom-input" type="number" id="c-carbo" placeholder="0" min="0" step="0.1">
+          </div>
+          <div class="custom-field">
+            <label class="custom-label">{{ i18n "carbo_custom_sodium_label" }}</label>
+            <div style="display:flex; gap:0.3rem;">
+              <input class="custom-input" type="number" id="c-sodio" placeholder="0" min="0" step="0.1" style="flex:1; min-width:0;">
+              <select class="custom-input" id="c-sodio-unit" style="flex:0 0 auto; width:auto; padding:0.4rem 0.3rem;">
+                <option value="sodio">{{ i18n "carbo_custom_sodium_unit_mg" }}</option>
+                <option value="sale">{{ i18n "carbo_custom_sodium_unit_salt" }}</option>
+              </select>
+            </div>
+          </div>
+          <div class="custom-field">
+            <label class="custom-label">{{ i18n "carbo_custom_caffeine_label" }}</label>
+            <input class="custom-input" type="number" id="c-caff" placeholder="0" min="0">
+          </div>
+          <div class="custom-field">
+            <label class="custom-label">{{ i18n "carbo_custom_protein_label" }}</label>
+            <input class="custom-input" type="number" id="c-prot" placeholder="0" min="0" step="0.1">
+          </div>
+        </div>
+        <p style="font-size:0.72rem;color:var(--text-muted);margin-top:1rem;margin-bottom:0;">
+          {{ i18n "carbo_custom_save_note" }}
+        </p>
       </div>
-      <div class="custom-field">
-        <label class="custom-label">{{ i18n "carbo_custom_sodium_label" }}</label>
-        <input class="custom-input" type="number" id="c-sodio" placeholder="0" min="0">
+      <div class="modal-footer">
+        <button class="btn btn-reset" id="btn-cancel-custom">{{ i18n "carbo_btn_cancel" }}</button>
+        <button class="btn btn-save-custom" id="btn-save-custom">{{ i18n "carbo_btn_save_db" }}</button>
       </div>
-      <div class="custom-field">
-        <label class="custom-label">{{ i18n "carbo_custom_caffeine_label" }}</label>
-        <input class="custom-input" type="number" id="c-caff" placeholder="0" min="0">
-      </div>
-      <div class="custom-field">
-        <label class="custom-label">{{ i18n "carbo_custom_protein_label" }}</label>
-        <input class="custom-input" type="number" id="c-prot" placeholder="0" min="0" step="0.1">
-      </div>
-    </div>
-    <div class="custom-actions">
-      <button class="btn" id="btn-add-custom" style="background:#2a3f5a;color:#6aacdc;border:1px solid #3d6a94;">{{ i18n "carbo_btn_add_session" }}</button>
-      <button class="btn btn-save-custom" id="btn-save-custom">{{ i18n "carbo_btn_save_db" }}</button>
-      <span class="custom-saved-msg" id="custom-saved-msg">{{ i18n "carbo_saved_msg" }}</span>
     </div>
   </div>
 
@@ -501,52 +573,48 @@
     <button class="btn btn-screenshot" id="btn-screenshot">{{ i18n "carbo_btn_screenshot" }}</button>
     <button class="btn btn-reset" id="btn-reset">{{ i18n "carbo_btn_reset" }}</button>
   </div>
-  <p style="font-size:0.72rem;color:var(--text-muted);margin-top:0.8rem;">
-    {{ i18n "carbo_footer_note" }}
-  </p>
 </div>
 
 <div class="toast" id="toast"></div>
 
-<script src="{{ "js/carbo-data.js" | relURL }}"></script>
 <script src="{{ "js/html2canvas.min.js" | relURL }}"></script>
 <script>
 (function () {
   // ── i18n ──────────────────────────────────────────────────────
   var CARBO_I18N = {
     locale: {{ if eq .Site.Language.Lang "it" }}"it-IT"{{ else }}"en-US"{{ end }},
-    selectPlaceholder: {{ i18n "carbo_select_placeholder" | jsonify }},
-    removeTitle: {{ i18n "carbo_th_remove" | jsonify }},
-    emptyState: {{ i18n "carbo_empty_state" | jsonify }},
-    tableTotal: {{ i18n "carbo_table_total" | jsonify }},
-    durDisplay: {{ i18n "carbo_dur_display" | jsonify }},
-    reportMeta: {{ i18n "carbo_report_meta" | jsonify }},
-    previewCarbo: {{ i18n "carbo_preview_carbo" | jsonify }},
-    previewSodium: {{ i18n "carbo_preview_sodium" | jsonify }},
-    previewCaffeine: {{ i18n "carbo_preview_caffeine" | jsonify }},
-    previewProtein: {{ i18n "carbo_preview_protein" | jsonify }},
-    toastSelectFirst: {{ i18n "carbo_toast_select_first" | jsonify }},
-    toastMinQty: {{ i18n "carbo_toast_min_qty" | jsonify }},
-    toastAdded: {{ i18n "carbo_toast_added" | jsonify }},
-    toastEnterName: {{ i18n "carbo_toast_enter_name" | jsonify }},
-    toastAddedSession: {{ i18n "carbo_toast_added_session" | jsonify }},
-    toastSavedDb: {{ i18n "carbo_toast_saved_db" | jsonify }},
-    toastScreenshotSaved: {{ i18n "carbo_toast_screenshot_saved" | jsonify }},
-    toastScreenshotError: {{ i18n "carbo_toast_screenshot_error" | jsonify }},
-    toastSessionReset: {{ i18n "carbo_toast_session_reset" | jsonify }},
-    toastHtml2canvasUnavailable: {{ i18n "carbo_toast_html2canvas_unavailable" | jsonify }},
-    confirmReset: {{ i18n "carbo_confirm_reset" | jsonify }},
+    selectPlaceholder: {{ i18n "carbo_select_placeholder" | jsonify | safeJS }},
+    removeTitle: {{ i18n "carbo_th_remove" | jsonify | safeJS }},
+    emptyState: {{ i18n "carbo_empty_state" | jsonify | safeJS }},
+    tableTotal: {{ i18n "carbo_table_total" | jsonify | safeJS }},
+    durDisplay: {{ i18n "carbo_dur_display" | jsonify | safeJS }},
+    reportMeta: {{ i18n "carbo_report_meta" | jsonify | safeJS }},
+    previewCarbo: {{ i18n "carbo_preview_carbo" | jsonify | safeJS }},
+    previewSodium: {{ i18n "carbo_preview_sodium" | jsonify | safeJS }},
+    previewCaffeine: {{ i18n "carbo_preview_caffeine" | jsonify | safeJS }},
+    previewProtein: {{ i18n "carbo_preview_protein" | jsonify | safeJS }},
+    toastSelectFirst: {{ i18n "carbo_toast_select_first" | jsonify | safeJS }},
+    toastMinQty: {{ i18n "carbo_toast_min_qty" | jsonify | safeJS }},
+    toastAdded: {{ i18n "carbo_toast_added" | jsonify | safeJS }},
+    toastEnterName: {{ i18n "carbo_toast_enter_name" | jsonify | safeJS }},
+    toastSavedDb: {{ i18n "carbo_toast_saved_db" | jsonify | safeJS }},
+    toastSaveFailed: {{ i18n "carbo_toast_save_failed" | jsonify | safeJS }},
+    toastScreenshotSaved: {{ i18n "carbo_toast_screenshot_saved" | jsonify | safeJS }},
+    toastScreenshotError: {{ i18n "carbo_toast_screenshot_error" | jsonify | safeJS }},
+    toastSessionReset: {{ i18n "carbo_toast_session_reset" | jsonify | safeJS }},
+    toastHtml2canvasUnavailable: {{ i18n "carbo_toast_html2canvas_unavailable" | jsonify | safeJS }},
+    confirmReset: {{ i18n "carbo_confirm_reset" | jsonify | safeJS }},
     catLabels: {
       "Gel": "Gel",
-      "Barretta": {{ i18n "carbo_cat_bar" | jsonify }},
+      "Barretta": {{ i18n "carbo_cat_bar" | jsonify | safeJS }},
       "Snack": "Snack",
       "Flask": "Flask",
       "Drink Mix": "Drink Mix",
-      "Sali": {{ i18n "carbo_cat_electrolytes" | jsonify }},
-      "Caffeina": {{ i18n "carbo_cat_caffeine" | jsonify }},
-      "Bevanda": {{ i18n "carbo_cat_drink" | jsonify }},
-      "Custom": {{ i18n "carbo_category_custom" | jsonify }},
-      "Altro": {{ i18n "carbo_cat_other" | jsonify }}
+      "Sali": {{ i18n "carbo_cat_electrolytes" | jsonify | safeJS }},
+      "Caffeina": {{ i18n "carbo_cat_caffeine" | jsonify | safeJS }},
+      "Bevanda": {{ i18n "carbo_cat_drink" | jsonify | safeJS }},
+      "Custom": {{ i18n "carbo_category_custom" | jsonify | safeJS }},
+      "Altro": {{ i18n "carbo_cat_other" | jsonify | safeJS }}
     }
   };
 
@@ -556,8 +624,17 @@
     return tpl.replace(/%s/g, function () { return args[i++]; });
   }
 
-  // ── Product database (from /js/carbo-data.js, not minified) ───
-  var DB_PRODUCTS = window.CARBO_DB || [];
+  // ── Product database ──────────────────────────────────────────
+  // Generated at build time from assets/data/carbo_products.csv, which
+  // is the file to hand-edit (e.g. in a spreadsheet) to add/change products.
+  {{ $numRe := "^-?[0-9]+(\\.[0-9]+)?$" }}
+  var DB_PRODUCTS = [
+    {{ $csv := resources.Get "data/carbo_products.csv" }}
+    {{ $rows := $csv | transform.Unmarshal }}
+    {{ range $i, $row := $rows }}{{ if gt $i 0 }}
+    {name: {{ index $row 0 | jsonify | safeJS }}, categoria: {{ index $row 1 | jsonify | safeJS }}, carbo_g: {{ if findRE $numRe (index $row 2) 1 }}{{ index $row 2 | safeJS }}{{ else }}0{{ end }}, sodio_mg: {{ if findRE $numRe (index $row 3) 1 }}{{ index $row 3 | safeJS }}{{ else }}0{{ end }}, caffeina_mg: {{ if findRE $numRe (index $row 4) 1 }}{{ index $row 4 | safeJS }}{{ else }}0{{ end }}, proteine_g: {{ if findRE $numRe (index $row 5) 1 }}{{ index $row 5 | safeJS }}{{ else }}0{{ end }}},
+    {{ end }}{{ end }}
+  ];
 
   // ── State ──────────────────────────────────────────────────────
   var products = [];
@@ -568,11 +645,16 @@
     products = DB_PRODUCTS.slice();
     loadCustomProducts();
     buildSelect();
+    buildCategorySelect();
     updateDurDisplay();
     recalc();
   }
 
   // ── Custom products (localStorage) ────────────────────────────
+  // Saved only in this browser's localStorage: this is a static site with
+  // no server, so there is no way to sync a custom product to other
+  // browsers/devices from here. It survives closing/reopening this same
+  // browser on this same device.
   function loadCustomProducts() {
     try {
       var stored = JSON.parse(localStorage.getItem('carbo_custom_products') || '[]');
@@ -591,7 +673,10 @@
         stored.push(p);
         localStorage.setItem('carbo_custom_products', JSON.stringify(stored));
       }
-    } catch(e) {}
+      return true;
+    } catch(e) {
+      return false;
+    }
   }
 
   // ── Build dropdown ─────────────────────────────────────────────
@@ -620,6 +705,25 @@
       });
       sel.appendChild(og);
     });
+  }
+
+  // ── Custom product category selector ──────────────────────────
+  function buildCategorySelect() {
+    var sel = document.getElementById('c-categoria');
+    var cats = CAT_ORDER.concat(['Altro']);
+    sel.innerHTML = cats.map(function(cat) {
+      return '<option value="' + esc(cat) + '">' + esc(CARBO_I18N.catLabels[cat] || cat) + '</option>';
+    }).join('');
+    sel.value = 'Custom';
+  }
+
+  // Salt (NaCl) is ~39.3% sodium by mass, so sodium(mg) = salt(g) * 393.
+  var SALT_TO_SODIUM_FACTOR = 393;
+
+  function getCustomSodiumMg() {
+    var val = parseFloat(document.getElementById('c-sodio').value) || 0;
+    var unit = document.getElementById('c-sodio-unit').value;
+    return unit === 'sale' ? val * SALT_TO_SODIUM_FACTOR : val;
   }
 
   // ── Duration ───────────────────────────────────────────────────
@@ -814,38 +918,58 @@
     if (e.key === 'Enter') document.getElementById('btn-add-product').click();
   });
 
-  document.getElementById('btn-add-custom').addEventListener('click', function() {
-    var name = document.getElementById('c-name').value.trim();
-    if (!name) { showToast(CARBO_I18N.toastEnterName); return; }
-    var p = {
-      name: name, categoria: 'Custom',
-      carbo_g:     parseFloat(document.getElementById('c-carbo').value) || 0,
-      sodio_mg:    parseFloat(document.getElementById('c-sodio').value) || 0,
-      caffeina_mg: parseFloat(document.getElementById('c-caff').value)  || 0,
-      proteine_g:  parseFloat(document.getElementById('c-prot').value)  || 0
-    };
-    addItem(p, 1);
-    showToast(fmtStr(CARBO_I18N.toastAddedSession, p.name));
+  // ── Custom product modal ───────────────────────────────────────
+  var customModal = document.getElementById('custom-modal-overlay');
+
+  function resetCustomForm() {
+    document.getElementById('c-name').value = '';
+    document.getElementById('c-categoria').value = 'Custom';
+    document.getElementById('c-carbo').value = '';
+    document.getElementById('c-sodio').value = '';
+    document.getElementById('c-sodio-unit').value = 'sodio';
+    document.getElementById('c-caff').value = '';
+    document.getElementById('c-prot').value = '';
+  }
+
+  function openCustomModal() {
+    resetCustomForm();
+    customModal.classList.add('show');
+    document.getElementById('c-name').focus();
+  }
+
+  function closeCustomModal() {
+    customModal.classList.remove('show');
+  }
+
+  document.getElementById('btn-open-custom-modal').addEventListener('click', openCustomModal);
+  document.getElementById('btn-close-custom-modal').addEventListener('click', closeCustomModal);
+  document.getElementById('btn-cancel-custom').addEventListener('click', closeCustomModal);
+  customModal.addEventListener('click', function(e) {
+    if (e.target === customModal) closeCustomModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && customModal.classList.contains('show')) closeCustomModal();
   });
 
   document.getElementById('btn-save-custom').addEventListener('click', function() {
     var name = document.getElementById('c-name').value.trim();
     if (!name) { showToast(CARBO_I18N.toastEnterName); return; }
     var p = {
-      name: name, categoria: 'Custom',
+      name: name, categoria: document.getElementById('c-categoria').value || 'Custom',
       carbo_g:     parseFloat(document.getElementById('c-carbo').value) || 0,
-      sodio_mg:    parseFloat(document.getElementById('c-sodio').value) || 0,
+      sodio_mg:    getCustomSodiumMg(),
       caffeina_mg: parseFloat(document.getElementById('c-caff').value)  || 0,
       proteine_g:  parseFloat(document.getElementById('c-prot').value)  || 0
     };
+    if (!saveCustomProduct(p)) {
+      showToast(CARBO_I18N.toastSaveFailed);
+      return;
+    }
     if (!products.find(function(x){ return x.name === name; })) {
       products.push(p);
       buildSelect();
     }
-    saveCustomProduct(p);
-    var msg = document.getElementById('custom-saved-msg');
-    msg.style.display = 'inline';
-    setTimeout(function(){ msg.style.display = 'none'; }, 3000);
+    closeCustomModal();
     showToast(CARBO_I18N.toastSavedDb);
   });
 
